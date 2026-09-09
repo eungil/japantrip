@@ -116,6 +116,19 @@ Leaflet CDN 태그에 integrity를 넣었는데, 해시가 어긋나면 브라�
 → 현재는 `el.offsetWidth`가 0이면 초기화를 미루고, 페이지 전환·`window.load`·`resize`에서
 `invalidateSize()` + `fitBounds(map._grp)`를 다시 호출한다.
 
+### (3-b) 페이지 전환 시 초기화가 아니라 갱신만 하던 문제 (2026-09-10 수정)
+`.pbtn` 전환 핸들러가 `for(k in LMAPS)`로 **이미 만들어진** 지도의 `invalidateSize`만
+호출하고 `initLMap`은 부르지 않았다. 첫 로드 때 `#page-food`가 숨겨져 있어 `LMAPS`가
+비어 있으면, 맛집 페이지로 넘어가도 지도가 안 뜨고 "실제 지도" 버튼을 직접 눌러야만 떴다.
+→ 전환 시 `setTimeout(refreshMaps, 80)`으로 교체. `initLMap`은 이미 있는 지도면
+`invalidateSize`+`fitBounds`만, 없으면 새로 만든다.
+
+### (3-c) 실제 지도 이름표 (2026-09-10 추가)
+마커에 `bindTooltip(nm, {permanent:true, className:'lname k-'+kind})`로 상시 이름표.
+CSS는 `#page-food .lmap .leaflet-tooltip.lname`. 화살표는 `:before{display:none}`로 제거.
+음식점(`k-f`) 이름표는 `map` 컨테이너의 `.lbl-min` 클래스(zoom<16)로 숨긴다 —
+좁은 구역에서 겹침 방지. `zoomend`에서 토글.
+
 ### (4) SVG가 안 보였던 문제
 `viewBox`만 있고 크기 정보가 없는 SVG는 숨겨진 부모 안에서 높이가 0으로 계산된다.
 → SVG를 아예 걷어내고 HTML/CSS 개념도로 대체함. **SVG로 되돌리지 말 것.**
