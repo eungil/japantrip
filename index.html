@@ -328,6 +328,15 @@ footer{
 #page-food .lpop{font-family:inherit;font-size:13px}
 #page-food .lpop b{display:block;margin-bottom:3px}
 #page-food .lpop a{color:var(--fm-pin);font-weight:700;text-decoration:none}
+/* 실제 지도 위 상시 이름표 — 개념도처럼 텍스트를 보이게 */
+#page-food .lmap .leaflet-tooltip.lname{background:rgba(255,255,255,.9);border:0;
+  box-shadow:0 1px 4px rgba(0,0,0,.18);padding:1px 4px;border-radius:4px;
+  font:700 9.5px/1.35 inherit;color:var(--fm-ink);white-space:nowrap;pointer-events:none}
+#page-food .lmap .leaflet-tooltip.lname:before{display:none}
+#page-food .lmap .leaflet-tooltip.lname.k-hotel{color:var(--fm-hot)}
+#page-food .lmap .leaflet-tooltip.lname.k-spot{color:#8A5326}
+#page-food .lmap .leaflet-tooltip.lname.k-f{color:var(--fm-pin)}
+#page-food .lmap.lbl-min .leaflet-tooltip.lname.k-f{display:none}
 
 /* 리스트 */
 #page-food .group{margin:26px 0 0}
@@ -1719,6 +1728,8 @@ function initLMap(key){
     var color = kind==='hotel' ? '#C2410C' : (kind==='spot' ? '#8A5326' : '#1D3F8F');
     L.circleMarker([la,ln],{radius:(kind==='hotel'?9:7),color:'#fff',weight:2,
       fillColor:color,fillOpacity:1}).addTo(map)
+     .bindTooltip(nm,{permanent:true,direction:'right',offset:[6,0],
+       className:'lname k-'+kind})
      .bindPopup('<div class="lpop"><b>'+nm+'</b>'+jp+
        '<br><a href="https://maps.google.com/?q='+encodeURIComponent(jp)+
        '" target="_blank" rel="noopener">구글맵에서 열기 →</a></div>');
@@ -1726,6 +1737,10 @@ function initLMap(key){
   });
   map._grp=grp;
   if(grp.length) map.fitBounds(grp,{padding:[30,30]});
+
+  /* 멀리 보일 때는 음식점 이름표를 숨겨 지도를 덜 어지럽게 */
+  function lblZoom(){ el.classList.toggle('lbl-min', map.getZoom() < 16); }
+  map.on('zoomend', lblZoom); lblZoom();
 
   if(touch){
     var gate=document.createElement('div');
@@ -1781,15 +1796,9 @@ document.querySelectorAll('.pbtn').forEach(b=>b.addEventListener('click',()=>{
   document.getElementById('page-food').classList.toggle('on', target==='page-food');
   window.scrollTo({top:0,behavior:'instant'});
   if(target==='page-food'){
-    setTimeout(function(){
-      for(var k in LMAPS){
-        if(LMAPS[k]){
-          LMAPS[k].invalidateSize();
-          if(LMAPS[k]._grp) LMAPS[k].fitBounds(LMAPS[k]._grp,{padding:[30,30]});
-          if(LMAPS[k]._grp) LMAPS[k].fitBounds(LMAPS[k]._grp,{padding:[30,30]});
-        }
-      }
-    },80);
+    /* 처음 열릴 때 지도가 숨겨진 상태였으면 여기서 초기화된다.
+       initLMap 은 이미 만들어진 지도면 invalidateSize + fitBounds 만 다시 한다. */
+    setTimeout(refreshMaps,80);
   }
 }));
 refreshMaps();
