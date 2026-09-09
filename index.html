@@ -353,115 +353,6 @@ footer{
 #page-food footer{margin:30px 0 0;padding:0;font-size:11.5px;color:var(--fm-ink2);text-align:center;line-height:1.7}
 
 
-/* ── 실제 지도 (Leaflet + OpenStreetMap) ── */
-var MAPDATA={"namba": [["미마루 호텔", "MIMARU大阪 難波STATION", 34.6630107, 135.505436, "hotel"], ["도톤보리 이마이 (우동)", "道頓堀今井 本店", 34.6686331, 135.5027144, "f"], ["킨류 라멘", "金龍ラーメン 道頓堀", 34.6686694, 135.5030523, "f"], ["혼케 오오타코 (타코야키)", "本家大たこ 道頓堀", 34.6686734, 135.5033155, "f"], ["무겐 라멘", "無限ラーメン 千日前", 34.6678221, 135.5031211, "f"], ["next shikaku (라멘)", "next shikaku 難波千日前", 34.6642464, 135.5034963, "f"], ["카마타케 우동", "釜たけうどん 難波千日前", 34.6642375, 135.5041105, "f"], ["라멘 멘히카", "麺匪火 難波中", 34.6639418, 135.5002763, "f"], ["돈카츠 KYK", "デリカKYK 大阪高島屋", 34.6646095, 135.5011374, "f"], ["키야스 소혼포 (당고)", "喜八洲総本舗 高島屋大阪店", 34.6643886, 135.5016576, "f"], ["지유켄 (카레)", "自由軒 難波本店", 34.6663311, 135.5024011, "f"], ["인디안 카레", "インデアンカレー 難波店", 34.6678375, 135.5017397, "f"], ["와나카 (타코야키)", "たこ焼道楽わなか 千日前本店", 34.6652167, 135.5033629, "f"], ["후쿠타로 (오코노미야키)", "福太郎本店 千日前", 34.6655916, 135.504538, "f"], ["마루후쿠 커피", "丸福珈琲店 千日前本店", 34.6676238, 135.504198, "f"], ["사키모토 베이커리 (빵)", "SAKImoto bakery 難波中", 34.6627599, 135.5035586, "f"], ["파네파네 (멜론빵)", "pane pane 日本橋 大阪", 34.6652826, 135.505928, "f"], ["CASCADE (빵)", "CASCADE なんばマルイ", 34.6654586, 135.5007245, "f"], ["우사미테이 마츠바야 (우동)", "うさみ亭マツバヤ 南船場", 34.67795, 135.50237, "f"], ["규카츠 모토무라 난바 별관", "牛カツもと村 難波別館", 34.666583, 135.5010671, "f"], ["교토 카츠규 난바워크", "京都勝牛 なんばウォーク", 34.6673162, 135.4983566, "f"], ["교토 카츠규 도톤보리", "京都勝牛 道頓堀", 34.6684287, 135.50246, "f"], ["쿠로몬 시장", "黒門市場", 34.6653511, 135.5062417, "spot"], ["Sanrio 신사이바시점", "Sanrio 心斎橋店", 34.6702034, 135.5012365, "spot"], ["디즈니스토어 파르코", "ディズニーストア 心斎橋パルコ店", 34.6738745, 135.5007778, "spot"], ["난바 다카시마야", "高島屋大阪店", 34.6646089, 135.5012633, "spot"]], "nara": [["긴테츠나라역", "近鉄奈良駅", 34.685, 135.829, "hotel"], ["도다이지 대불전", "東大寺 大仏殿", 34.68906, 135.83988, "spot"], ["우키미도 · 사기이케", "浮見堂 奈良", 34.681, 135.833, "spot"], ["나카타니도 (쑥떡)", "中谷堂 奈良", 34.68194, 135.8289, "f"], ["소바도코로 키타하라", "蕎麦処北原 奈良", 34.68679, 135.83668, "f"], ["소바처 남고", "そば処南郷 奈良 高畑町", 34.67747, 135.83558, "f"], ["소바도코로 하야시", "蕎麦処はやし 奈良", 34.676, 135.82606, "f"], ["미즈야차야 (우동)", "水谷茶屋 奈良", 34.68347, 135.8468, "f"], ["가마메시 시즈카 공원점", "釜めし志津香 公園店", 34.68435, 135.83694, "f"]]};
-var LEAF_READY=(typeof L!=='undefined'), LEAF_LOADING=false, LMAPS={};
-function lmapFail(){
-  document.querySelectorAll('#page-food .lmap').forEach(function(el){
-    if(el.dataset.ok==='1') return;
-    var isNara = el.id.indexOf('nara')>-1;
-    var q = isNara ? '\u5948\u826f\u516c\u5712' : '\u96e3\u6ce2 \u5927\u962a';
-    el.innerHTML='<div class="lmsg"><b>이 화면에서는 실제 지도를 띄울 수 없습니다.</b>'+
-      '<div class="why">앱 안의 미리보기는 보안상 외부 지도 서버 접속을 막습니다. '+
-      '코드 문제가 아니라 환경 제약이라, <b>이 파일을 내려받아 폰 브라우저에서 직접 열면</b> 지도가 정상적으로 뜹니다.</div>'+
-      '<a class="act" href="https://maps.google.com/?q='+encodeURIComponent(q)+
-      '" target="_blank" rel="noopener">지금은 구글맵으로 열기 →</a>'+
-      '<div class="why">그동안은 <b>개념도</b>를 쓰세요. 점을 누르면 그 가게의 구글맵이 바로 열립니다.</div></div>';
-  });
-}
-function loadLeaflet(cb){
-  if(LEAF_READY){cb();return;}
-  if(LEAF_LOADING){setTimeout(function(){loadLeaflet(cb);},250);return;}
-  LEAF_LOADING=true;
-  setTimeout(function(){ if(!LEAF_READY) lmapFail(); }, 6000);
-  var css=document.createElement('link');
-  css.rel='stylesheet';
-  css.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
-  document.head.appendChild(css);
-  var sc=document.createElement('script');
-  sc.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
-  sc.onload=function(){LEAF_READY=true;cb();};
-  sc.onerror=function(){ LEAF_LOADING=false; lmapFail(); };
-  document.head.appendChild(sc);
-}
-function initLMap(key){
-  if(LMAPS[key]) {LMAPS[key].invalidateSize();
-    if(LMAPS[key]._grp) LMAPS[key].fitBounds(LMAPS[key]._grp,{padding:[30,30]});
-    return;}
-  var el=document.getElementById('lmap-'+key);
-  var pts=MAPDATA[key];
-  var touch = ('ontouchstart' in window);
-  var map=L.map(el,{scrollWheelZoom:false, dragging:!touch, tap:true});
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:19, attribution:'&copy; OpenStreetMap'
-  }).addTo(map);
-  var group=[];
-  pts.forEach(function(p){
-    var nm=p[0], jp=p[1], la=p[2], ln=p[3], kind=p[4];
-    var color = kind==='hotel' ? '#C2410C' : (kind==='spot' ? '#8A5326' : '#1D3F8F');
-    var r = kind==='hotel' ? 9 : 7;
-    var m=L.circleMarker([la,ln],{radius:r,color:'#fff',weight:2,
-      fillColor:color,fillOpacity:1}).addTo(map);
-    m.bindPopup('<div class="lpop"><b>'+nm+'</b>'+jp+
-      '<br><a href="https://maps.google.com/?q='+encodeURIComponent(jp)+
-      '" target="_blank" rel="noopener">구글맵에서 열기 →</a></div>');
-    group.push([la,ln]);
-  });
-  map.fitBounds(group,{padding:[30,30]});
-  if(touch){
-    var gate=document.createElement('div');
-    gate.className='lgate';
-    gate.innerHTML='<span>지도를 한 번 탭하면 움직입니다</span>';
-    gate.addEventListener('click',function(){
-      map.dragging.enable(); gate.classList.add('off');
-    });
-    el.appendChild(gate);
-    map.on('movestart',function(){ gate.classList.add('off'); });
-  }
-  var zl=document.createElement('a');
-  zl.className='lzoom'; zl.target='_blank'; zl.rel='noopener';
-  zl.href = key==='nara'
-    ? 'https://maps.google.com/?q='+encodeURIComponent('奈良公園')
-    : 'https://maps.google.com/?q='+encodeURIComponent('難波 大阪');
-  zl.textContent='구글맵 앱으로 →';
-  el.appendChild(zl);
-  map._grp=group;
-  setTimeout(function(){map.invalidateSize();map.fitBounds(group,{padding:[30,30]});},60);
-  el.dataset.ok='1';
-  LMAPS[key]=map;
-}
-function bootMaps(){
-  ['namba','nara'].forEach(function(k){
-    var sch=document.querySelector('.pmap.'+k);
-    var lm=document.getElementById('lmap-'+k);
-    if(sch&&lm){ sch.style.display='none'; lm.classList.add('on'); }
-  });
-  loadLeaflet(function(){ initLMap('namba'); initLMap('nara'); });
-}
-document.querySelectorAll('#page-food .mapswap button').forEach(function(b){
-  b.addEventListener('click',function(){
-    var key=b.dataset.k, mode=b.dataset.m;
-    b.parentNode.querySelectorAll('button').forEach(function(x){
-      x.classList.toggle('on', x===b);
-    });
-    var box=b.parentNode.parentNode;
-    var sch=box.querySelector('.pmap');
-    var lm=document.getElementById('lmap-'+key);
-    if(mode==='l'){
-      sch.style.display='none'; lm.classList.add('on');
-      if(lm.dataset.ok!=='1' && !lm.innerHTML.trim()){
-        lm.innerHTML='<div class="lmsg">지도를 불러오는 중입니다…</div>';
-      }
-      loadLeaflet(function(){
-        if(lm.dataset.ok!=='1'){ lm.innerHTML=''; }
-        initLMap(key);
-      });
-    } else {
-      sch.style.display=''; lm.classList.remove('on');
-    }
-  });
-});
-
 /* 최상위 페이지 전환 */
 .pageswitch{position:sticky;top:0;z-index:30;display:flex;gap:8px;
   height:52px;box-sizing:border-box;
@@ -474,10 +365,15 @@ document.querySelectorAll('#page-food .mapswap button').forEach(function(b){
 .page.on{display:block}
 
 </style>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/* 1차 CDN 실패 시 2차로 자동 대체 */
+if (typeof L === 'undefined') {
+  document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">');
+  document.write('<scr'+'ipt src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"><\/scr'+'ipt>');
+}
+</script>
 </head>
 <body>
 <div class="pageswitch">
@@ -1794,6 +1690,88 @@ document.querySelectorAll('#page-food .mapswap button').forEach(function(b){
 
 
 <script>
+/* ── 실제 지도 (Leaflet + OpenStreetMap) ── */
+var MAPDATA={"namba": [["미마루 호텔", "MIMARU大阪 難波STATION", 34.6630107, 135.505436, "hotel"], ["도톤보리 이마이 (우동)", "道頓堀今井 本店", 34.6686331, 135.5027144, "f"], ["킨류 라멘", "金龍ラーメン 道頓堀", 34.6686694, 135.5030523, "f"], ["혼케 오오타코 (타코야키)", "本家大たこ 道頓堀", 34.6686734, 135.5033155, "f"], ["무겐 라멘", "無限ラーメン 千日前", 34.6678221, 135.5031211, "f"], ["next shikaku (라멘)", "next shikaku 難波千日前", 34.6642464, 135.5034963, "f"], ["카마타케 우동", "釜たけうどん 難波千日前", 34.6642375, 135.5041105, "f"], ["라멘 멘히카", "麺匪火 難波中", 34.6639418, 135.5002763, "f"], ["돈카츠 KYK", "デリカKYK 大阪高島屋", 34.6646095, 135.5011374, "f"], ["키야스 소혼포 (당고)", "喜八洲総本舗 高島屋大阪店", 34.6643886, 135.5016576, "f"], ["지유켄 (카레)", "自由軒 難波本店", 34.6663311, 135.5024011, "f"], ["인디안 카레", "インデアンカレー 難波店", 34.6678375, 135.5017397, "f"], ["와나카 (타코야키)", "たこ焼道楽わなか 千日前本店", 34.6652167, 135.5033629, "f"], ["후쿠타로 (오코노미야키)", "福太郎本店 千日前", 34.6655916, 135.504538, "f"], ["마루후쿠 커피", "丸福珈琲店 千日前本店", 34.6676238, 135.504198, "f"], ["사키모토 베이커리 (빵)", "SAKImoto bakery 難波中", 34.6627599, 135.5035586, "f"], ["파네파네 (멜론빵)", "pane pane 日本橋 大阪", 34.6652826, 135.505928, "f"], ["CASCADE (빵)", "CASCADE なんばマルイ", 34.6654586, 135.5007245, "f"], ["우사미테이 마츠바야 (우동)", "うさみ亭マツバヤ 南船場", 34.67795, 135.50237, "f"], ["규카츠 모토무라 난바 별관", "牛カツもと村 難波別館", 34.666583, 135.5010671, "f"], ["교토 카츠규 난바워크", "京都勝牛 なんばウォーク", 34.6673162, 135.4983566, "f"], ["교토 카츠규 도톤보리", "京都勝牛 道頓堀", 34.6684287, 135.50246, "f"], ["쿠로몬 시장", "黒門市場", 34.6653511, 135.5062417, "spot"], ["Sanrio 신사이바시점", "Sanrio 心斎橋店", 34.6702034, 135.5012365, "spot"], ["디즈니스토어 파르코", "ディズニーストア 心斎橋パルコ店", 34.6738745, 135.5007778, "spot"], ["난바 다카시마야", "高島屋大阪店", 34.6646089, 135.5012633, "spot"]], "nara": [["긴테츠나라역", "近鉄奈良駅", 34.685, 135.829, "hotel"], ["도다이지 대불전", "東大寺 大仏殿", 34.68906, 135.83988, "spot"], ["우키미도 · 사기이케", "浮見堂 奈良", 34.681, 135.833, "spot"], ["나카타니도 (쑥떡)", "中谷堂 奈良", 34.68194, 135.8289, "f"], ["소바도코로 키타하라", "蕎麦処北原 奈良", 34.68679, 135.83668, "f"], ["소바처 남고", "そば処南郷 奈良 高畑町", 34.67747, 135.83558, "f"], ["소바도코로 하야시", "蕎麦処はやし 奈良", 34.676, 135.82606, "f"], ["미즈야차야 (우동)", "水谷茶屋 奈良", 34.68347, 135.8468, "f"], ["가마메시 시즈카 공원점", "釜めし志津香 公園店", 34.68435, 135.83694, "f"]]};
+var LMAPS={};
+function lmEl(k){ return document.getElementById('lmap-'+k); }
+function lmMsg(k,html){ var e=lmEl(k); if(e && !LMAPS[k]) e.innerHTML='<div class="lmsg">'+html+'</div>'; }
+
+function initLMap(key){
+  var el=lmEl(key); if(!el) return;
+  if(LMAPS[key]){
+    LMAPS[key].invalidateSize();
+    if(LMAPS[key]._grp) LMAPS[key].fitBounds(LMAPS[key]._grp,{padding:[30,30]});
+    return;
+  }
+  if(!el.offsetWidth) return;                 /* 아직 화면에 없음 — 나중에 다시 */
+  if(typeof L === 'undefined'){
+    lmMsg(key,'지도 라이브러리를 불러오지 못했습니다.<br>네트워크가 막혀 있을 수 있어요.<br><br>위의 <b>개념도</b> 버튼을 누르면 점 위치는 그대로 볼 수 있고, 점을 누르면 구글맵이 열립니다.');
+    return;
+  }
+  el.innerHTML='';
+  var pts=MAPDATA[key]||[], touch=('ontouchstart' in window);
+  var map=L.map(el,{scrollWheelZoom:false, dragging:!touch});
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {maxZoom:19, attribution:'&copy; OpenStreetMap'}).addTo(map);
+  var grp=[];
+  pts.forEach(function(p){
+    var nm=p[0], jp=p[1], la=p[2], ln=p[3], kind=p[4];
+    var color = kind==='hotel' ? '#C2410C' : (kind==='spot' ? '#8A5326' : '#1D3F8F');
+    L.circleMarker([la,ln],{radius:(kind==='hotel'?9:7),color:'#fff',weight:2,
+      fillColor:color,fillOpacity:1}).addTo(map)
+     .bindPopup('<div class="lpop"><b>'+nm+'</b>'+jp+
+       '<br><a href="https://maps.google.com/?q='+encodeURIComponent(jp)+
+       '" target="_blank" rel="noopener">구글맵에서 열기 →</a></div>');
+    grp.push([la,ln]);
+  });
+  map._grp=grp;
+  if(grp.length) map.fitBounds(grp,{padding:[30,30]});
+
+  if(touch){
+    var gate=document.createElement('div');
+    gate.className='lgate';
+    gate.innerHTML='<span>지도를 한 번 탭하면 움직입니다</span>';
+    gate.addEventListener('click',function(){ map.dragging.enable(); gate.classList.add('off'); });
+    el.appendChild(gate);
+    map.on('movestart',function(){ gate.classList.add('off'); });
+  }
+  var zl=document.createElement('a');
+  zl.className='lzoom'; zl.target='_blank'; zl.rel='noopener';
+  zl.href='https://maps.google.com/?q='+encodeURIComponent(key==='nara'?'奈良公園':'難波 大阪');
+  zl.textContent='구글맵 앱으로 →';
+  el.appendChild(zl);
+
+  LMAPS[key]=map;
+  setTimeout(function(){
+    map.invalidateSize();
+    if(grp.length) map.fitBounds(grp,{padding:[30,30]});
+  },80);
+}
+
+function refreshMaps(){ ['namba','nara'].forEach(initLMap); }
+
+document.querySelectorAll('#page-food .mapswap button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var key=b.dataset.k, mode=b.dataset.m;
+    b.parentNode.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x===b); });
+    var sch=b.parentNode.parentNode.querySelector('.pmap');
+    var lm=lmEl(key);
+    if(mode==='l'){ sch.style.display='none'; lm.classList.add('on'); initLMap(key); }
+    else { sch.style.display=''; lm.classList.remove('on'); }
+  });
+});
+
+/* 시작 시 실제 지도를 켜둔다 (초기화는 화면에 보일 때) */
+['namba','nara'].forEach(function(k){
+  var sch=document.querySelector('.pmap.'+k), lm=lmEl(k);
+  if(sch&&lm){ sch.style.display='none'; lm.classList.add('on'); }
+  lmMsg(k,'지도를 불러오는 중…');
+});
+window.addEventListener('load', refreshMaps);
+window.addEventListener('resize', function(){
+  for(var k in LMAPS){ if(LMAPS[k]) LMAPS[k].invalidateSize(); }
+});
+
 
 /* 최상위 페이지 전환 */
 document.querySelectorAll('.pbtn').forEach(b=>b.addEventListener('click',()=>{
@@ -1814,7 +1792,7 @@ document.querySelectorAll('.pbtn').forEach(b=>b.addEventListener('click',()=>{
     },80);
   }
 }));
-bootMaps();
+refreshMaps();
 
 /* 탭 전환 */
 const tabs=[...document.querySelectorAll('.tab')];

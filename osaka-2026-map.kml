@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<name>오사카 가족여행 2026.9.23-26</name>
+<description>미마루 오사카 난바 스테이션 기준 맛집·일정 지도</description>
+<Style id="s_13420"><IconStyle><color>FF0A64C2</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_65656"><IconStyle><color>FF8F3F1D</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_28006"><IconStyle><color>FF3030C0</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_25275"><IconStyle><color>FF1B7ACC</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_7029"><IconStyle><color>FF2AA5E8</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_13985"><IconStyle><color>FF6B9E1F</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_39739"><IconStyle><color>FFB0429C</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_25169"><IconStyle><color>FF26538A</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Style id="s_54137"><IconStyle><color>FF707070</color><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Folder><name>숙소·거점</name>
+<Placemark><name>미마루 오사카 난바 스테이션</name><description>MIMARU大阪 難波STATION / 숙소</description><styleUrl>#s_13420</styleUrl><Point><coordinates>135.5054360,34.6630107,0</coordinates></Point></Placemark>
+<Placemark><name>난바 다카시마야</name><description>高島屋大阪店 / 돈카츠 KYK·키야스 당고·데파치카</description><styleUrl>#s_13420</styleUrl><Point><coordinates>135.5012633,34.6646089,0</coordinates></Point></Placemark>
+<Placemark><name>쿠로몬 시장</name><description>黒門市場 / 호텔 도보 3분, 17시 마감</description><styleUrl>#s_13420</styleUrl><Point><coordinates>135.5062417,34.6653511,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>우동·소바</name>
+<Placemark><name>도톤보리 이마이</name><description>道頓堀今井 本店 / 키츠네우동 ¥930, 수요일 휴무</description><styleUrl>#s_65656</styleUrl><Point><coordinates>135.5027144,34.6686331,0</coordinates></Point></Placemark>
+<Placemark><name>카마타케 우동</name><description>釜たけうどん / 호텔 도보 3분</description><styleUrl>#s_65656</styleUrl><Point><coordinates>135.5041105,34.6642375,0</coordinates></Point></Placemark>
+<Placemark><name>우사미테이 마츠바야</name><description>うさみ亭マツバヤ / 1893년, 키츠네우동 발상지, 일요일 휴무</description><styleUrl>#s_65656</styleUrl><Point><coordinates>135.5023700,34.6779500,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>라멘</name>
+<Placemark><name>무겐 라멘</name><description>無限ラーメン 千日前 / 난바 최고 평점, 2층 있음</description><styleUrl>#s_28006</styleUrl><Point><coordinates>135.5031211,34.6678221,0</coordinates></Point></Placemark>
+<Placemark><name>킨류 라멘</name><description>金龍ラーメン 道頓堀 / 24시간, 다다미 좌식</description><styleUrl>#s_28006</styleUrl><Point><coordinates>135.5030523,34.6686694,0</coordinates></Point></Placemark>
+<Placemark><name>next shikaku</name><description>next shikaku / 굴 육수, 14석뿐</description><styleUrl>#s_28006</styleUrl><Point><coordinates>135.5034963,34.6642464,0</coordinates></Point></Placemark>
+<Placemark><name>라멘 멘히카</name><description>麺匪火 / 수·목 휴무, 현금만</description><styleUrl>#s_28006</styleUrl><Point><coordinates>135.5002763,34.6639418,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>돈가스·카레</name><Placemark><name>규카츠 모토무라 난바 별관</name><description>牛カツもと村 難波別館 / 돌판에 직접 구움, 기본 레어. 11:00-22:00</description><styleUrl>#s_25275</styleUrl><Point><coordinates>135.5010671,34.6665830,0</coordinates></Point></Placemark><Placemark><name>교토 카츠규 난바워크점</name><description>京都勝牛 なんばウォーク / 지하상가, 10:30 오픈, 아이 동반 최적</description><styleUrl>#s_25275</styleUrl><Point><coordinates>135.4983566,34.6673162,0</coordinates></Point></Placemark><Placemark><name>교토 카츠규 도톤보리점</name><description>京都勝牛 道頓堀 くいだおれビル2F / 2층이라 조용</description><styleUrl>#s_25275</styleUrl><Point><coordinates>135.5024600,34.6684287,0</coordinates></Point></Placemark>
+<Placemark><name>돈카츠 KYK</name><description>デリカKYK 大阪高島屋 B1 / 밥·양배추 리필 무료</description><styleUrl>#s_25275</styleUrl><Point><coordinates>135.5011374,34.6646095,0</coordinates></Point></Placemark>
+<Placemark><name>지유켄 난바 본점</name><description>自由軒 難波本店 / 1910년, 명물카레, 월요일 휴무</description><styleUrl>#s_25275</styleUrl><Point><coordinates>135.5024011,34.6663311,0</coordinates></Point></Placemark>
+<Placemark><name>인디안 카레 난바점</name><description>インデアンカレー / 매움! 아이 비추천, 수요일 휴무</description><styleUrl>#s_25275</styleUrl><Point><coordinates>135.5017397,34.6678375,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>타코야키·오코노미야키</name>
+<Placemark><name>타코야키 와나카</name><description>たこ焼道楽わなか 千日前本店 / 뒤편 좌석 있음</description><styleUrl>#s_7029</styleUrl><Point><coordinates>135.5033629,34.6652167,0</coordinates></Point></Placemark>
+<Placemark><name>혼케 오오타코</name><description>本家大たこ 道頓堀 / 문어 큼직, 23시까지</description><styleUrl>#s_7029</styleUrl><Point><coordinates>135.5033155,34.6686734,0</coordinates></Point></Placemark>
+<Placemark><name>후쿠타로 본점</name><description>福太郎本店 / 네기야키, 평일 17시부터</description><styleUrl>#s_7029</styleUrl><Point><coordinates>135.5045380,34.6655916,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>커피·빵·디저트</name>
+<Placemark><name>마루후쿠 커피 센니치마에 본점</name><description>丸福珈琲店 / 1934년, 08:00 오픈, 계란샌드·핫케이크</description><styleUrl>#s_13985</styleUrl><Point><coordinates>135.5041980,34.6676238,0</coordinates></Point></Placemark>
+<Placemark><name>사키모토 베이커리</name><description>SAKImoto bakery / 식빵, 호텔 도보 3분</description><styleUrl>#s_13985</styleUrl><Point><coordinates>135.5035586,34.6627599,0</coordinates></Point></Placemark>
+<Placemark><name>CASCADE 난바 마루이</name><description>CASCADE / 08:00-21:00 대형 베이커리</description><styleUrl>#s_13985</styleUrl><Point><coordinates>135.5007245,34.6654586,0</coordinates></Point></Placemark>
+<Placemark><name>파네파네</name><description>pane pane / 멜론빵, 수요일 휴무, 현금만</description><styleUrl>#s_13985</styleUrl><Point><coordinates>135.5059280,34.6652826,0</coordinates></Point></Placemark>
+<Placemark><name>키야스 소혼포</name><description>喜八洲総本舗 高島屋B1 / 미타라시 당고, 굽기 선택</description><styleUrl>#s_13985</styleUrl><Point><coordinates>135.5016576,34.6643886,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>쇼핑</name>
+<Placemark><name>Sanrio 신사이바시점</name><description>Sanrio 心斎橋店 / 2026.7.31 오픈, 11:30-20:00</description><styleUrl>#s_39739</styleUrl><Point><coordinates>135.5012365,34.6702034,0</coordinates></Point></Placemark>
+<Placemark><name>디즈니스토어 신사이바시 파르코</name><description>ディズニーストア 心斎橋パルコ店 5F / 2026.8.26 오픈</description><styleUrl>#s_39739</styleUrl><Point><coordinates>135.5007778,34.6738745,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>나라</name>
+<Placemark><name>긴테츠나라역</name><description>近鉄奈良駅</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8290000,34.6850000,0</coordinates></Point></Placemark>
+<Placemark><name>도다이지 대불전</name><description>東大寺 大仏殿 / 기둥 구멍 통과</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8398800,34.6890600,0</coordinates></Point></Placemark>
+<Placemark><name>우키미도 · 사기이케</name><description>浮見堂 / 한적한 사슴 스팟</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8330000,34.6810000,0</coordinates></Point></Placemark>
+<Placemark><name>나카타니도</name><description>中谷堂 / 떡치기 공연, 쑥떡 ¥200</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8289000,34.6819400,0</coordinates></Point></Placemark>
+<Placemark><name>소바도코로 키타하라</name><description>蕎麦処北原 / 하루 40~50인분, 11시 개점 필수</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8366800,34.6867900,0</coordinates></Point></Placemark>
+<Placemark><name>미즈야차야</name><description>水谷茶屋 / 초가지붕 찻집, 아이 동반 최적</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8468000,34.6834700,0</coordinates></Point></Placemark>
+<Placemark><name>가마메시 시즈카 공원점</name><description>釜めし志津香 公園店 / 대기 김</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8369400,34.6843500,0</coordinates></Point></Placemark>
+<Placemark><name>소바처 남고</name><description>そば処南郷 / 8석뿐</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8355800,34.6774700,0</coordinates></Point></Placemark>
+<Placemark><name>소바도코로 하야시</name><description>蕎麦処はやし / 나라마치, 수요일 휴무</description><styleUrl>#s_25169</styleUrl><Point><coordinates>135.8260600,34.6760000,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>간사이공항</name>
+<Placemark><name>키네야 무기마루</name><description>杵屋麦丸 T1 2F / 우동, 07:00-22:00</description><styleUrl>#s_54137</styleUrl><Point><coordinates>135.2443300,34.4345600,0</coordinates></Point></Placemark>
+<Placemark><name>멘쇼 라멘</name><description>MENSHO RAMEN / 06:30-24:15</description><styleUrl>#s_54137</styleUrl><Point><coordinates>135.2457700,34.4346800,0</coordinates></Point></Placemark>
+</Folder>
+</Document></kml>
