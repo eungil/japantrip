@@ -20,7 +20,7 @@
 - **주석 문자열을 앵커로 삼아 코드를 치환하지 말 것.** 같은 주석이 CSS와 JS 양쪽에 있어 사고가 났음. 삽입 후 `</style>` 위치 < `var MAPDATA` 위치인지 검증
 - Leaflet CDN 태그에 `integrity`(SRI) 넣지 말 것 — 해시 어긋나면 조용히 차단됨
 - 숨겨진(`display:none`) 컨테이너에서 `L.map()` 초기화 금지 → 크기 0. 전환·load·resize에서 `invalidateSize()` 재호출
-- SVG로 개념도 되돌리지 말 것. HTML/CSS 개념도 유지
+- SVG 지도로 되돌리지 말 것 (숨겨진 부모 안에서 높이 0 계산됨). 개념도(`.pmap`)는 2026-09-10 제거됨 — 되살리지 말 것
 - `.pageswitch` 높이(52px) 바꾸면 `.tabs`·`.filters`의 `top:52px`도 같이 바꿀 것
 
 ## 변경 플로우

@@ -260,38 +260,7 @@ footer{
 
 /* 지도 */
 #page-food .mapbox{background:var(--fm-card);border-radius:14px;padding:14px 12px 10px;margin:18px 0 0}
-#page-food .mapbox h2{font-size:16px;margin:0 0 2px;font-weight:800}
-#page-food .mapbox p{font-size:12px;color:var(--fm-ink2);margin:0 0 8px}
-/* HTML 지도 (SVG 미사용) */
-#page-food .pmap{position:relative;width:100%;height:0;
-  background:#F1EFE9;border-radius:10px;overflow:hidden}
-#page-food .pmap.namba{padding-bottom:122%}
-#page-food .pmap.nara{padding-bottom:79%}
-#page-food .guide{position:absolute;left:4%;right:4%;height:0;
-  border-top:1px dashed #CDC6B8}
-#page-food .guide span{position:absolute;left:0;top:-15px;
-  font-size:9.5px;color:#95907F;font-weight:600}
-#page-food .pin{position:absolute;width:0;height:0;
-  text-decoration:none;color:inherit;-webkit-tap-highlight-color:transparent}
-#page-food .pin:active i{transform:scale(1.35)}
-#page-food .pin b{transition:background .15s}
-#page-food .pin:hover b{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.18)}
-#page-food .pin i{position:absolute;left:-5px;top:-5px;transition:transform .12s;
-  width:10px;height:10px;border-radius:50%;background:var(--fm-pin);
-  box-shadow:0 0 0 2px #F1EFE9}
-#page-food .pin b{position:absolute;left:50%;top:9px;transform:translateX(-50%);
-  white-space:nowrap;font-size:10px;font-weight:700;color:var(--fm-ink);
-  background:rgba(255,255,255,.88);padding:1px 4px;border-radius:4px}
-#page-food .pin.lb-r b{left:11px;top:-8px;transform:none}
-#page-food .pin.lb-l b{left:auto;right:11px;top:-8px;transform:none}
-#page-food .pin.hot i{background:var(--fm-hot)}
-#page-food .pin.hot b{color:var(--fm-hot)}
-#page-food .pin.mark i{background:#8A5326}
-#page-food .pin.big i{left:-8px;top:-8px;width:16px;height:16px;
-  box-shadow:0 0 0 3px #F1EFE9}
-#page-food .pin.big b{font-size:10.5px;top:12px}
-#page-food .pin.big.lb-r b{left:14px;top:-8px}
-#page-food .pin.big.lb-l b{right:14px;top:-8px}
+#page-food .mapbox h2{font-size:16px;margin:0 0 8px;font-weight:800}
 
 #page-food .maplink{display:block;margin:10px 0 2px;text-align:center;
   background:var(--fm-pin);color:#fff;text-decoration:none;
@@ -299,11 +268,6 @@ footer{
 #page-food .maplink.alt{background:#fff;color:var(--fm-pin);
   border:1px solid #C3D0EA;margin-top:7px}
 
-#page-food .mapswap{display:flex;gap:6px;margin:0 0 10px}
-#page-food .mapswap button{flex:1;font-family:inherit;cursor:pointer;
-  font-size:12.5px;font-weight:800;padding:8px 0;border-radius:8px;
-  border:1px solid var(--fm-line);background:#fff;color:var(--fm-ink2)}
-#page-food .mapswap button.on{background:var(--fm-ink);color:#fff;border-color:var(--fm-ink)}
 #page-food .lmap{display:none;position:relative;width:100%;
   height:min(68vh,460px);min-height:300px;border-radius:10px;
   overflow:hidden;background:#E8E6E0}
@@ -328,7 +292,7 @@ footer{
 #page-food .lpop{font-family:inherit;font-size:13px}
 #page-food .lpop b{display:block;margin-bottom:3px}
 #page-food .lpop a{color:var(--fm-pin);font-weight:700;text-decoration:none}
-/* 실제 지도 위 상시 이름표 — 개념도처럼 텍스트를 보이게 */
+/* 실제 지도 위 상시 이름표 — 마커 옆에 장소명을 바로 보이게 */
 #page-food .lmap .leaflet-tooltip.lname{background:rgba(255,255,255,.9);border:0;
   box-shadow:0 1px 4px rgba(0,0,0,.18);padding:1px 4px;border-radius:4px;
   font:700 9.5px/1.35 inherit;color:var(--fm-ink);white-space:nowrap;pointer-events:none}
@@ -1259,7 +1223,7 @@ if (typeof L === 'undefined') {
     <li>아래 지도가 <b>실제 지도</b>로 바로 뜹니다. 점 34개가 다 올라가 있어요</li>
     <li>지도를 <b>한 번 탭하면</b> 손가락으로 움직일 수 있습니다. 탭 전에는 잠겨 있어서 페이지 스크롤이 걸리지 않아요</li>
     <li>점을 누르면 가게 이름이 뜨고 <b>구글맵 앱으로 바로 넘어갑니다</b></li>
-    <li>지하철이 끊기는 곳에서는 <b>개념도</b>로 바꾸세요. 인터넷 없이도 보입니다</li>
+    <li>인터넷이 끊기면(지하철 데드존 등) 지도가 안 뜹니다. 구글맵 앱에서 <b>난바·나라 지역을 미리 오프라인 저장</b>해두면 안전합니다</li>
   </ul>
 </div>
 
@@ -1302,32 +1266,6 @@ if (typeof L === 'undefined') {
 <!-- ─────────── 난바 지도 ─────────── -->
 <div class="mapbox">
   <h2>난바 일대</h2>
-  <p>실제 지도가 아니라 <b>위치 관계를 보여주는 개념도</b>입니다. 주황색이 호텔, 위쪽이 북(도톤보리 방향)이에요. <b>점을 누르면 구글맵이 열립니다.</b></p>
-    <div class="mapswap"><button data-m="s" data-k="namba">개념도</button><button class="on" data-m="l" data-k="namba">실제 지도</button></div>
-  <div class="pmap namba">
-    <div class="guide" style="top:13.6%"><span>도톤보리강</span></div>
-    <div class="guide" style="top:68.2%"><span>난바역 · 다카시마야</span></div>
-
-    <a class="pin lb-l" style="left:45.0%;top:9.5%" href="https://maps.google.com/?q=%E9%81%93%E9%A0%93%E5%A0%80%E4%BB%8A%E4%BA%95%20%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener"><i></i><b>이마이 (우동)</b></a>
-    <a class="pin lb-r" style="left:51.4%;top:11.4%" href="https://maps.google.com/?q=%E9%87%91%E9%BE%8D%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E9%81%93%E9%A0%93%E5%A0%80" target="_blank" rel="noopener"><i></i><b>킨류 · 오오타코</b></a>
-    <a class="pin lb-l" style="left:31.1%;top:20.7%" href="https://maps.google.com/?q=%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A2%E3%83%B3%E3%82%AB%E3%83%AC%E3%83%BC%20%E9%9B%A3%E6%B3%A2%E5%BA%97" target="_blank" rel="noopener"><i></i><b>인디안카레</b></a>
-    <a class="pin lb-r" style="left:50.6%;top:20.9%" href="https://maps.google.com/?q=%E7%84%A1%E9%99%90%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E5%8D%83%E6%97%A5%E5%89%8D" target="_blank" rel="noopener"><i></i><b>무겐라멘</b></a>
-    <a class="pin hot lb-r" style="left:65.8%;top:23.4%" href="https://maps.google.com/?q=%E4%B8%B8%E7%A6%8F%E7%8F%88%E7%90%B2%E5%BA%97%20%E5%8D%83%E6%97%A5%E5%89%8D%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener"><i></i><b>마루후쿠 커피</b></a>
-    <a class="pin lb-l" style="left:34.8%;top:37.5%" href="https://maps.google.com/?q=%E7%89%9B%E3%82%AB%E3%83%84%E3%82%82%E3%81%A8%E6%9D%91%20%E9%9B%A3%E6%B3%A2%E5%88%A5%E9%A4%A8" target="_blank" rel="noopener"><i></i><b>모토무라(규카츠)</b></a>
-    <a class="pin lb-r" style="left:40.6%;top:42.3%" href="https://maps.google.com/?q=%E8%87%AA%E7%94%B1%E8%BB%92%20%E9%9B%A3%E6%B3%A2%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener"><i></i><b>지유켄</b></a>
-    <a class="pin lb-r" style="left:16.9%;top:53.4%" href="https://maps.google.com/?q=CASCADE%20%E3%81%AA%E3%82%93%E3%81%B0%E3%83%9E%E3%83%AB%E3%82%A4" target="_blank" rel="noopener"><i></i><b>CASCADE</b></a>
-    <a class="pin lb-l" style="left:81.9%;top:51.6%" href="https://maps.google.com/?q=%E7%A6%8F%E5%A4%AA%E9%83%8E%E6%9C%AC%E5%BA%97%20%E5%8D%83%E6%97%A5%E5%89%8D" target="_blank" rel="noopener"><i></i><b>후쿠타로</b></a>
-    <a class="pin lb-l" style="left:89.7%;top:55.9%" href="https://maps.google.com/?q=pane%20pane%20%E6%97%A5%E6%9C%AC%E6%A9%8B%20%E5%A4%A7%E9%98%AA" target="_blank" rel="noopener"><i></i><b>파네파네</b></a>
-    <a class="pin lb-r" style="left:53.9%;top:56.8%" href="https://maps.google.com/?q=%E3%81%9F%E3%81%93%E7%84%BC%E9%81%93%E6%A5%BD%E3%82%8F%E3%81%AA%E3%81%8B%20%E5%8D%83%E6%97%A5%E5%89%8D%E6%9C%AC%E5%BA%97" target="_blank" rel="noopener"><i></i><b>와나카</b></a>
-    <a class="pin lb-l" style="left:22.8%;top:66.1%" href="https://maps.google.com/?q=%E3%83%87%E3%83%AA%E3%82%ABKYK%20%E5%A4%A7%E9%98%AA%E9%AB%98%E5%B3%B6%E5%B1%8B" target="_blank" rel="noopener"><i></i><b>KYK</b></a>
-    <a class="pin" style="left:18.9%;top:68.4%" href="https://maps.google.com/?q=%E5%96%9C%E5%85%AB%E6%B4%B2%E7%B7%8F%E6%9C%AC%E8%88%97%20%E9%AB%98%E5%B3%B6%E5%B1%8B%E5%A4%A7%E9%98%AA%E5%BA%97" target="_blank" rel="noopener"><i></i><b>키야스(당고)</b></a>
-    <a class="pin lb-l" style="left:55.8%;top:70.7%" href="https://maps.google.com/?q=next%20shikaku%20%E9%9B%A3%E6%B3%A2%E5%8D%83%E6%97%A5%E5%89%8D" target="_blank" rel="noopener"><i></i><b>시카쿠</b></a>
-    <a class="pin lb-r" style="left:64.7%;top:70.7%" href="https://maps.google.com/?q=%E9%87%9C%E3%81%9F%E3%81%91%E3%81%86%E3%81%A9%E3%82%93%20%E9%9B%A3%E6%B3%A2%E5%8D%83%E6%97%A5%E5%89%8D" target="_blank" rel="noopener"><i></i><b>카마타케</b></a>
-    <a class="pin lb-r" style="left:10.8%;top:75.2%" href="https://maps.google.com/?q=%E9%BA%BA%E5%8C%AA%E7%81%AB%20%E9%9B%A3%E6%B3%A2%E4%B8%AD" target="_blank" rel="noopener"><i></i><b>멘히카</b></a>
-    <a class="pin lb-r" style="left:56.7%;top:91.1%" href="https://maps.google.com/?q=SAKImoto%20bakery%20%E9%9B%A3%E6%B3%A2%E4%B8%AD" target="_blank" rel="noopener"><i></i><b>사키모토(빵)</b></a>
-
-    <a class="pin hot big lb-l" style="left:83.1%;top:87.5%" href="https://maps.google.com/?q=MIMARU%E5%A4%A7%E9%98%AA%20%E9%9B%A3%E6%B3%A2STATION" target="_blank" rel="noopener"><i></i><b>미마루 호텔</b></a>
-  </div>
   <div class="lmap" id="lmap-namba"></div>
   <a class="maplink" target="_blank" rel="noopener" href="https://maps.google.com/?q=%E9%9B%A3%E6%B3%A2%20%E3%82%B0%E3%83%AB%E3%83%A1%20%E5%A4%A7%E9%98%AA">구글맵에서 난바 일대 열기 →</a>
 <a class="maplink alt" target="_blank" rel="noopener" href="https://maps.google.com/?q=MIMARU%E5%A4%A7%E9%98%AA%20%E9%9B%A3%E6%B3%A2STATION">호텔 위치만 보기 →</a>
@@ -1536,19 +1474,6 @@ if (typeof L === 'undefined') {
 <!-- ─────────── 나라 지도 ─────────── -->
 <div class="mapbox" data-area="나라">
   <h2>나라</h2>
-  <p>개념도입니다. 주황색이 긴테츠나라역, 오른쪽이 나라공원 방향이에요. <b>점을 누르면 구글맵이 열립니다.</b></p>
-    <div class="mapswap"><button data-m="s" data-k="nara">개념도</button><button class="on" data-m="l" data-k="nara">실제 지도</button></div>
-  <div class="pmap nara">
-    <a class="pin mark lb-r" style="left:61.1%;top:10.0%" href="https://maps.google.com/?q=%E6%9D%B1%E5%A4%A7%E5%AF%BA%20%E5%A4%A7%E4%BB%8F%E6%AE%BF" target="_blank" rel="noopener"><i></i><b>도다이지</b></a>
-    <a class="pin lb-r" style="left:48.7%;top:23.3%" href="https://maps.google.com/?q=%E8%95%8E%E9%BA%A6%E5%87%A6%E5%8C%97%E5%8E%9F%20%E5%A5%88%E8%89%AF" target="_blank" rel="noopener"><i></i><b>소바 키타하라</b></a>
-    <a class="pin lb-l" style="left:49.7%;top:30.3%" href="https://maps.google.com/?q=%E9%87%9C%E3%82%81%E3%81%97%E5%BF%97%E6%B4%A5%E9%A6%99%20%E5%85%AC%E5%9C%92%E5%BA%97" target="_blank" rel="noopener"><i></i><b>시즈카(가마메시)</b></a>
-    <a class="pin lb-l" style="left:87.6%;top:35.7%" href="https://maps.google.com/?q=%E6%B0%B4%E8%B0%B7%E8%8C%B6%E5%B1%8B%20%E5%A5%88%E8%89%AF" target="_blank" rel="noopener"><i></i><b>미즈야차야</b></a>
-    <a class="pin hot big lb-r" style="left:19.2%;top:34.0%" href="https://maps.google.com/?q=%E8%BF%91%E9%89%84%E5%A5%88%E8%89%AF%E9%A7%85" target="_blank" rel="noopener"><i></i><b>긴테츠나라역</b></a>
-    <a class="pin lb-r" style="left:18.7%;top:52.3%" href="https://maps.google.com/?q=%E4%B8%AD%E8%B0%B7%E5%A0%82%20%E5%A5%88%E8%89%AF" target="_blank" rel="noopener"><i></i><b>나카타니도</b></a>
-    <a class="pin mark lb-r" style="left:34.5%;top:57.7%" href="https://maps.google.com/?q=%E6%B5%AE%E8%A6%8B%E5%A0%82%20%E5%A5%88%E8%89%AF" target="_blank" rel="noopener"><i></i><b>우키미도</b></a>
-    <a class="pin lb-r" style="left:44.5%;top:78.7%" href="https://maps.google.com/?q=%E3%81%9D%E3%81%B0%E5%87%A6%E5%8D%97%E9%83%B7%20%E5%A5%88%E8%89%AF%20%E9%AB%98%E7%95%91%E7%94%BA" target="_blank" rel="noopener"><i></i><b>소바처 남고</b></a>
-    <a class="pin lb-r" style="left:7.9%;top:87.3%" href="https://maps.google.com/?q=%E8%95%8E%E9%BA%A6%E5%87%A6%E3%81%AF%E3%82%84%E3%81%97%20%E5%A5%88%E8%89%AF" target="_blank" rel="noopener"><i></i><b>소바 하야시</b></a>
-  </div>
   <div class="lmap" id="lmap-nara"></div>
   <a class="maplink" target="_blank" rel="noopener" href="https://maps.google.com/?q=%E5%A5%88%E8%89%AF%E5%85%AC%E5%9C%92">구글맵에서 나라공원 열기 →</a>
 </div>
@@ -1714,7 +1639,7 @@ function initLMap(key){
   }
   if(!el.offsetWidth) return;                 /* 아직 화면에 없음 — 나중에 다시 */
   if(typeof L === 'undefined'){
-    lmMsg(key,'지도 라이브러리를 불러오지 못했습니다.<br>네트워크가 막혀 있을 수 있어요.<br><br>위의 <b>개념도</b> 버튼을 누르면 점 위치는 그대로 볼 수 있고, 점을 누르면 구글맵이 열립니다.');
+    lmMsg(key,'지도를 불러오지 못했습니다.<br>인터넷이 끊겨 있을 수 있어요.<br><br>아래 <b>구글맵에서 열기</b> 버튼으로 확인하세요. 구글맵 앱에 이 지역을 오프라인 저장해두면 데이터 없이도 됩니다.');
     return;
   }
   el.innerHTML='';
@@ -1765,21 +1690,10 @@ function initLMap(key){
 
 function refreshMaps(){ ['namba','nara'].forEach(initLMap); }
 
-document.querySelectorAll('#page-food .mapswap button').forEach(function(b){
-  b.addEventListener('click',function(){
-    var key=b.dataset.k, mode=b.dataset.m;
-    b.parentNode.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', x===b); });
-    var sch=b.parentNode.parentNode.querySelector('.pmap');
-    var lm=lmEl(key);
-    if(mode==='l'){ sch.style.display='none'; lm.classList.add('on'); initLMap(key); }
-    else { sch.style.display=''; lm.classList.remove('on'); }
-  });
-});
-
-/* 시작 시 실제 지도를 켜둔다 (초기화는 화면에 보일 때) */
+/* 지도 컨테이너를 켜둔다 (초기화는 화면에 보일 때) */
 ['namba','nara'].forEach(function(k){
-  var sch=document.querySelector('.pmap.'+k), lm=lmEl(k);
-  if(sch&&lm){ sch.style.display='none'; lm.classList.add('on'); }
+  var lm=lmEl(k);
+  if(lm) lm.classList.add('on');
   lmMsg(k,'지도를 불러오는 중…');
 });
 window.addEventListener('load', refreshMaps);
