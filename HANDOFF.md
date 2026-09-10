@@ -65,19 +65,32 @@
   .pageswitch          ← 최상위 전환 (일정 / 맛집 지도), sticky top:0, height:52px
   #page-itinerary.page.on
     .wrap
-      .masthead        ← D-day 카운트다운, 일본 현지시각, 항공편
-      .tabs            ← 날짜/카테고리 탭 (sticky top:52px)
-      section.panel#p1..p4   ← 9/23~9/26
-      section.panel#pf,#ps,#pt ← 식당/쇼핑/팁
+      #masthead        ← 렌더링됨: D-day, 일본 현지시각, 항공편
+      #tabs            ← 렌더링됨: 날짜 탭(데이터) + 식당/쇼핑/준비(고정)
+      #days            ← 렌더링됨: section.panel#p1..p4 (data/itinerary.json)
+      section.panel#pf,#ps,#pt ← 식당후보/쇼핑/팁·체크 (정적 HTML, 그대로)
   #page-food.page
     .fw
-      .daywarn         ← 지도 사용법 + 요일별 휴무 경고
-      .filters         ← 종류/지역 칩 필터 (sticky top:52px)
-      .mapbox          ← 난바 지도 (실제 지도만)
-      .group           ← 가게 카드 목록
-      .mapbox          ← 나라 지도
-      .group           ← 나라/공항 카드
+      .daywarn         ← 지도 사용법 + 요일별 휴무 경고 (정적)
+      .filters         ← 종류/지역 칩 필터 (정적, sticky top:52px)
+      .mapbox          ← 난바 지도 (실제 지도만, 정적)
+      .group[data-area] ← 빈 셸. 카드는 data/food.json 에서 렌더링
+      .mapbox[data-area=나라] ← 나라 지도 (정적)
+      .group[data-area] ← 나라/공항 셸
 ```
+
+### 데이터 분리 (2026-09-10)
+일정 카드(p1~p4)와 맛집 카드는 **`data/itinerary.json` · `data/food.json`** 에서 렌더링된다.
+- 편집 가이드: **`data/SCHEMA.md`**. 편집 → `node scripts/build.mjs` → 커밋 → 배포
+- `build.mjs` 가 JSON을 `index.html` 안 `<script type="application/json" id="itin-data">` /
+  `id="food-data"` 블록에 **인라인**한다. fetch 안 씀 — 기본 화면이라 지연/실패 시 빈 화면이
+  나고 `file://` 에선 fetch가 막히기 때문. 인라인이면 즉시 + 오프라인 OK
+- 렌더러는 그 두 데이터 스크립트 바로 다음의 `<script>` IIFE. 맛집 필터 IIFE보다 먼저 실행되어야
+  하고(카드를 만들어놔야 함), 실제로 그 앞에 있다
+- `#masthead`/`#tabs`/`#days`/`.group[data-area]` 셸은 정적으로 남겨두고 renderer가 innerHTML만 채움
+- 되돌리려면: 이 커밋 이전 `index.html` 로 복원 (전부 git에 있음)
+- `#pf/#ps/#pt`(식당후보·쇼핑·팁·체크리스트)는 변동이 적어 **정적 HTML로 남겨둠**. 체크리스트
+  배열은 마지막 `<script>` 안에 하드코딩
 
 ### 지도 (2026-09-10: 개념도 제거, 실제 지도 단일)
 **실제 지도 (`.lmap`)** — Leaflet + OpenStreetMap 타일. 인터넷 필요.
@@ -217,12 +230,15 @@ CSS는 `#page-food .lmap .leaflet-tooltip.lname`. 화살표는 `:before{display:
 
 | 파일 | 용도 |
 |---|---|
-| `index.html` | **배포본.** GitHub Pages용. Leaflet을 head에서 로드, 실제 지도 기본 |
-| `osaka-family-2026.html` | Claude 아티팩트용 사본. 외부 리소스 차단 환경이라 개념도 기본 |
+| `index.html` | **배포본.** GitHub Pages용. 데이터는 인라인됨(빌드 결과 포함) |
+| `data/itinerary.json` | 일정 p1~p4 데이터 (편집 대상) |
+| `data/food.json` | 맛집 카드 데이터 (편집 대상) |
+| `data/SCHEMA.md` | 위 두 JSON 편집 가이드 |
+| `scripts/build.mjs` | JSON → index.html 인라인. 데이터 수정 후 실행 |
 | `osaka-2026-map.kml` | Google My Maps 가져오기용. 37개 지점, 분류별 폴더 |
-| `README-배포방법.md` | GitHub Pages 배포 절차 |
+| `README.md` | 저장소 안내 |
 
-앞으로는 `index.html` 하나만 유지하는 게 낫다. 아티팩트 사본은 역할이 끝났다.
+아티팩트 사본(`osaka-family-2026.html`)은 저장소에 없다. 역할이 끝났다.
 
 ---
 
@@ -230,18 +246,14 @@ CSS는 `#page-food .lmap .leaflet-tooltip.lname`. 화살표는 `:before{display:
 
 우선순위 순.
 
-1. **배포본에서 지도가 실제로 뜨는지 확인.** 실패 시 지도 자리에 한글 안내 문구가 뜨도록 되어 있으니 그 문구를 단서로 삼을 것
-2. **단일 HTML을 분리** — 현재 10만 자 가까운 한 파일이라 유지보수가 어렵다.
-   `index.html` + `style.css` + `app.js` + `data.json` 정도로 쪼개면 좋다.
-   데이터(장소·일정)를 JSON으로 빼내면 이후 수정이 훨씬 쉬워진다
-3. **일정 데이터도 구조화** — 현재는 카드가 전부 하드코딩된 HTML이다.
-   `{time, title, jp, body[], tips[], badges[]}` 형태로 빼고 템플릿 렌더링으로 바꾸면
-   시간 조정이 잦은 여행 일정 특성에 맞다
-4. **오프라인 대응** — 여행 중 데이터가 불안정할 수 있다. Service Worker로
-   최소한 일정 페이지는 오프라인에서 열리게 하면 실용적이다
-5. **현재 위치 표시** — Leaflet에 `navigator.geolocation` 연동. "지금 여기서 가까운 가게"가
+1. ~~배포본 지도 렌더 확인~~ — 완료 (2026-09-10)
+2. ~~일정·맛집 데이터 JSON 분리~~ — 완료 (2026-09-10). `data/*.json` + `data/SCHEMA.md`.
+   식당후보/쇼핑/팁(`#pf/ps/pt`)은 정적으로 남김. 필요하면 이것도 같은 방식으로 뺄 수 있음
+3. **오프라인 대응** — Service Worker로 최소한 일정 페이지는 오프라인에서 열리게.
+   데이터가 이미 인라인이라 일정 페이지는 사실상 오프라인에서 뜬다. SW는 재방문 캐싱용
+4. **현재 위치 표시** — Leaflet에 `navigator.geolocation` 연동. "지금 여기서 가까운 가게"가
    여행 중 가장 자주 필요한 기능이다
-6. 일정 시각 변경 시 뒤 일정이 자동으로 밀리는 계산
+5. 일정 시각 변경 시 뒤 일정이 자동으로 밀리는 계산 (지금은 각 stop의 `time` 을 수동 조정)
 
 ---
 

@@ -23,10 +23,16 @@
 - SVG 지도로 되돌리지 말 것 (숨겨진 부모 안에서 높이 0 계산됨). 개념도(`.pmap`)는 2026-09-10 제거됨 — 되살리지 말 것
 - `.pageswitch` 높이(52px) 바꾸면 `.tabs`·`.filters`의 `top:52px`도 같이 바꿀 것
 
+## 데이터 (일정·맛집 카드)
+일정 p1~p4 = `data/itinerary.json`, 맛집 카드 = `data/food.json`. 편집 규칙 `data/SCHEMA.md`.
+`index.html` 안의 카드 HTML은 렌더링 결과 — 직접 고치지 말 것.
+데이터 수정 후 `node scripts/build.mjs` 실행 → JSON을 index.html에 인라인.
+`#pf/#ps/#pt`(식당후보·쇼핑·팁)와 체크리스트는 아직 정적 HTML.
+
 ## 변경 플로우
-1. `index.html` 수정
-2. 로컬에서 브라우저로 열어 눈으로 확인 (일정 페이지 + 맛집 지도 두 페이지 모두)
-3. 커밋·푸시 → 1~2분 뒤 Pages 반영 확인
+1. 데이터면 `data/*.json` 수정 → `node scripts/build.mjs`. 그 외는 `index.html` 직접
+2. 로컬에서 브라우저로 열어 눈으로 확인 (일정 4탭 + 맛집 지도 두 페이지 모두)
+3. 커밋·푸시(`eungil` 계정) → 1~2분 뒤 Pages 반영 확인
 
 ## 서술 톤
 존댓말 담백체. "왜 그렇게 짰는지"를 항상 함께 적는다. 아이 동반 관점의 실질적 경고 우선.

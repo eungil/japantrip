@@ -356,635 +356,13 @@ if (typeof L === 'undefined') {
 <div id="page-itinerary" class="page on">
 <div class="wrap">
 
-<header class="masthead">
-  <h1>오사카 가족여행</h1>
-  <p class="sub">2026년 9월 23일 수요일 – 9월 26일 토요일 · 3박 4일<br>어른 2 · 아이 2 (36개월, 70개월)<br>미마루 오사카 난바 스테이션 · 닛폰바시</p>
-  <div class="meter">
-    <div><div class="k">출발까지</div><div class="v" id="dday">–</div></div>
-    <div><div class="k">일본 현지 시각</div><div class="v" id="jst">–</div></div>
-  </div>
-  <div class="fly">
-    <div class="row"><span class="cd">KE2117</span><span class="rt">9/23 김포 → 간사이</span><span class="tm">09:30 → 11:20</span></div>
-    <div class="row"><span class="cd">KE2120</span><span class="rt">9/26 간사이 → 김포</span><span class="tm">19:35 → 21:25</span></div>
-    <div class="memo">아래 일정은 이 시각 기준입니다. 출발 시각은 항공권 원본으로 한 번 더 확인해주세요.</div>
-  </div>
-</header>
+<header class="masthead" id="masthead"></header>
 
-<nav class="tabs" role="tablist" aria-label="일정 탭">
-  <button class="tab" data-c="1" role="tab" aria-selected="true" data-p="p1"><span class="n">9/23</span><span class="w">수 · 도착</span></button>
-  <button class="tab" data-c="2" role="tab" aria-selected="false" data-p="p2"><span class="n">9/24</span><span class="w">목 · 가이유칸</span></button>
-  <button class="tab" data-c="3" role="tab" aria-selected="false" data-p="p3"><span class="n">9/25</span><span class="w">금 · 나라</span></button>
-  <button class="tab" data-c="4" role="tab" aria-selected="false" data-p="p4"><span class="n">9/26</span><span class="w">토 · 출국</span></button>
-  <button class="tab" data-c="x" role="tab" aria-selected="false" data-p="pf"><span class="n">식당</span><span class="w">디저트</span></button>
-  <button class="tab" data-c="x" role="tab" aria-selected="false" data-p="ps"><span class="n">쇼핑</span><span class="w">기념품</span></button>
-  <button class="tab" data-c="x" role="tab" aria-selected="false" data-p="pt"><span class="n">준비</span><span class="w">팁·체크</span></button>
-</nav>
+<nav class="tabs" id="tabs" role="tablist" aria-label="일정 탭"></nav>
 
-<!-- ══════════ DAY 1 ══════════ -->
-<section class="panel on" id="p1" style="--day:var(--d1)">
-  <div class="dayhead">
-    <h2>도착일 — 짐 풀고, 쉬고, 잘 먹기</h2>
-    <p>난바역에 내리자마자 밥부터 먹고, 체크인하고 한 번 쉽니다. 오후 늦게 산리오만 하나 다녀오고 나머지는 호텔 반경 도보 10분 안에서 해결해요. 디즈니는 9/25 오후, 도톤보리는 9/26 낮으로 옮겼습니다.</p>
-    <div class="flag">9/23은 추분의 날 공휴일이자 <b>실버위크(9/19~9/23) 마지막 날</b>입니다. 도톤보리와 신사이바시는 오후부터 밤까지 인파가 최고조예요. 첫날 그 한복판에 아이 둘을 데리고 들어가면 그날 저녁은 물론 다음 날까지 영향을 줍니다.</div>
-  </div>
+<div id="days"></div>
 
-  <div class="line">
-
-    <div class="stop">
-      <div class="when">11:20</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>간사이공항 도착 <span class="badge b-rsv" style="font-size:10px">KE2117</span></h3>
-        <p>입국심사와 짐 찾기에 40~60분. <b>Visit Japan Web</b>을 4인 모두 출발 전에 등록해두면 심사 줄이 확연히 짧습니다. 아이 여권 정보도 같이 넣어두세요.</p>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">12:35</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>라피트 12:35 출발 <span class="badge b-rsv" style="font-size:10px">QR · 4석</span></h3>
-        <button class="jp" data-jp="南海 関西空港駅">南海 関西空港駅</button>
-        <p>도착층에서 에스컬레이터로 2층, 연결통로를 건너 오른쪽 빨간 <b>NANKAI</b> 간판이 난카이 개찰구입니다. 도보 5분 정도. 예매하신 QR을 개찰기에 대면 그대로 통과돼요.</p>
-        <div class="tip"><b>여유는 75분.</b> 착륙에서 개찰구까지 보통 45~60분이니 넉넉하진 않지만 충분합니다. <b>12:20까지 개찰 통과</b>를 목표로 잡으세요. 화장실은 열차 안에도 있으니 공항에서 시간 쓰지 말고 일단 넘어가는 게 안전합니다.</div>
-        <div class="tip"><b>혹시 놓치면</b> — 같은 승강장에서 난카이 <b>공항급행</b>이 자유석으로 자주 다닙니다. 난바까지 45분. 이 경우 개찰구 역무원에게 QR을 보여주고 처리를 받으세요.</div>
-        <div class="tip"><b>4석 예약해두신 게 잘한 선택입니다.</b> 아이들도 각자 앉으니 38분이 훨씬 편해요. 둥근 창문의 진한 파란 열차라 타기 전부터 좋아합니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop move">
-      <div class="when"></div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="trip">
-        <span class="pill">난카이 라피트</span> 간사이공항 12:35 → 난바 13:13 <span class="dur">38분</span>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">13:20</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>바로 점심 — 난바역 도착 즉시</h3>
-        <p>김포–간사이는 1시간 50분짜리 단거리라 기내식이 스낵 수준입니다. 9시 반에 출발했으면 이 시간에 아이들은 이미 배가 고파요. <b>호텔에 짐 맡기러 가기 전에 먹는 게 맞습니다.</b></p>
-        <p>난카이 난바역 개찰구에서 <b>다카시마야로 바로 연결</b>되니 밖으로 나갈 필요가 없습니다.</p>
-        <ul>
-          <li><b>돈카츠 KYK</b>(지하 1층) — 밥·양배추·국 리필 무료. 통로가 넓어 캐리어를 끌고 들어가도 됩니다</li>
-          <li><b>7층 식당가</b> — 회전이 빠르고 선택지가 많습니다</li>
-          <li><b>카마타케 우동</b> — 호텔 방향으로 도보 3분. 짐을 먼저 맡기고 갈 거면 이쪽</li>
-        </ul>
-        <div class="tip"><b>줄 서는 맛집은 오늘 하지 마세요.</b> 공휴일이라 유명한 곳은 대기가 깁니다. 첫날 웨이팅으로 아이 체력을 쓰면 남은 사흘이 흔들려요.</div>
-        <div class="tip"><b>짐이 부담되면</b> — 난카이 난바역 개찰구 근처 <b>코인로커</b>(큰 사이즈 700엔 안팎, IC카드 결제)에 넣고 먹은 뒤 찾아가세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">14:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>미마루 오사카 난바 스테이션 — 짐 맡기기</h3>
-        <button class="jp" data-jp="MIMARU大阪 難波STATION">MIMARU大阪 難波STATION</button>
-        <p>다카시마야에서 도보 6분(닛폰바시 3초메). 체크인이 15시라 조금 이르면 캐리어만 맡기고 잠시 로비에서 기다리면 됩니다.</p>
-        <div class="tip"><b>프런트에서 미리 물어볼 것</b> — 침대가드·유아 변기커버·아기 욕조·발판, 보드게임 대여, 코인세탁실 위치, 마지막 날 공항 수하물 배송 가능 여부.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">15:00</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>체크인 · 짐 풀고 한 번 쉬기 <span class="badge b-must">오늘의 핵심</span></h3>
-        <p>여기가 오늘 제일 중요한 일정입니다. 새벽부터 움직였고 비행기까지 탔고 밥까지 먹었으니 <b>36개월 아이는 이 시간에 반드시 한 번 눕혀야</b> 저녁이 편해요.</p>
-        <ul>
-          <li>짐 풀고, 아이들 씻기고, 낮잠 또는 최소 한 시간 뒹굴기</li>
-          <li>어른도 이때 캐리어 정리와 다음 날 준비를 끝내두세요</li>
-          <li>미마루는 방에 주방·식탁·세탁기가 있어서 첫날 세팅을 해두면 남은 사흘이 편합니다</li>
-        </ul>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">16:20</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>쿠로몬 시장 — 내일 아침거리 <span class="badge b-must">17시 마감</span></h3>
-        <button class="jp" data-jp="黒門市場">黒門市場</button>
-        <p>호텔에서 <b>도보 3분</b>. 방에 냉장고와 전자레인지가 있으니 여기서 내일 아침을 사둡니다. 걷는 거리가 짧아 쉬고 나온 직후 일정으로 딱 맞아요.</p>
-        <ul>
-          <li>잘라 파는 과일(딸기·멜론·샤인머스캣) — 아이들 아침으로 제일 잘 먹습니다</li>
-          <li>계란말이(다시마키), 유부초밥, 주먹밥</li>
-          <li><b>대부분 17시에 닫습니다.</b> 늦으면 셔터만 봅니다</li>
-        </ul>
-        <div class="tip">걸어 다니며 먹는 걸 금지하는 가게가 많습니다. 산 자리에서 먹거나 포장해 가세요. 가격표 확인은 필수.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">17:10</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>Sanrio 신사이바시점 <span class="badge b-kid">오늘 유일한 외출</span></h3>
-        <button class="jp" data-jp="Sanrio 心斎橋店">Sanrio 心斎橋店</button>
-        <p>쿠로몬에서 도보 12분, 호텔에서는 약 1.1km입니다. 2026년 7월 31일 오픈한 <b>대형 직영점</b>으로 예전 ZARA 자리에 들어왔어요. 하라주쿠 본점급 규모입니다. <b>매일 11:30–20:00.</b></p>
-        <div class="tip"><b>여기서만 파는 것 ①</b> — 캐릭터들이 신사이바시를 산책하는 레트로 디자인의 매장 한정 굿즈. 마스코트 홀더 6종 각 ¥2,794, 인형 4종 각 ¥4,598. <b>1인당 아이템별·캐릭터별 1개까지</b>고, 한 사람이 여러 명 몫을 몰아 계산하는 것도 막습니다. 아이별로 하나씩 고르게 하세요.</div>
-        <div class="tip"><b>여기서만 파는 것 ②</b> — <b>츠메테네 피규어</b>. 캐릭터 유리병에 작은 마스코트를 직접 골라 담습니다. 종류가 20가지라 <b>70개월 아이가 고르는 재미가 큽니다.</b> 큰 병 5종 각 ¥4,950, 작은 병 3종 각 ¥2,200.</div>
-        <div class="tip"><b>45분으로 끊으세요.</b> 오늘은 연휴 마지막 날이라 신사이바시스지 인파가 상당합니다. 상점가에서는 어른 한 명이 한 아이씩 맡고, 다 보면 바로 난바 방향으로 내려오세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">18:05</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>리쿠로 오지상 치즈케이크</h3>
-        <button class="jp" data-jp="りくろーおじさんの店 なんば本店">りくろーおじさんの店 なんば本店</button>
-        <p>난바 본점, 다카시마야 바로 옆입니다. 갓 구운 걸 꺼낼 때 종을 울리고 케이크가 출렁거리는데 아이들이 그 장면을 좋아해요. 통째로 하나 사서 호텔에서 잘라 먹으면 됩니다.</p>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">18:25</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>다카시마야 지하 — 저녁 포장 + 당고 + 빵 <span class="badge b-must">먹킷 2·3/9</span></h3>
-        <button class="jp" data-jp="高島屋大阪店 デパ地下">高島屋大阪店 デパ地下</button>
-        <p>도시락·튀김·초밥·반찬이 한자리에 있습니다. <b>20시 폐점이라 19시부터 할인 스티커</b>가 붙어요. 18시 반이면 슬슬 붙기 시작하는 시간이라 타이밍이 괜찮습니다.</p>
-        <ul>
-          <li><b>당고</b> — 같은 지하의 <b>키야스 소혼포</b>(喜八洲総本舗). 오사카 명물 미타라시 당고를 주문하면 그 자리에서 구워줍니다. <b>굽기 정도를 고를 수 있는데</b> 살짝 태운 쪽이 훨씬 고소해요. 앉을 데는 없으니 포장해서 방에서 드세요</li>
-          <li><b>빵</b> — 같은 층 베이커리에서 내일 아침 몫을 사둡니다. 미마루 방에 전기포트가 있어서 빵·우유·과일이면 아침이 해결돼요</li>
-          <li><b>551 호라이</b>도 이 지하에 있습니다. 부타망 몇 개 사서 방에서 데우면 아이들이 잘 먹어요</li>
-        </ul>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">19:15</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>호텔에서 저녁 · 보드게임</h3>
-        <p>식탁에 펼쳐놓고 방에서 먹습니다. 공휴일 저녁 식당에서 아이 둘 데리고 버티는 것보다 훨씬 편해요. 로비에서 보드게임을 빌려주니 하나 가져와서 마무리하면 첫날이 딱 좋게 끝납니다.</p>
-        <div class="tip"><b>부족한 게 있으면</b> — 길 건너 로손, 또는 돈키호테 도톤보리점(24시간)에 어른 한 명만 다녀오세요. 다만 면세 쇼핑은 9/26에 몰아서 하는 걸로 잡아뒀습니다.</div>
-      </div></div>
-    </div>
-
-  </div>
-
-  <div class="altbox">
-    <div class="lead">여유가 남으면</div>
-    <h3>그래도 첫날 뭔가 더 하고 싶다면</h3>
-    <p>아이들 컨디션이 예상보다 좋으면 이 정도만 얹으세요. 전부 호텔 도보 10분 안입니다.</p>
-    <ul>
-      <li><b>난바파크스 옥상정원</b> — 계단식으로 이어진 무료 정원. 잔디가 있어 아이들 뛰기 좋고 공휴일에도 도톤보리만큼 붐비지 않습니다</li>
-      <li><b>호젠지 요코초</b> — 도톤보리 바로 옆인데 좁은 돌길이라 분위기가 완전히 다릅니다. 이끼 덮인 부동명왕상에 물을 끼얹는 게 아이들한테 재밌어요. 10분이면 충분</li>
-      <li>도톤보리 글리코 간판은 <b>9/26 낮</b>에 넣어뒀습니다. 같은 자리도 토요일 낮이 공휴일 밤보다 훨씬 낫습니다</li>
-      <li><b>점심을 백화점 말고 다른 데서 먹고 싶다면</b> — 짐만 호텔에 던지고 <b>쿠로몬 시장</b>(도보 3분)에서 해결하는 방법도 있습니다. 밥 먹는 김에 내일 아침거리까지 같이 사면 오후 일정이 하나 줄어요. 다만 서서 먹는 가게가 많아 제대로 앉아 먹기는 어렵습니다</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ══════════ DAY 2 ══════════ -->
-<section class="panel" id="p2" style="--day:var(--d2)">
-  <div class="dayhead">
-    <h2>가이유칸 &amp; 텐포잔 — 하루 종일 한 동네</h2>
-    <p>예약해두신 가이유칸을 중심으로 텐포잔 한 블록에서 전부 해결합니다. 이동이 거의 없어 아이들 체력에 가장 유리한 날.</p>
-    <div class="flag">텐포잔 마켓플레이스 한 건물 안에 점심 · 관람차 · 레고랜드가 다 있습니다. 건물 밖으로 나갈 일이 없어 걷는 거리가 가장 짧은 날이에요.</div>
-  </div>
-
-  <div class="line">
-
-    <div class="stop">
-      <div class="when">07:40</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>아침 — 방에서 (전날 사둔 것)</h3>
-        <p>미마루 주방에 전자레인지·냉장고·전기포트가 있으니 어제 다카시마야에서 사둔 걸로 해결합니다. 아이들을 아침부터 밖으로 끌고 나가지 않는 것만으로 하루 체력이 달라져요.</p>
-        <div class="tip"><b>오늘 밤 살 것</b> — 내일(9/25)은 나라 가는 날이라 아침이 더 이릅니다. 오늘 저녁에 빵·우유·바나나를 넉넉히 사두세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop move">
-      <div class="when">08:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body">
-        <div class="trip"><span class="pill" style="background:#8A5326">사카이스지선</span> 니혼바시 → 사카이스지혼마치 <span class="dur">4분</span> · 호텔에서 니혼바시역 도보 5분</div>
-        <div class="trip" style="padding-top:0"><span class="pill">츄오선</span> 사카이스지혼마치 → 오사카코 <span class="dur">14분</span> + 도보 5분</div>
-        <div class="trip" style="padding-top:0;color:#8A5326"><b>08:30 출발 → 09:15경 오사카코역 도착.</b> 입장까지 45분 여유가 생깁니다</div>
-      </div>
-    </div>
-
-    <div class="stop">
-      <div class="when">09:15</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>텐포잔 바닷가에서 시간 보내기</h3>
-        <p>일찍 나선 만큼 45분이 뜹니다. 이 시간을 줄에 서서 버리지 마세요. 가이유칸 앞은 바로 <b>오사카항 바닷가</b>라 산책로와 벤치가 있습니다. 배가 오가고 관람차가 머리 위에 있어서 아이들은 그것만 봐도 좋아해요.</p>
-        <div class="tip"><b>화장실은 여기서 미리.</b> 가이유칸은 들어가면 나선형 일방통행이라 되돌아 나오기가 번거롭습니다.</div>
-        <div class="tip"><b>09:45쯤 입구 줄로.</b> 예약분은 별도 줄이라 오래 안 걸립니다. 텐포잔 마켓플레이스는 11시 개점이라 그 전엔 실내로 들어갈 데가 마땅치 않아요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">10:00</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>가이유칸 <span class="badge b-rsv" style="font-size:10px">10:00 예약완료</span></h3>
-        <button class="jp" data-jp="海遊館">海遊館</button>
-        <p>8층까지 올라간 뒤 나선형으로 내려오며 관람하는 구조라 계단이 없고 계속 완만하게 내려옵니다. 소요 2~3시간.</p>
-        <ul>
-          <li>고래상어가 있는 태평양 대수조는 <b>층마다 다른 높이</b>에서 보입니다. 아이들은 아래층 유리 앞이 제일 반응 좋아요</li>
-          <li>바다사자·펭귄 구역에서 시간 많이 씁니다. 앞에서 여유 있게</li>
-          <li>마지막 구역 '터치 풀'에서 상어·가오리를 직접 만질 수 있어요. 70개월 아이 하이라이트</li>
-        </ul>
-        <div class="tip"><b>입장 요금</b> — 3세 이하 무료, 4~6세는 유아 요금입니다. 36개월 아이는 무료 대상이니 예약 인원 확인해보세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">12:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>점심 — 나니와 쿠이신보 요코초 <span class="badge b-must">먹킷 4/9 타코야키</span></h3>
-        <button class="jp" data-jp="なにわ食いしんぼ横丁">なにわ食いしんぼ横丁</button>
-        <p>텐포잔 마켓플레이스 2층. 옛날 오사카 거리를 재현한 푸드코트라 아이들이 구경만 해도 좋아합니다. 타코야키·오므라이스·카레·우동이 다 있어서 각자 먹고 싶은 걸 고를 수 있어요.</p>
-        <div class="tip"><b>타코야키 주문 팁</b> — 아이용은 소스 적게, 가츠오부시 빼달라고 하면 됩니다. 속이 굉장히 뜨거우니 반으로 갈라서 식혀주세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">13:50</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>텐포잔 대관람차</h3>
-        <button class="jp" data-jp="天保山大観覧車">天保山大観覧車</button>
-        <p>가이유칸 바로 옆. 직경 100m, 높이 112.5m로 세계 최대급이고 <b>한 바퀴 15분</b>입니다. 가이유칸에서 두 시간 넘게 걸은 뒤라 <b>앉아서 쉬는 15분</b>이라는 게 오늘 가장 큰 장점이에요. 곤돌라 안에 안내 방송이 나오고, 날 좋으면 아카시 해협 대교와 간사이공항까지 보입니다.</p>
-        <ul>
-          <li><b>¥800 · 3세 이상</b>부터 요금 · 10:00–22:00</li>
-          <li>60대 중 8대가 <b>바닥까지 투명한 시스루 곤돌라</b>인데 대기가 길고 아이가 무서워할 수 있습니다. <b>일반 곤돌라로 달라고 하면</b> 바로 탑니다</li>
-          <li>평일 낮이라 대기는 거의 없을 거예요</li>
-        </ul>
-        <div class="tip"><b>레고랜드를 뺀 게 맞는 선택입니다.</b> 실내에서 두세 시간 더 도는 코스라 가이유칸 직후엔 과해요. 게다가 내일이 나라라 이번 여행에서 제일 많이 걷는 날입니다. 오늘 체력을 남겨두는 편이 낫습니다.</div>
-        <div class="tip"><b>그래도 아쉬우면</b> — 레고랜드는 같은 건물 3층이고 평일 온라인 예매가 약 ¥2,200입니다. 아이들이 관람차 타고도 쌩쌩하면 그때 현장에서 결정해도 돼요. 다만 <b>당일 예약이 안 될 수 있고</b> 입장 마감이 16시입니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop move">
-      <div class="when">14:45</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="trip"><span class="pill">츄오선 → 사카이스지선</span> 오사카코 → 니혼바시 <span class="dur">20분</span> + 호텔까지 도보 5분</div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">15:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>호텔 복귀 · 낮잠 &amp; 샤워</h3>
-        <p>이 시간대를 비워두는 게 4일 내내 무너지지 않는 핵심입니다. 36개월 아이는 여기서 한숨 자야 저녁이 편해요.</p>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">17:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>저녁 — 스시로 센니치마에점 <span class="badge b-must">사전 접수 권장</span></h3>
-        <button class="jp" data-jp="スシロー 千日前店">スシロー 千日前店</button>
-        <p><b>호텔에서 도보 5분</b>, 돈키호테 건물 4층입니다(엘리베이터로 바로 4층). 태블릿으로 주문하면 접시가 레일로 달려오는 게 아이들한테는 식당이 아니라 놀이예요. 우동·감자튀김·푸딩도 있어서 초밥 못 먹는 36개월도 괜찮습니다. 11:00–23:00.</p>
-        <div class="tip"><b>스시로는 &lsquo;예약&rsquo;이 아니라 순번 접수입니다.</b> 전화 예약은 아예 안 받아요. 대신 <b>공식 앱 · LINE · 공식 웹사이트</b>에서 두 가지를 할 수 있습니다. ① <b>날짜·시간 지정 예약</b> — 며칠 전에 미리 잡아두는 방식 ② <b>&lsquo;지금 갈게&rsquo; 접수</b> — 30분 안에 도착할 수 있을 때 순번만 미리 받는 방식. 30분이 지나면 자동 취소되니 주의하세요.</div>
-        <div class="tip"><b>여기는 접수를 꼭 하세요.</b> 도톤보리 옆 관광 밀집 구역이라 피크에는 현장 발권 시 <b>60~120분</b> 대기가 나옵니다. 아이 둘 데리고 그 시간을 서서 버티는 건 무리예요.</div>
-        <div class="tip"><b>그래서 저녁을 17:30으로 당겼습니다.</b> 일본 저녁 피크는 18:30~20:00입니다. 오늘은 15:30에 호텔로 돌아와 쉬는 일정이라 한 시간 일찍 나가는 게 어렵지 않아요. 미리 접수까지 해두면 거의 안 기다립니다.</div>
-        <div class="tip"><b>접수해도 즉시 착석은 아닙니다.</b> 매장 회전에 따라 10~20분은 볼 수 있으니 그 정도는 감안하세요.</div>
-        <div class="tip"><b>접수가 번거로우면</b> — 스시로도 포장이 되고, 다카시마야 지하 식품관(20:00 마감)에서 사와 방에서 먹어도 됩니다. 종일 걸은 날이라 방에서 먹는 쪽도 충분히 좋아요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">19:15</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>내일 아침거리 사기</h3>
-        <p>내일은 나라라 08:40에 나섭니다. 오늘 밤에 반드시 사두세요. <b>라이프 시모데라점</b>(도보 9분, 24:00까지)이 종류가 많고, 급하면 24시간 돈키호테나 편의점으로도 됩니다.</p>
-        <div class="tip"><b>나라에서 먹일 것도 같이</b> — 물, 바나나, 젤리. 나라공원은 자판기가 드문드문 있고 사슴이 봉지를 노리니 가방 안쪽에 넣어두세요.</div>
-      </div></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════ DAY 3 ══════════ -->
-<section class="panel" id="p3" style="--day:var(--d3)">
-  <div class="dayhead">
-    <h2>나라 — 사슴, 대불, 조용한 연못</h2>
-    <p>평일 금요일. 오사카난바에서 환승 없이 40분이라 아이 둘 데리고 가기 가장 편한 근교입니다. 오전에 도착해 붐비기 전에 움직이는 게 핵심이에요.</p>
-    <div class="flag">9월은 수사슴 발정기입니다. 매년 10월에 뿔 자르기 행사를 하는 게 바로 이 시기 수컷이 예민해지기 때문이에요. 아래 안전 수칙을 출발 전에 한 번 읽어주세요.</div>
-  </div>
-
-  <div class="line">
-
-    <div class="stop">
-      <div class="when">07:50</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>아침 — 방에서 (어젯밤에 사둔 것)</h3>
-        <p>오늘은 나라 가는 날이라 출발이 이릅니다. 방에서 먹고 바로 나서면 08:40 열차에 여유 있게 맞아요.</p>
-      </div></div>
-    </div>
-
-    <div class="stop move">
-      <div class="when">08:25</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="trip"><span class="pill">도보</span> 호텔 → 오사카난바역(킨테츠) <span class="dur">약 8분</span> · 난카이 난바역과 다른 역입니다</div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">08:40</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>오사카난바역 출발</h3>
-        <button class="jp" data-jp="大阪難波駅">大阪難波駅</button>
-        <p>호텔에서 도보 7분. 킨테츠 나라선 <b>쾌속급행</b>을 타면 환승 없이 킨테츠나라역까지 갑니다. 자유석이라 예약은 필요 없어요.</p>
-        <div class="tip"><b>긴테츠니혼바시역이 더 가깝지만</b>(도보 6분) 거기서 타면 이미 자리가 찹니다. 오사카난바가 시발역이니 한 정거장 더 걸어가서 앉아 가세요. 아이 둘이면 40분을 서서 가느냐 앉아 가느냐가 큽니다.</div>
-        <span class="money">어른 ¥680 · 아이 둘 다 무료</span>
-        <div class="tip"><b>왜 아침 일찍인가</b> — 나라는 오전 11시부터 관광버스가 몰립니다. 같은 자리도 9시대에는 사람이 눈에 띄게 적고, 사슴도 아직 배가 고프지 않아 덜 달려들어요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop move">
-      <div class="when"></div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="trip"><span class="pill">킨테츠 나라선 쾌속급행</span> 오사카난바 → 킨테츠나라 <span class="dur">40분 · 환승 없음</span></div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">09:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>도다이지 참배길 — 첫 사슴</h3>
-        <button class="jp" data-jp="東大寺 南大門">東大寺 南大門</button>
-        <p>킨테츠나라역 2번 출구에서 도보 10분. 남대문 앞 잔디에 사슴이 흩어져 있습니다. 첫 만남은 센베 없이 그냥 보여주기만 하세요. 36개월 아이는 사슴과 눈높이가 비슷해서 처음엔 놀랄 수 있으니 안고 보여주다가 반응 보고 내려주는 게 좋아요.</p>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">10:15</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>도다이지 대불전</h3>
-        <button class="jp" data-jp="東大寺 大仏殿">東大寺 大仏殿</button>
-        <p>15미터 넘는 청동 대불. 실물 크기가 사진과 완전히 달라서 아이들도 입을 벌립니다.</p>
-        <ul>
-          <li><b>기둥 구멍 통과</b> — 대불 뒤 기둥에 대불 콧구멍 크기의 구멍이 뚫려 있습니다. 통과하면 복이 온다는 이야기가 있어요. 70개월 아이는 혼자 통과 가능하고, 36개월은 어른이 밀어 넣어주면 됩니다. 오늘 사진 중 제일 잘 나올 장면</li>
-          <li>오전이라 구멍 앞 줄이 짧습니다. 오후엔 30분씩 서기도 해요</li>
-        </ul>
-        <span class="money">어른 ¥800 · 미취학 아동 무료</span>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">11:40</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>점심 — 나라에서 고르기</h3>
-        <p>도다이지를 보고 나온 시간대입니다. 셋 다 걸어갈 수 있는 거리예요.</p>
-        <ul>
-          <li><b>소바도코로 키타하라</b> — 나라 소바 최고 평가. 도다이지 도보 5분. 하루 40~50인분만 만들어서 <b>11:00 개점에 맞춰 가야</b> 합니다</li>
-          <li><b>미즈야차야</b> — 초가지붕 찻집의 우동과 오뎅. <b>야외 툇마루라 아이 데리고 가장 편합니다.</b> 회전도 빨라요</li>
-          <li><b>소바처 남고</b> — 우키미도 근처 8석짜리 집. 자리가 나면 오늘의 행운입니다</li>
-          <li><b>가마메시 시즈카</b> 공원점 — 솥밥. 맛은 좋지만 <b>대기가 1시간 넘는 날이 많습니다</b></li>
-        </ul>
-        <div class="tip"><b>아이 둘 기준으로는 미즈야차야가 가장 안전합니다.</b> 소바를 꼭 먹고 싶으면 도다이지를 조금 일찍 끊고 11시에 키타하라로 직행하세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">13:00</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>우키미도 · 사기이케 <span class="badge b-kid">오늘의 하이라이트</span></h3>
-        <button class="jp" data-jp="浮見堂 鷺池">浮見堂 鷺池</button>
-        <p>요청하신 &lsquo;덜 붐비고 순한 사슴&rsquo; 자리입니다. 나라공원 남서쪽 끝이라 도다이지–가스가타이샤 주 동선에서 완전히 빠져 있어요. 연못 위에 육각 정자가 떠 있고 주변은 넓은 잔디밭입니다.</p>
-        <ul>
-          <li><b>센베 노점이 없어서</b> 여기 사슴은 사람을 먹이로 학습하지 않았습니다. 달려들지 않고 풀 뜯거나 누워 있어요</li>
-          <li>아이가 사슴 옆에 앉아서 가만히 볼 수 있는 거의 유일한 구역</li>
-          <li>평지에 포장길이고 큰 나무 그늘과 벤치가 있어, 오전 내내 걷고 다리 쉬기에 딱 좋습니다</li>
-        </ul>
-        <div class="tip"><b>센베를 꼭 주고 싶다면</b> — 도다이지 쪽에서 한 봉지만 사서 <b>가방 깊숙이 넣고</b> 여기로 이동하세요. 손에 들고 걸으면 오는 길 내내 사슴이 따라옵니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">14:20</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>나카타니도 떡치기</h3>
-        <button class="jp" data-jp="中谷堂">中谷堂</button>
-        <p>히가시무키 상점가. 두 사람이 무서운 속도로 떡메를 내리치는 걸 길에 서서 그냥 볼 수 있습니다. 갓 만든 쑥떡이 한 개 ¥150이고, 아이들 반응이 오늘 중 손꼽히는 순간이에요.</p>
-        <span class="money">쑥떡 ¥150 / 개</span>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">15:10</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>마호로바 대불 푸딩</h3>
-        <button class="jp" data-jp="まほろば大仏プリン">まほろば大仏プリン</button>
-        <p>킨테츠나라역 안 매장. 사슴과 대불 그림이 그려진 유리병에 담겨 나와서 병을 기념품으로 가져올 수 있습니다. 열차 기다리며 하나씩 먹기 좋아요.</p>
-        <div class="tip">오후에 디즈니 하나만 붙어 있어서 나라를 15:30까지 씁니다. 사슴을 더 보고 싶으면 우키미도에서 시간을 더 쓰고 나카타니도를 빼세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop move">
-      <div class="when">15:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="trip"><span class="pill">킨테츠 나라선</span> 킨테츠나라 15:30 → 오사카난바 16:10 <span class="dur">40분</span></div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">16:20</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>호텔에서 한 시간 쉬기 <span class="badge b-must">건너뛰지 마세요</span></h3>
-        <p>나라에서 하루치를 이미 걸었습니다. 오후에 디즈니를 붙이려면 <b>이 한 시간이 조건</b>이에요. 씻기고 눕히고 간식 먹이고 다시 나갑니다.</p>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">17:45</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>디즈니스토어 신사이바시 파르코점 <span class="badge b-kid">2026.8.26 오픈</span></h3>
-        <button class="jp" data-jp="ディズニーストア 心斎橋パルコ店">ディズニーストア 心斎橋パルコ店</button>
-        <p>호텔에서 약 1.5km, 도보 19분 또는 미도스지선 신사이바시역 직결입니다. <b>신사이바시 파르코 5층.</b> 국내 45번째이자 <b>서일본 최대 규모</b> 점포로 신사이바시에 4년 만에 돌아왔습니다. 매일 10:00–20:00.</p>
-        <div class="tip"><b>매장 자체가 볼거리</b> — &lsquo;마법의 여행&rsquo;을 주제로 한 일본 최초 디자인입니다. 입구에서 기관사 복장의 <b>스티치 조형물</b>이 맞아주고, 증기기관차 &lsquo;Train of Wonder&rsquo;가 매장을 가로지릅니다. 객차마다 티거, 앨리스와 체셔 고양이, 존과 커비가 타고 있어요. 안쪽에는 기관차 연료인 <b>픽시더스트를 만드는 칩과 데일</b>이 숨어 있습니다. 아이들한테 찾아보라고 하면 알아서 한 바퀴 돕니다.</div>
-        <div class="tip"><b>여기서만 파는 것</b> — 오픈 기념 <b>점포 한정 23종</b>. 오코노미야키·타코야키 모티브의 &lsquo;우루포차짱&rsquo; 인형처럼 오사카색이 들어간 물건이 많고, 오사카부 한정 아이템도 따로 있습니다. 한정품은 개수 제한이 걸려 있어요.</div>
-        <div class="tip"><b>입장</b> — 오픈 직후 8/26~8/30에만 앱 예약이 필요했고 지금은 그냥 들어갑니다. 상품이 1,500점이라 작정하면 한 시간이 그냥 가니 45분으로 끊으세요. <b>20시 마감</b>입니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">18:45</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>저녁 — 디즈니 다녀오는 길에</h3>
-        <p>파르코에서 도톤보리를 지나 호텔로 내려오는 동선입니다. 전부 그 길 위에 있어요.</p>
-        <ul>
-          <li><b>킨류 라멘</b> — <b>다다미 좌식석</b>이 있어 36개월 아이는 오히려 편합니다. 김치·부추 무한, 24시간. 관광지 한복판이라 평은 갈려요</li>
-          <li><b>무겐 라멘</b> — 난바 라멘 중 평점이 가장 높습니다. 2층까지 있어 4인이 앉기 수월해요</li>
-          <li><b>도톤보리 이마이</b> — 우동. 21시까지고 층이 여러 개라 자리가 넉넉합니다. 종일 걸은 날 국물이 순해서 잘 맞아요</li>
-          <li><b>후쿠타로</b> — 오코노미야키. 본점은 호텔 도보 4분, 대기가 있으면 다카시마야 8층 지점으로</li>
-        </ul>
-        <div class="tip"><b>지쳤으면</b> 다카시마야 지하에서 포장해 방에서 먹어도 됩니다. 나라에서 하루치를 걸은 날이라 그것도 충분히 좋은 선택이에요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">20:00</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>호텔 복귀</h3>
-        <p>오늘이 이번 여행에서 가장 긴 하루입니다. 씻기고 일찍 재우세요. 내일 아침거리는 어제 사둔 게 남아 있으면 그걸로, 없으면 로손에서.</p>
-        <div class="tip"><b>지쳤다면 잘라낼 순서</b> — ① 나카타니도·푸딩을 생략하고 나라에서 한 시간 일찍 나오기 ② 디즈니를 9/26 낮으로 미루기(그날은 오전이 비어 있어서 얼마든지 들어갑니다) ③ 저녁을 551 대신 다카시마야 지하 포장으로 바꾸기.</div>
-      </div></div>
-    </div>
-
-  </div>
-
-  <div class="altbox" style="border-color:#E0B9B4;background:#FFFBFA">
-    <div class="lead" style="color:#B01C1C">꼭 읽어주세요</div>
-    <h3>사슴 안전 수칙</h3>
-    <ul>
-      <li><b>센베는 어른이 들고 아이에게 한 장씩</b> 건네주세요. 봉지째 아이 손에 쥐여주면 여러 마리가 동시에 달려듭니다</li>
-      <li>센베를 등 뒤로 숨기면 사슴이 옷과 가방을 머리로 들이받습니다. <b>다 줬으면 손바닥을 활짝 펴 보여주세요.</b> 알아듣고 물러납니다</li>
-      <li>뿔이 크고 목이 굵은 수컷은 9월에 특히 예민합니다. 사진만 멀리서 찍고 아이는 그쪽으로 보내지 마세요</li>
-      <li>지도·티켓·비닐봉지는 가방 안에. 종이류를 먹으려고 달려듭니다</li>
-      <li>고개를 숙여 인사하면 사슴도 따라 숙이는데, 손에 아무것도 없을 때 하면 아이들이 정말 좋아합니다</li>
-      <li>옷은 세탁 편한 걸로. 사슴 침과 흙이 반드시 묻습니다</li>
-    </ul>
-  </div>
-
-  <div class="altbox">
-    <div class="lead">사슴 구역 선택지</div>
-    <h3>덜 붐비는 순서</h3>
-    <p>나라 사슴은 나라공원 일대에만 살아서 완전히 다른 장소는 없습니다. 대신 <b>같은 공원 안에서도 구역에 따라 인파와 사슴 성격이 완전히 다릅니다.</b> 기준은 하나, 센베 노점이 있느냐예요.</p>
-    <ul>
-      <li><b>1순위 · 우키미도 &middot; 사기이케</b> — 위 일정에 넣은 곳. 노점이 없어 사슴이 순하고 사람이 적습니다</li>
-      <li><b>2순위 · 미즈야차야 주변 숲길</b> — 가스가타이샤 뒤편 삼나무 숲. 사슴이 그늘에서 쉬고 있고 사진이 제일 예쁩니다</li>
-      <li><b>3순위 · 도다이지 뒤편</b> — 대불전에서 정문으로 되돌아 나오지 말고 뒤쪽(쇼소인 방향)으로 5분만 걸으면 관광객이 거의 사라집니다. 동선 손해가 없는 게 장점</li>
-      <li><b>피할 곳</b> — 나라국립박물관 앞 센베 노점 주변. 사슴이 사람을 먹이로 학습해서 가장 공격적입니다</li>
-    </ul>
-  </div>
-
-  <div class="altbox">
-    <div class="lead">B안 — 비가 오면</div>
-    <h3>키즈플라자 오사카 (실내)</h3>
-    <p>나라는 온종일 야외라 비 예보가 있으면 바꾸는 게 낫습니다. 사카이스지선 오기마치역 바로 앞, 일본 최초의 어린이 박물관이에요.</p>
-    <ul>
-      <li>오스트리아 작가가 설계한 컬러풀한 미로 건축 &lsquo;어린이의 거리&rsquo;가 핵심. 70개월 아이가 몇 시간이고 놉니다</li>
-      <li>유아 전용 존이 따로 있어 36개월 아이도 안전해요</li>
-      <li>09:30–17:00 (입장 마감 16:15) · 수유실·기저귀 교환대 있음</li>
-      <li>점심은 도보 5분 텐진바시스지 상점가에서</li>
-    </ul>
-    <p><span class="money">어른 ¥1,400 · 3세 이상 ¥500</span></p>
-  </div>
-</section>
-
-<!-- ══════════ DAY 4 ══════════ -->
-<section class="panel" id="p4" style="--day:var(--d4)">
-  <div class="dayhead">
-    <h2>마지막 날 — 시장 아침, 쇼핑, 공항</h2>
-    <p>19:35 출발이라 오후 3시 반까지는 온전히 쓸 수 있습니다. 쇼핑은 어제까지 다 끝냈으니 오늘은 아이들 놀리고 마지막 정리만 합니다. 짐은 호텔에 맡기고 몸만 나오세요.</p>
-    <div class="flag">귀국 라피트는 특급권 4장만 예약된 상태라 <b>난바역에서 승차권을 따로 사야 합니다.</b> 16:10 항목을 확인해주세요.</div>
-  </div>
-
-  <div class="line">
-
-    <div class="stop">
-      <div class="when">08:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>아침 먹고 체크아웃 · 짐 맡기기</h3>
-        <p>남은 음식으로 방에서 아침을 해결하고 나옵니다. 캐리어는 프런트에 맡기세요.</p>
-        <div class="tip"><b>첫날 물어본 수하물 배송</b>이 된다면 여기서 부치는 게 최선입니다. 오후 내내 짐 없이 다니고 호텔로 되돌아올 필요도 없어져요. 다만 <b>공항 도착 시간과 출발편을 꼭 확인</b>하고 부치세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">09:00</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>아침 — 마루후쿠 커피 센니치마에 본점 <span class="badge b-must">먹킷 7/9</span></h3>
-        <button class="jp" data-jp="丸福珈琲店 千日前本店">丸福珈琲店 千日前本店</button>
-        <p>호텔에서 도보 7분, 1934년에 문 연 오사카 커피의 원조 격입니다. 좁은 골목 모퉁이에 있고 안은 70~80년대 영국풍 인테리어라 분위기가 완전히 달라요. <b>08:00–23:00</b>이라 아침에 여는 몇 안 되는 제대로 된 카페입니다. 영어 메뉴가 있어요.</p>
-        <ul>
-          <li><b>계란 샌드위치</b>가 이 집 간판입니다. 편의점 계란 샌드와는 다른 물건이에요</li>
-          <li><b>핫케이크</b> — 바닥이 바삭하게 구워져 나옵니다. 커피 휘핑크림을 얹어줘요. 아이 둘이 나눠 먹기 좋습니다</li>
-          <li>커피는 상당히 진하고 씁쓸한 편이라 단 것과 같이 먹어야 균형이 맞습니다</li>
-        </ul>
-        <div class="tip"><b>아침 대기는 10분 안팎</b>입니다. 8시 조금 넘어 가면 거의 안 기다려요. 나오는 데 20분쯤 걸리니 여유 있게 잡으세요.</div>
-        <div class="tip"><b>쿠로몬 시장</b>은 호텔 도보 3분이니 나오는 길에 구경만 하고 지나가도 됩니다. 오늘은 살 게 없으니 사진만 찍으세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">10:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>코나몬 뮤지엄 — 타코야키 만들기 <span class="badge b-kid">아이 체험</span></h3>
-        <button class="jp" data-jp="道頓堀コナモンミュージアム">道頓堀コナモンミュージアム</button>
-        <p>도톤보리, 호텔에서 도보 10분. 직접 타코야키를 뒤집어 굽는 체험을 합니다. 30분 정도 걸리고 <b>70개월 아이가 특히 좋아하는 종류</b>예요. 36개월 아이는 어른이 손을 잡고 같이 돌려주면 됩니다.</p>
-        <div class="tip">체험은 인원이 차면 대기가 생깁니다. 토요일이라 도착하면 먼저 접수부터 하세요. 체험이 부담스러우면 1층에서 음식 모형만 구경하고 나와도 됩니다.</div>
-        <div class="tip"><b>대안</b> — 체험이 내키지 않으면 <b>난바파크스 옥상정원</b>(호텔 도보 8분). 계단식 무료 정원이라 아이들 마지막으로 실컷 뛰게 하기 좋고, 짐 찾는 호텔에서 가깝습니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">12:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>점심 — 마지막 제대로 된 한 끼</h3>
-        <p>도톤보리에서 호텔로 돌아오는 길입니다.</p>
-        <ul>
-          <li><b>지유켄 난바 본점</b> — 1910년 창업, 오사카에서 가장 오래된 양식당. 명물 카레는 카레와 밥을 미리 비벼 내고 생계란 노른자를 얹어줍니다. 노른자를 섞으면 매운맛이 부드러워져요. <b>아이는 오므라이스나 하이라이스로.</b> 11:00–19:35</li>
-          <li><b>도톤보리 이마이</b> — 우동을 아직 안 먹었다면 여기. 토요일 영업합니다</li>
-          <li><b>후쿠타로 다카시마야 8층</b> — 오코노미야키. 짐 찾으러 가는 길에 붙습니다</li>
-        </ul>
-        <div class="tip"><b>인디안 카레는 아이와 가지 마세요.</b> 36개월에게는 확실히 맵고 자리도 좁습니다. 어른들끼리 짬이 날 때만.</div>
-        <div class="tip"><b>551 부타망</b>은 선물용으로 간사이공항점에서 사세요. 상온 보관이 짧습니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">13:40</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>도톤보리 — 글리코 간판</h3>
-        <button class="jp" data-jp="道頓堀 グリコサイン">道頓堀 グリコサイン</button>
-        <p>첫날 일부러 뺐던 걸 여기로 옮겼습니다. <b>토요일 낮이 공휴일 밤보다 훨씬 낫습니다.</b> 코나몬 뮤지엄 바로 앞이라 오전에 미리 봐도 되고, 점심 먹고 다시 나와도 됩니다. 글리코 간판 사진 한 장, 에비스바시 위 한 바퀴면 20분이에요.</p>
-        <div class="tip"><b>10분만 더 쓴다면</b> — 바로 옆 <b>호젠지 요코초</b>. 좁은 돌길이라 분위기가 완전히 달라지고, 이끼 덮인 부동명왕상에 물을 끼얹는 게 아이들한테 재밌습니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">14:20</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>돈키호테 도톤보리 — 면세 마무리 <span class="badge b-must">여권 지참</span></h3>
-        <button class="jp" data-jp="ドン・キホーテ 道頓堀店">ドン・キホーテ 道頓堀店</button>
-        <p>오늘 면세는 여기 한 곳에서 끝냅니다. 남은 기념품과 약·과자를 한 번에 정리하세요. <b>면세 카운터가 따로 있고 토요일 오후엔 줄이 깁니다.</b> 계산 전에 5,000엔(세금 제외)이 넘는지 확인하고, 일반물품과 소모품을 나눠 담아두면 처리가 빨라요.</p>
-        <div class="tip"><b>시간을 아끼려면</b> — 어른 한 명이 아이들과 밖에서 기다리고, 한 명만 면세 카운터에 서세요. 면세 절차와 요령은 <b>&lsquo;팁&rsquo; 탭의 면세 쇼핑 항목</b>에 정리해뒀습니다.</div>
-        <div class="tip"><b>551 부타망은 여기서 사지 마세요.</b> 상온 보관이 짧아 간사이공항점에서 보냉백과 함께 사는 게 맞습니다.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">15:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>호텔에서 짐 찾기</h3>
-        <p>화장실 다녀오고, 아이들 옷 갈아입히고, 물 사서 출발.</p>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">16:10</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card" style="border:2px solid #E5171F">
-        <h3>난카이 난바역 — 승차권 구매 <span class="badge b-must">필수</span></h3>
-        <button class="jp" data-jp="南海なんば駅 きっぷうりば">南海なんば駅 きっぷうりば</button>
-        <p>난카이 특급은 <b>승차권 + 특급권 두 장이 한 세트</b>입니다. 예약하신 건 특급권 4장뿐이라, 이것만으로는 개찰구를 통과할 수 없어요.</p>
-        <p><b>좌석 4개를 점유하니 승차권도 4장</b>이 필요합니다. 미취학 아동은 원래 무료지만, 좌석을 따로 쓰면 소아 운임이 붙어요.</p>
-        <ul>
-          <li>어른 승차권 ¥970 × 2 = <b>¥1,940</b></li>
-          <li>소아 승차권 ¥490 × 2 = <b>¥980</b></li>
-          <li>오늘 살 금액 <b>합계 ¥2,920</b> (특급권은 예약 완료)</li>
-        </ul>
-        <div class="tip"><b>가장 빠른 방법</b> — 어른은 ICOCA·애플페이 스이카로 개찰을 통과하고, 아이 몫 소아 승차권 2장만 창구에서 사면 됩니다. 창구에 특급권 4장을 보여주면 알아서 처리해줘요. IC카드가 없으면 1층 매표소에서 4장 다 사세요.</div>
-        <div class="tip"><b>특급권이 어떻게 발권됐는지</b>도 창구에서 같이 확인하세요. 어른 4장으로 끊겼다면 아이 몫이 과납된 것이고, 소아 특급권 2장이 포함돼 있으면 위 계산 그대로입니다.</div>
-        <div class="tip"><b>열차 안에서 사면 ¥300이 추가</b>됩니다. 반드시 타기 전에 해결하세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop move">
-      <div class="when">16:30</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="trip"><span class="pill">난카이 라피트</span> 난바 → 간사이공항 <span class="dur">38분</span> · 예약하신 열차 시각에 맞춰 조정</div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">17:10</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>간사이공항 도착 · 체크인</h3>
-        <p>대한항공은 제1터미널입니다. 아이 둘이면 체크인과 보안검색이 느려서 <b>출발 2시간 30분 전 도착</b>이 마음 편해요. 수속 끝내고 면세구역에서 저녁 겸 간식 먹이면 시간이 딱 맞습니다.</p>
-        <div class="tip"><b>공항에서 살 것</b> — 551 부타망(보냉백 같이 주문), 로이스, 코베 후게츠도 고프레. 시내에서 미리 사서 들고 다니지 마세요.</div>
-        <div class="tip"><b>마지막 끼니는 공항에서</b> — 19:35 비행기라 저녁을 여기서 해결하는 게 자연스럽습니다. <b>키네야 무기마루</b>(제1터미널 2F, 07:00–22:00)는 육수를 원하는 만큼 받아 쓰는 셀프 방식이라 아이 몫을 연하게 조절할 수 있어요. 라멘을 시내에서 못 먹었으면 <b>멘쇼 라멘</b>, 네 식구 취향이 갈리면 <b>Tasty Street 푸드코트</b>가 답입니다. 면은 잘라주고 국물은 식혀서 주세요.</div>
-      </div></div>
-    </div>
-
-    <div class="stop">
-      <div class="when">19:35</div><div class="rail"><span class="dot"></span></div>
-      <div class="body"><div class="card">
-        <h3>KE2120 출발</h3>
-        <p>김포 21:25 도착. 아이들은 이륙하면 바로 잘 확률이 높아요. 이착륙 때 귀 아파하면 물이나 젤리를 삼키게 해주세요.</p>
-      </div></div>
-    </div>
-
-  </div>
-</section>
-
+<!-- p1~p4 는 data/itinerary.json 에서 렌더링됩니다. 식당/쇼핑/준비 패널은 아래 정적 HTML. -->
 <!-- ══════════ 식당 ══════════ -->
 <section class="panel" id="pf" style="--day:#4A5D72">
 
@@ -1271,205 +649,9 @@ if (typeof L === 'undefined') {
 <a class="maplink alt" target="_blank" rel="noopener" href="https://maps.google.com/?q=MIMARU%E5%A4%A7%E9%98%AA%20%E9%9B%A3%E6%B3%A2STATION">호텔 위치만 보기 →</a>
 </div>
 
-<div class="group" data-area="난바">
-  <h2>호텔에서 걸어서 10분 안</h2>
-
-  <div class="card" data-cat="우동" data-a="난바">
-    <div class="ctop"><h3>카마타케 우동</h3><span class="cat">우동</span></div>
-    <p class="jpname">釜たけうどん · 難波千日前4-20</p>
-    <div class="meta"><span>도보 3분</span><span>런치 대기 5~30분</span><span>한국어 메뉴 있음</span></div>
-    <p class="desc">호텔에서 가장 가까운 제대로 된 우동집. 면이 굵고 쫄깃하며 튀김을 그때그때 튀겨줍니다. 어묵튀김과 반숙 계란튀김을 얹은 조합이 이 집 간판이에요. 사진 메뉴가 있어서 주문이 쉽습니다.</p>
-    <div class="kid good"><b>아이 동반 ○</b> — 양이 많으니 아이는 어른 것에서 덜어주는 편이 낫습니다. 대기 중에 미리 주문을 받아서 앉으면 금방 나와요.</div>
-    <a class="gm" href="https://maps.google.com/?q=釜たけうどん+難波千日前" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="라멘" data-a="난바">
-    <div class="ctop"><h3>next shikaku</h3><span class="cat">라멘</span></div>
-    <p class="jpname">next 四カク · 難波千日前9-12</p>
-    <div class="meta"><span>도보 3분</span><span>10:30–22:30</span><span>연중무휴</span></div>
-    <p class="desc">굴 육수를 쓰는 진한 라멘. 국물이 크리미하면서 바다향이 강하게 올라오는데, 흔한 돈코츠와 완전히 다른 계열입니다. 밖의 자판기에서 식권을 사고 왼쪽 줄에 서면 돼요.</p>
-    <div class="kid bad"><b>아이 동반 △</b> — <b>14석뿐이고 실내가 어둡습니다.</b> 4인이 함께 앉기 어려울 수 있어요. 어른들끼리 갈 기회가 있을 때가 낫습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=next+shikaku+難波千日前" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="빵" data-a="난바">
-    <div class="ctop"><h3>사키모토 베이커리</h3><span class="cat">빵</span></div>
-    <p class="jpname">SAKImoto bakery 大阪初号本店 · 難波中2-3-18</p>
-    <div class="meta"><span>도보 3분</span><span>빵집 9:30–19:00</span><span>카페 8:30–18:00</span></div>
-    <p class="desc">고급 식빵으로 유명해진 집인데, 건물 세 칸이 각각 <b>빵집·커피·카페</b>로 나뉘어 있습니다. 빵만 살 거면 1층, 앉아서 먹을 거면 2층 카페예요. 꿀버터 토스트와 소금빵 평이 특히 좋습니다.</p>
-    <div class="kid good"><b>아이 동반 ○</b> — 다음 날 아침용 식빵을 사두기 딱 좋은 위치입니다. 카페는 이름 적고 대기하는 방식이에요.</div>
-    <a class="gm" href="https://maps.google.com/?q=SAKImoto+bakery+難波中" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="오코노미야키" data-a="난바">
-    <div class="ctop"><h3>후쿠타로 본점</h3><span class="cat">오코노미야키</span></div>
-    <p class="jpname">福太郎本店 · 千日前2-3-17</p>
-    <div class="meta"><span>도보 4분</span><span>평일 17:00–22:45</span><span class="rest">토·일은 12:00부터</span></div>
-    <p class="desc">겉은 바삭한데 속이 흐물흐물할 정도로 부드러운 게 이 집 특징입니다. 간판은 오코노미야키가 아니라 <b>네기야키</b>(파 잔뜩)인데, 소스 대신 특제 간장으로 먹어요. 소힘줄을 넣은 스지네기야키가 대표 메뉴입니다.</p>
-    <div class="kid good"><b>아이 동반 ○</b> — 이름 적고 밖에서 대기하는 방식이라 회전은 빠른 편입니다. 눈앞 철판에서 굽는 걸 보는 것 자체가 아이들한테는 구경거리예요.</div>
-    <div class="kid"><b>대기가 싫으면</b> — 난바 다카시마야 8층에 같은 집 지점이 있습니다. 11:00–21:00 매일이고 자리가 넓어 아이 데리고는 오히려 편해요.</div>
-    <a class="gm" href="https://maps.google.com/?q=福太郎本店+千日前" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="타코야키" data-a="난바">
-    <div class="ctop"><h3>타코야키 도라쿠 와나카</h3><span class="cat">타코야키</span></div>
-    <p class="jpname">たこ焼道楽わなか 千日前本店 · 難波千日前11-19</p>
-    <div class="meta"><span>도보 5분</span><span>10:30–21:00</span><span>주말 9:30부터</span></div>
-    <p class="desc">오사카 타코야키 중 가장 안전한 선택. 겉이 살짝 바삭하고 속은 크림처럼 흐르며, 문어가 큼직하게 들어갑니다. 줄은 길어도 빨리 줄어요.</p>
-    <div class="kid good"><b>아이 동반 ○</b> — <b>매장 뒤쪽에 2층짜리 좌석 공간이 있고 물이 무료</b>라 서서 먹지 않아도 됩니다. 속이 굉장히 뜨거우니 반으로 갈라 식혀주세요.</div>
-    <a class="gm" href="https://maps.google.com/?q=たこ焼道楽わなか+千日前本店" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="규카츠" data-a="난바">
-    <div class="ctop"><h3>규카츠 모토무라 난바 별관</h3><span class="cat">규카츠</span></div>
-    <p class="jpname">牛カツ もと村 難波別館 · 難波3-6-17 なんばチップスビル B1F</p>
-    <div class="meta"><span>도보 8분</span><span>11:00–22:00</span><span>연중무휴</span></div>
-    <p class="desc">규카츠 하면 여기입니다. 겉만 튀기고 <b>속은 레어로 나와서, 자리마다 놓인 작은 돌판에 직접 구워</b> 원하는 익힘 정도로 먹습니다. 고기가 놀랄 만큼 부드럽고, 산쇼 소금·와사비·간장 소스를 바꿔가며 먹는 재미가 있어요. 밥·된장국·양배추가 딸려 나오고 리필됩니다.</p>
-    <div class="kid good"><b>아이 동반 ○ — 대기 방식이 좋습니다.</b> 줄 서는 동안 미리 주문을 받아서 <b>앉자마자 음식이 나옵니다.</b> 아이 둘 데리고 앉아서 기다리는 시간이 짧아요.</div>
-    <div class="kid bad"><b>돌판이 아주 뜨겁습니다.</b> 36개월 아이 손이 닿지 않게 안쪽에 두고, <b>고기는 어른이 충분히 익혀서</b> 나눠주세요. 기본이 레어라 그냥 주면 안 됩니다. 70개월 아이는 직접 굽는 걸 재밌어할 나이예요.</div>
-    <a class="gm" href="https://maps.google.com/?q=%E7%89%9B%E3%82%AB%E3%83%84%E3%82%82%E3%81%A8%E6%9D%91%20%E9%9B%A3%E6%B3%A2%E5%88%A5%E9%A4%A8" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="규카츠" data-a="난바">
-    <div class="ctop"><h3>교토 카츠규 난바워크점</h3><span class="cat">규카츠</span></div>
-    <p class="jpname">京都勝牛 なんばウォーク1番街 · 難波2-3</p>
-    <div class="meta"><span>도보 9분</span><span>10:30–22:00</span><span>연중무휴</span></div>
-    <p class="desc">모토무라와 쌍벽인 체인. 이쪽은 <b>카레와 산쇼 소금</b>까지 곁들여 나와서 맛을 여러 번 바꿔 먹을 수 있습니다. 등심·안심·와규 중에 고르는데 저렴한 부위도 충분히 좋아요.</p>
-    <div class="kid good"><b>아이 동반 ◎ — 이 셋 중 가장 편합니다.</b> <b>지하상가 안</b>이라 비바람과 상관없고 통로가 넓으며, 대기용 의자가 있습니다. <b>10:30에 열어서</b> 붐비기 전에 이른 점심으로 가기 좋아요. 세트에 딸려 나오는 <b>작은 카레와 온천계란</b>이 있어서 고기를 안 먹는 아이도 밥을 먹습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=%E4%BA%AC%E9%83%BD%E5%8B%9D%E7%89%9B%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="돈가스" data-a="난바">
-    <div class="ctop"><h3>돈카츠 KYK</h3><span class="cat">돈가스</span></div>
-    <p class="jpname">デリカ KYK 大阪高島屋 · 難波5-1-5 B1</p>
-    <div class="meta"><span>도보 6분</span><span>10:00–20:00</span><span>연중무휴</span></div>
-    <p class="desc">오사카에서 시작한 돈카츠 집. 다카시마야 지하 1층이라 난카이 난바역에서 밖으로 나가지 않고 갈 수 있습니다. <b>밥·양배추·된장국·차가 리필 무료</b>예요. 포장 도시락도 팝니다.</p>
-    <div class="kid good"><b>아이 동반 ◎</b> — 히레카츠(안심)가 부드러워 아이가 먹기 편합니다. 백화점이라 통로가 넓어 캐리어를 끌고 들어가도 돼요. <b>첫날 도착 직후에 가장 현실적인 선택.</b></div>
-    <a class="gm" href="https://maps.google.com/?q=デリカKYK+大阪高島屋" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="당고·디저트" data-a="난바">
-    <div class="ctop"><h3>키야스 소혼포</h3><span class="cat">당고·디저트</span></div>
-    <p class="jpname">喜八洲総本舗 · 高島屋大阪店 B1F</p>
-    <div class="meta"><span>도보 6분</span><span>10:00–20:00</span><span>연중무휴</span></div>
-    <p class="desc">오사카 명물 <b>미타라시 당고</b>. 주문하면 그 자리에서 구워주고 <b>굽기 정도를 고를 수 있는데</b>, 살짝 태운 쪽이 훨씬 고소합니다. 간장 소스가 과하게 달지 않아 계속 들어가요.</p>
-    <div class="kid"><b>앉을 데가 없습니다.</b> 포장해서 호텔에서 드세요. 길에서 걸어다니며 먹는 건 실례로 여겨집니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=喜八洲総本舗+高島屋大阪店" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="카레" data-a="난바">
-    <div class="ctop"><h3>지유켄 난바 본점</h3><span class="cat">카레</span></div>
-    <p class="jpname">自由軒 難波本店 · 難波3-1-34</p>
-    <div class="meta"><span>도보 7분</span><span>11:00–19:35</span><span class="rest">월요일 휴무</span></div>
-    <p class="desc">1910년에 문 연 오사카에서 가장 오래된 양식당. 간판인 <b>명물 카레</b>는 카레와 밥을 미리 비벼 내고 가운데에 생계란 노른자를 얹어줍니다. 노른자를 풀어 섞으면 매운맛이 확 부드러워져요. 1,000엔이 안 됩니다.</p>
-    <div class="kid"><b>아이 동반 ○</b> — 명물 카레는 살짝 매콤하고 생계란이 들어갑니다. 36개월 아이에게는 같은 집 <b>오므라이스나 하이라이스</b>를 시켜주세요. 붐빌 때 모르는 사람과 합석하지만 회전이 빨라 오래 안 기다립니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=自由軒+難波本店" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="커피" data-a="난바">
-    <div class="ctop"><h3>마루후쿠 커피 센니치마에 본점</h3><span class="cat">커피</span></div>
-    <p class="jpname">丸福珈琲店 千日前本店 · 千日前1-9-1</p>
-    <div class="meta"><span>도보 7분</span><span>08:00–23:00</span><span>연중무휴</span></div>
-    <p class="desc">1934년 창업. 좁은 골목 모퉁이의 70~80년대 영국풍 인테리어라 신사이바시 인파에서 완전히 벗어난 느낌입니다. <b>계란 샌드위치</b>가 간판이고, <b>핫케이크</b>는 바닥이 바삭하게 구워져 커피 휘핑크림과 함께 나와요. 커피는 상당히 진하고 씁쓸합니다. 영어 메뉴 있음.</p>
-    <div class="kid good"><b>아이 동반 ◎</b> — <b>아침 8시에 여는 몇 안 되는 제대로 된 카페</b>라 아이들이 일찍 깨는 날에 최고입니다. 대기는 10분 안팎, 음식은 20분쯤 걸려요.</div>
-    <a class="gm" href="https://maps.google.com/?q=丸福珈琲店+千日前本店" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="빵" data-a="난바">
-    <div class="ctop"><h3>CASCADE 난바 마루이</h3><span class="cat">빵</span></div>
-    <p class="jpname">CASCADE なんばマルイ店 · 難波3-8-9 B1</p>
-    <div class="meta"><span>도보 7분</span><span>08:00–21:00</span><span>연중무휴</span></div>
-    <p class="desc">아침 8시부터 밤 9시까지 여는 대형 베이커리. 종류가 압도적으로 많아 <b>아침거리를 한 번에 해결하기 좋습니다.</b> 멜론빵과 카레빵, 식빵 평이 좋아요. 8시 개점 직후에도 줄이 있습니다.</p>
-    <div class="kid good"><b>아이 동반 ◎</b> — 쟁반에 집게로 담는 방식이라 아이가 직접 고르는 재미가 있습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=CASCADE+なんばマルイ" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="빵" data-a="난바">
-    <div class="ctop"><h3>파네파네</h3><span class="cat">빵</span></div>
-    <p class="jpname">pane pane · 日本橋2-5-1</p>
-    <div class="meta"><span>도보 4분</span><span>10:00–19:00</span><span class="rest">수요일 휴무 · 현금만</span></div>
-    <p class="desc">멜론빵 하나로 승부하는 작은 집. 겉은 바삭하고 속은 부드러워서 "여행 중 먹은 멜론빵 중 최고"라는 평이 반복됩니다. 주인 할머니가 편백나무 향이 밴 종이봉투에 담아줘요.</p>
-    <div class="kid"><b>9/23은 수요일이라 휴무입니다.</b> 9/24~26에 지나가는 길에 들르세요. 호텔에서 정말 가깝습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=pane+pane+日本橋+大阪" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="라멘" data-a="난바">
-    <div class="ctop"><h3>라멘 멘히카</h3><span class="cat">라멘</span></div>
-    <p class="jpname">らーめん 麺匪火 · 難波中1-18-8</p>
-    <div class="meta"><span>도보 7분</span><span>11:30–14:30 / 18:00–20:30</span><span class="rest">수·목 휴무 · 현금만</span></div>
-    <p class="desc">굴과 조개로 낸 맑은 소금 육수. 국물이 투명한데 단맛과 감칠맛이 진하게 올라오고 연어알을 얹어줍니다. 난바 라멘 중 평가가 가장 높은 축이에요. 돼지고기가 싫다고 하면 닭으로 바꿔줍니다.</p>
-    <div class="kid bad"><b>아이 동반 △</b> — 좌석이 적고 입장 인원을 조절해서 대기가 깁니다. <b>9/23(수)과 9/24(목)은 휴무</b>라 이번 일정에선 9/25 점심 아니면 기회가 없어요.</div>
-    <a class="gm" href="https://maps.google.com/?q=麺匪火+難波中" target="_blank">구글맵에서 열기 →</a>
-  </div>
-</div>
-
-<div class="group" data-area="도톤보리">
-  <h2>도톤보리 · 신사이바시 (도보 8~20분)</h2>
-
-  <div class="card" data-cat="우동" data-a="도톤보리">
-    <div class="ctop"><h3>도톤보리 이마이 본점</h3><span class="cat">우동</span></div>
-    <p class="jpname">道頓堀 今井 本店 · 道頓堀1-7-22</p>
-    <div class="meta"><span>도보 9분</span><span>11:30–21:00</span><span class="rest">수요일 휴무</span></div>
-    <p class="desc"><b>우동을 하나만 고른다면 여기입니다.</b> 도톤보리 한복판인데 안으로 들어가면 소란이 뚝 끊깁니다. 간판인 <b>키츠네우동(¥930)</b>은 국물이 맑고 가벼운데 다시 향이 깊고, 위에 얹힌 유부가 두툼하고 달아서 국물을 잔뜩 머금어요. 면은 굵고 부드럽습니다. 오야코동도 평이 좋아요.</p>
-    <div class="kid good"><b>아이 동반 ◎</b> — 층이 여러 개라 자리가 넉넉하고, 붐벼도 음식이 10분 안에 나옵니다. 직원이 양이 많다 싶으면 작은 사이즈로 바꿔주기도 해요. 국물이 순해서 아이들이 잘 먹습니다.</div>
-    <div class="kid bad"><b>9/23은 수요일이라 휴무입니다.</b> 9/24·9/25·9/26에 넣으세요.</div>
-    <a class="gm" href="https://maps.google.com/?q=道頓堀今井+本店" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="라멘" data-a="도톤보리">
-    <div class="ctop"><h3>무겐 라멘 센니치마에</h3><span class="cat">라멘</span></div>
-    <p class="jpname">無限ラーメン 千日前 · 難波1-2-2</p>
-    <div class="meta"><span>도보 8분</span><span>10:00–다음날 01:00</span><span>연중무휴</span></div>
-    <p class="desc">난바 일대 라멘 중 평점이 가장 높은 집. 국물이 진하고 크리미하며 <b>등심 차슈</b>가 부드럽습니다. 키오스크로 주문하고 2층에도 자리가 있어요. 매운 라멘도 따로 있습니다.</p>
-    <div class="kid good"><b>아이 동반 ○</b> — 2층까지 있어 4인이 앉기 수월하고 직원이 주문을 도와줍니다. 늦게까지 열어서 저녁 시간을 놓쳐도 돼요.</div>
-    <a class="gm" href="https://maps.google.com/?q=無限ラーメン+千日前" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="라멘" data-a="도톤보리">
-    <div class="ctop"><h3>킨류 라멘 도톤보리</h3><span class="cat">라멘</span></div>
-    <p class="jpname">金龍ラーメン 道頓堀 · 道頓堀1-7-26</p>
-    <div class="meta"><span>도보 9분</span><span>24시간</span><span>연중무휴</span></div>
-    <p class="desc">지붕 위 거대한 용이 간판인 그 집. 식권 자판기로 주문하고 <b>김치와 부추가 무한 제공</b>됩니다. 한 그릇 1,000엔이 안 돼요.</p>
-    <div class="kid good"><b>아이 동반 ○ (좌식)</b> — <b>다다미 좌식석</b>이 있어 36개월 아이는 오히려 편합니다. 다만 관광지 한복판이라 평가가 갈려요. 진한 돈코츠를 기대하면 실망할 수 있습니다. <b>싸고 빠르고 앉을 수 있다</b>가 장점입니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=金龍ラーメン+道頓堀" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="타코야키" data-a="도톤보리">
-    <div class="ctop"><h3>혼케 오오타코</h3><span class="cat">타코야키</span></div>
-    <p class="jpname">本家 大たこ 道頓堀本店 · 道頓堀1-4-16</p>
-    <div class="meta"><span>도보 9분</span><span>10:30–23:00</span><span>연중무휴</span></div>
-    <p class="desc">글리코 간판 바로 근처. <b>문어 덩어리가 크고 신선한 게</b> 이 집의 특징입니다. 6개 600엔이라 와나카보다 조금 쌉니다. 안쪽에 앉아 먹을 공간이 있고 오코노미야키도 팝니다.</p>
-    <div class="kid good"><b>아이 동반 ○</b> — 밤 11시까지 열어서 도톤보리 산책 뒤에 들르기 좋습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=本家大たこ+道頓堀" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="규카츠" data-a="도톤보리">
-    <div class="ctop"><h3>교토 카츠규 도톤보리점</h3><span class="cat">규카츠</span></div>
-    <p class="jpname">京都勝牛 道頓堀中座くいだおれビル 2階 · 道頓堀1-7-21</p>
-    <div class="meta"><span>도보 10분</span><span>11:00–22:00</span><span>연중무휴</span></div>
-    <p class="desc">쿠이다오레 빌딩 2층. <b>도톤보리 한복판인데 위층이라 조용한 게</b> 이 지점의 장점입니다. 창밖으로 도톤보리가 내려다보여요. 가격 대비 고기 양이 좋다는 평이 많습니다.</p>
-    <div class="kid good"><b>아이 동반 ○</b> — 도톤보리 구경하다가 바로 올라가면 됩니다. 2층이라 길거리 인파에서 벗어날 수 있어요.</div>
-    <a class="gm" href="https://maps.google.com/?q=%E4%BA%AC%E9%83%BD%E5%8B%9D%E7%89%9B%20%E9%81%93%E9%A0%93%E5%A0%80" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="카레" data-a="도톤보리">
-    <div class="ctop"><h3>인디안 카레 난바점</h3><span class="cat">카레</span></div>
-    <p class="jpname">インデアンカレー 難波店 · 難波1-5-20</p>
-    <div class="meta"><span>도보 9분</span><span>11:00–15:30 / 17:00–20:00</span><span class="rest">수요일 휴무</span></div>
-    <p class="desc">1940년대부터 이어온 오사카 명물. 처음엔 달다가 몇 초 뒤에 매운맛이 훅 올라오는 독특한 구조입니다. 메뉴가 사실상 두 개뿐이고 회전이 아주 빨라요.</p>
-    <div class="kid bad"><b>아이 동반 ✕</b> — <b>36개월 아이에게는 확실히 맵습니다.</b> 좌석도 좁고 더워요. 어른들끼리 짬이 날 때 가세요. 아이와 카레를 먹을 거면 지유켄이 맞습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=インデアンカレー+難波店" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="우동" data-a="도톤보리">
-    <div class="ctop"><h3>우사미테이 마츠바야</h3><span class="cat">우동</span></div>
-    <p class="jpname">うさみ亭マツバヤ · 南船場3-8-1</p>
-    <div class="meta"><span>도보 22분</span><span>11:00–18:00</span><span class="rest">일요일 휴무 · 현금만</span></div>
-    <p class="desc">1893년 창업, <b>키츠네우동을 처음 만든 집</b>입니다. 130년 된 가게라 내부가 쇼와 시대 그대로예요. 대표 메뉴는 우동에 밥을 함께 끓인 <b>오지야우동</b>. 값도 쌉니다.</p>
-    <div class="kid"><b>아이 동반 △</b> — 노부부가 운영하는 작은 가게라 붐빌 때 4인은 부담스러울 수 있습니다. 호텔에서 좀 멀어요(신사이바시 북쪽). 우동의 역사를 보러 가는 곳이지, 편한 식사 자리는 아닙니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=うさみ亭マツバヤ+南船場" target="_blank">구글맵에서 열기 →</a>
-  </div>
-</div>
+<!-- .group 카드는 data/food.json 에서 렌더링됩니다 -->
+<div class="group" data-area="난바"></div>
+<div class="group" data-area="도톤보리"></div>
 
 <!-- ─────────── 나라 지도 ─────────── -->
 <div class="mapbox" data-area="나라">
@@ -1478,104 +660,121 @@ if (typeof L === 'undefined') {
   <a class="maplink" target="_blank" rel="noopener" href="https://maps.google.com/?q=%E5%A5%88%E8%89%AF%E5%85%AC%E5%9C%92">구글맵에서 나라공원 열기 →</a>
 </div>
 
-<div class="group" data-area="나라">
-  <h2>나라 — 9/25 금요일, 전부 정상 영업</h2>
-
-  <div class="card" data-cat="소바" data-a="나라">
-    <div class="ctop"><h3>소바도코로 키타하라</h3><span class="cat">소바</span></div>
-    <p class="jpname">蕎麦処 北原 · 奈良市水門町50</p>
-    <div class="meta"><span>도다이지에서 도보 5분</span><span>11:00–14:30</span><span class="rest">화·수 휴무</span></div>
-    <p class="desc">나라 소바 중 평이 가장 좋은 집. <b>매일 아침 돌절구로 직접 갈아</b> 면을 뽑고, 하루 40~50인분만 만듭니다. 튀김은 기름지지 않고 바삭하며, 마지막에 소바 삶은 물을 남은 장국에 부어 마시는 것까지가 코스예요. 감 절임과 청어 조림 같은 나라 향토 반찬도 팝니다.</p>
-    <div class="kid bad"><b>아이 동반 △ — 대기가 길 수 있습니다.</b> 하루 분량이 정해져 있어 <b>개점 시각(11:00)에 맞춰 가는 게 사실상 필수</b>예요. 그 이후엔 한 시간 대기가 나옵니다. 도다이지를 먼저 보고 11시에 딱 들어가는 동선이면 승산이 있습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=蕎麦処北原+奈良" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="소바" data-a="나라">
-    <div class="ctop"><h3>소바처 남고</h3><span class="cat">소바</span></div>
-    <p class="jpname">そば処 南郷 · 奈良市高畑町966-3</p>
-    <div class="meta"><span>나라공원 남쪽</span><span>11:30–15:00</span><span class="rest">수·목 휴무 · 현금만</span></div>
-    <p class="desc">나라공원 바로 옆에 숨어 있는 8석짜리 집. 노부부가 둘이서 운영하고, 튀김소바 평이 아주 좋습니다. 손님에게 먹는 법과 소스 쓰는 법을 직접 알려줘요. <b>우키미도와 가까워서</b> 사슴 보는 동선에 자연스럽게 붙습니다.</p>
-    <div class="kid bad"><b>아이 동반 △</b> — <b>8석뿐입니다.</b> 4인이 한 번에 앉으려면 운이 따라야 해요. 대신 분위기는 남의 집에 초대받은 것 같다는 평이 많습니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=そば処南郷+奈良+高畑町" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="소바" data-a="나라">
-    <div class="ctop"><h3>소바도코로 하야시</h3><span class="cat">소바</span></div>
-    <p class="jpname">蕎麦処 はやし · 奈良市南袋町1</p>
-    <div class="meta"><span>나라마치</span><span>11:30–14:30</span><span class="rest">수요일 휴무</span></div>
-    <p class="desc">나라마치 골목의 작고 소박한 집. 면을 직접 뽑고 튀김이 바삭합니다. 소바에 튀김을 곁들여 1,200엔 안팎이라 값이 착해요. 영어는 안 통하지만 주인이 친절합니다.</p>
-    <div class="kid"><b>아이 동반 △</b> — 역시 작은 가게입니다. 위 두 곳이 안 되면 여기로.</div>
-    <a class="gm" href="https://maps.google.com/?q=蕎麦処はやし+奈良" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="우동" data-a="나라">
-    <div class="ctop"><h3>미즈야차야</h3><span class="cat">우동</span></div>
-    <p class="jpname">水谷茶屋 · 奈良市春日野町30</p>
-    <div class="meta"><span>가스가타이샤 뒤</span><span>11:00–15:30</span><span class="rest">화·수 휴무</span></div>
-    <p class="desc">개울 옆 초가지붕 찻집. 우동과 소바, 오뎅, 말차 아이스크림을 팝니다. <b>냉수와 뜨거운 녹차가 무료</b>고, 사슴 센베도 여기서 팔아요. 나라에서 평점이 가장 높은 식사 자리 중 하나입니다.</p>
-    <div class="kid good"><b>아이 동반 ◎ — 나라에서 아이 데리고 가기 가장 편한 곳입니다.</b> 자리가 야외 툇마루라 소란스러워도 괜찮고, 회전이 빨라 대기가 있어도 금방 앉아요. 주변에 사슴이 어슬렁거려서 밥 먹으며 구경이 됩니다.</div>
-    <a class="gm" href="https://maps.google.com/?q=水谷茶屋+奈良" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="솥밥" data-a="나라">
-    <div class="ctop"><h3>가마메시 시즈카 공원점</h3><span class="cat">솥밥</span></div>
-    <p class="jpname">釜めし志津香 公園店 · 奈良市登大路町59-11</p>
-    <div class="meta"><span>나라공원 안</span><span>11:00–15:00 (토·일 16:00)</span><span class="rest">화요일 휴무</span></div>
-    <p class="desc">나라 대표 솥밥집. 주문 후 솥에 지어 나오고, 다 먹을 때쯤 바닥의 누룽지까지 긁어 먹는 게 코스입니다. 간이 순해서 아이들이 잘 먹어요.</p>
-    <div class="kid bad"><b>대기가 정말 깁니다.</b> 밥 짓는 데 20~30분이 걸려 회전이 느려서, 1시간 이상 기다렸다는 후기가 많아요. <b>줄 서면서 미리 주문을 받습니다.</b> 개점 전에 가는 게 아니면 아이 둘과는 권하지 않습니다.</div>
-    <div class="kid"><b>대안</b> — 같은 집 <b>본점(오미야초)</b>은 긴테츠나라역 서쪽이라 관광객이 훨씬 적고 정원이 보이는 자리입니다. 조용히 먹고 싶으면 이쪽.</div>
-    <a class="gm" href="https://maps.google.com/?q=釜めし志津香+公園店" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="당고·디저트" data-a="나라">
-    <div class="ctop"><h3>나카타니도</h3><span class="cat">당고·디저트</span></div>
-    <p class="jpname">中谷堂 · 奈良市橋本町29</p>
-    <div class="meta"><span>히가시무키 상점가</span><span>10:00–18:00</span><span class="rest">화요일 휴무</span></div>
-    <p class="desc">두 사람이 무서운 속도로 떡메를 치는 걸 길에서 그냥 볼 수 있습니다. 갓 만든 쑥떡이 <b>한 개 200엔</b>이고 팥소가 과하게 달지 않아요. 하루만 지나도 맛이 떨어져서 그 자리에서 먹는 게 맞습니다.</p>
-    <div class="kid good"><b>아이 동반 ◎</b> — 떡치기 공연 자체가 아이들 반응이 제일 좋은 구경거리입니다. 다만 <b>오후 4시쯤이면 그날 치기가 끝나므로</b> 공연을 보려면 점심 전후로 가세요.</div>
-    <a class="gm" href="https://maps.google.com/?q=中谷堂+奈良" target="_blank">구글맵에서 열기 →</a>
-  </div>
-</div>
-
-<div class="group" data-area="공항">
-  <h2>간사이공항 — 마지막 끼니</h2>
-
-  <div class="card" data-cat="우동" data-a="공항">
-    <div class="ctop"><h3>키네야 무기마루</h3><span class="cat">우동</span></div>
-    <p class="jpname">杵屋麦丸 @KIX · 제1터미널 2F</p>
-    <div class="meta"><span>07:00–22:00</span><span>연중무휴</span><span>할랄 인증</span></div>
-    <p class="desc">공항에서 제일 무난한 우동집. 면이 굵고 쫄깃하며 국물이 맑고 순합니다. <b>육수를 기계에서 원하는 만큼 받아 쓰는</b> 셀프 방식이라 아이 몫은 연하게 조절할 수 있어요. 값도 쌉니다.</p>
-    <div class="kid good"><b>아이 동반 ◎</b> — 19:35 비행기라면 여기서 저녁을 해결하는 게 자연스럽습니다. <b>기내에서 배고파 깨는 일이 없어요.</b> 면은 잘라주고 국물은 식혀서 주세요.</div>
-    <a class="gm" href="https://maps.google.com/?q=杵屋麦丸+関西国際空港" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="라멘" data-a="공항">
-    <div class="ctop"><h3>멘쇼 라멘</h3><span class="cat">라멘</span></div>
-    <p class="jpname">MENSHO RAMEN · 간사이공항</p>
-    <div class="meta"><span>06:30–24:15</span><span>연중무휴</span></div>
-    <p class="desc">공항 라멘치고 평이 좋은 편입니다. <b>트러플 향을 얹은 닭 백탕</b>이 간판인데 국물이 진하고 면이 쫄깃해요. 공항 가격이라 시내보다 비쌉니다. 줄이 있어도 10분이면 앉습니다.</p>
-    <div class="kid"><b>아이 동반 △</b> — 푸드코트가 아니라 일반 식당이라 자리가 넉넉하진 않습니다. 트러플 국물이 아이에겐 무거울 수 있어요. <b>라멘을 시내에서 못 먹었다면 여기가 마지막 기회입니다.</b></div>
-    <a class="gm" href="https://maps.google.com/?q=MENSHO+RAMEN+関西国際空港" target="_blank">구글맵에서 열기 →</a>
-  </div>
-
-  <div class="card" data-cat="푸드코트" data-a="공항">
-    <div class="ctop"><h3>Tasty Street 푸드코트</h3><span class="cat">푸드코트</span></div>
-    <p class="jpname">제1터미널 2F</p>
-    <div class="meta"><span>터미널 운영 시간</span><span>물 무료</span></div>
-    <p class="desc">초밥, 카레, 텐동, 타코야키, 카무쿠라 라멘이 한자리에 있습니다. <b>네 식구 취향이 다 다를 때 답</b>입니다. 좌석이 작은 편이라 붐비면 자리 잡기가 어려워요.</p>
-    <div class="kid good"><b>아이 동반 ◎</b> — 각자 먹고 싶은 걸 고를 수 있고 물이 무료입니다. 위 두 곳에 줄이 길면 여기로.</div>
-    <a class="gm" href="https://maps.google.com/?q=Tasty+Street+関西国際空港" target="_blank">구글맵에서 열기 →</a>
-  </div>
-</div>
+<div class="group" data-area="나라"></div>
+<div class="group" data-area="공항"></div>
 
 <p class="empty" id="empty">조건에 맞는 곳이 없습니다. 필터를 풀어보세요.</p>
 
-<footer>
-  영업 시간과 휴무일은 2026년 9월 기준 조사 내용입니다.<br>임시 휴업이 있을 수 있으니 가기 전 구글맵에서 한 번 확인하세요.
-</footer>
+<footer id="foodfoot"></footer>
 
 </div>
 
+<script type="application/json" id="itin-data">{"meta":{"title":"오사카 가족여행","sub":["2026년 9월 23일 수요일 – 9월 26일 토요일 · 3박 4일","어른 2 · 아이 2 (36개월, 70개월)","미마루 오사카 난바 스테이션 · 닛폰바시"],"flights":[{"code":"KE2117","route":"9/23 김포 → 간사이","time":"09:30 → 11:20"},{"code":"KE2120","route":"9/26 간사이 → 김포","time":"19:35 → 21:25"}],"flightMemo":"아래 일정은 이 시각 기준입니다. 출발 시각은 항공권 원본으로 한 번 더 확인해주세요."},"days":[{"id":"p1","cvar":"--d1","tab":{"n":"9/23","w":"수 · 도착"},"title":"도착일 — 짐 풀고, 쉬고, 잘 먹기","intro":"난바역에 내리자마자 밥부터 먹고, 체크인하고 한 번 쉽니다. 오후 늦게 산리오만 하나 다녀오고 나머지는 호텔 반경 도보 10분 안에서 해결해요. 디즈니는 9/25 오후, 도톤보리는 9/26 낮으로 옮겼습니다.","flag":"9/23은 추분의 날 공휴일이자 <b>실버위크(9/19~9/23) 마지막 날</b>입니다. 도톤보리와 신사이바시는 오후부터 밤까지 인파가 최고조예요. 첫날 그 한복판에 아이 둘을 데리고 들어가면 그날 저녁은 물론 다음 날까지 영향을 줍니다.","stops":[{"time":"11:20","card":{"title":"간사이공항 도착","badges":[{"b":"rsv","t":"KE2117","sm":true}],"blocks":[{"p":"입국심사와 짐 찾기에 40~60분. <b>Visit Japan Web</b>을 4인 모두 출발 전에 등록해두면 심사 줄이 확연히 짧습니다. 아이 여권 정보도 같이 넣어두세요."}]}},{"time":"12:35","card":{"title":"라피트 12:35 출발","badges":[{"b":"rsv","t":"QR · 4석","sm":true}],"jp":"南海 関西空港駅","blocks":[{"p":"도착층에서 에스컬레이터로 2층, 연결통로를 건너 오른쪽 빨간 <b>NANKAI</b> 간판이 난카이 개찰구입니다. 도보 5분 정도. 예매하신 QR을 개찰기에 대면 그대로 통과돼요."},{"tip":"<b>여유는 75분.</b> 착륙에서 개찰구까지 보통 45~60분이니 넉넉하진 않지만 충분합니다. <b>12:20까지 개찰 통과</b>를 목표로 잡으세요. 화장실은 열차 안에도 있으니 공항에서 시간 쓰지 말고 일단 넘어가는 게 안전합니다."},{"tip":"<b>혹시 놓치면</b> — 같은 승강장에서 난카이 <b>공항급행</b>이 자유석으로 자주 다닙니다. 난바까지 45분. 이 경우 개찰구 역무원에게 QR을 보여주고 처리를 받으세요."},{"tip":"<b>4석 예약해두신 게 잘한 선택입니다.</b> 아이들도 각자 앉으니 38분이 훨씬 편해요. 둥근 창문의 진한 파란 열차라 타기 전부터 좋아합니다."}]}},{"move":{"segs":[{"pill":"난카이 라피트","t":"간사이공항 12:35 → 난바 13:13","dur":"38분"}]}},{"time":"13:20","card":{"title":"바로 점심 — 난바역 도착 즉시","blocks":[{"p":"김포–간사이는 1시간 50분짜리 단거리라 기내식이 스낵 수준입니다. 9시 반에 출발했으면 이 시간에 아이들은 이미 배가 고파요. <b>호텔에 짐 맡기러 가기 전에 먹는 게 맞습니다.</b>"},{"p":"난카이 난바역 개찰구에서 <b>다카시마야로 바로 연결</b>되니 밖으로 나갈 필요가 없습니다."},{"ul":["<b>돈카츠 KYK</b>(지하 1층) — 밥·양배추·국 리필 무료. 통로가 넓어 캐리어를 끌고 들어가도 됩니다","<b>7층 식당가</b> — 회전이 빠르고 선택지가 많습니다","<b>카마타케 우동</b> — 호텔 방향으로 도보 3분. 짐을 먼저 맡기고 갈 거면 이쪽"]},{"tip":"<b>줄 서는 맛집은 오늘 하지 마세요.</b> 공휴일이라 유명한 곳은 대기가 깁니다. 첫날 웨이팅으로 아이 체력을 쓰면 남은 사흘이 흔들려요."},{"tip":"<b>짐이 부담되면</b> — 난카이 난바역 개찰구 근처 <b>코인로커</b>(큰 사이즈 700엔 안팎, IC카드 결제)에 넣고 먹은 뒤 찾아가세요."}]}},{"time":"14:30","card":{"title":"미마루 오사카 난바 스테이션 — 짐 맡기기","jp":"MIMARU大阪 難波STATION","blocks":[{"p":"다카시마야에서 도보 6분(닛폰바시 3초메). 체크인이 15시라 조금 이르면 캐리어만 맡기고 잠시 로비에서 기다리면 됩니다."},{"tip":"<b>프런트에서 미리 물어볼 것</b> — 침대가드·유아 변기커버·아기 욕조·발판, 보드게임 대여, 코인세탁실 위치, 마지막 날 공항 수하물 배송 가능 여부."}]}},{"time":"15:00","card":{"title":"체크인 · 짐 풀고 한 번 쉬기","badges":[{"b":"must","t":"오늘의 핵심"}],"blocks":[{"p":"여기가 오늘 제일 중요한 일정입니다. 새벽부터 움직였고 비행기까지 탔고 밥까지 먹었으니 <b>36개월 아이는 이 시간에 반드시 한 번 눕혀야</b> 저녁이 편해요."},{"ul":["짐 풀고, 아이들 씻기고, 낮잠 또는 최소 한 시간 뒹굴기","어른도 이때 캐리어 정리와 다음 날 준비를 끝내두세요","미마루는 방에 주방·식탁·세탁기가 있어서 첫날 세팅을 해두면 남은 사흘이 편합니다"]}]}},{"time":"16:20","card":{"title":"쿠로몬 시장 — 내일 아침거리","badges":[{"b":"must","t":"17시 마감"}],"jp":"黒門市場","blocks":[{"p":"호텔에서 <b>도보 3분</b>. 방에 냉장고와 전자레인지가 있으니 여기서 내일 아침을 사둡니다. 걷는 거리가 짧아 쉬고 나온 직후 일정으로 딱 맞아요."},{"ul":["잘라 파는 과일(딸기·멜론·샤인머스캣) — 아이들 아침으로 제일 잘 먹습니다","계란말이(다시마키), 유부초밥, 주먹밥","<b>대부분 17시에 닫습니다.</b> 늦으면 셔터만 봅니다"]},{"tip":"걸어 다니며 먹는 걸 금지하는 가게가 많습니다. 산 자리에서 먹거나 포장해 가세요. 가격표 확인은 필수."}]}},{"time":"17:10","card":{"title":"Sanrio 신사이바시점","badges":[{"b":"kid","t":"오늘 유일한 외출"}],"jp":"Sanrio 心斎橋店","blocks":[{"p":"쿠로몬에서 도보 12분, 호텔에서는 약 1.1km입니다. 2026년 7월 31일 오픈한 <b>대형 직영점</b>으로 예전 ZARA 자리에 들어왔어요. 하라주쿠 본점급 규모입니다. <b>매일 11:30–20:00.</b>"},{"tip":"<b>여기서만 파는 것 ①</b> — 캐릭터들이 신사이바시를 산책하는 레트로 디자인의 매장 한정 굿즈. 마스코트 홀더 6종 각 ¥2,794, 인형 4종 각 ¥4,598. <b>1인당 아이템별·캐릭터별 1개까지</b>고, 한 사람이 여러 명 몫을 몰아 계산하는 것도 막습니다. 아이별로 하나씩 고르게 하세요."},{"tip":"<b>여기서만 파는 것 ②</b> — <b>츠메테네 피규어</b>. 캐릭터 유리병에 작은 마스코트를 직접 골라 담습니다. 종류가 20가지라 <b>70개월 아이가 고르는 재미가 큽니다.</b> 큰 병 5종 각 ¥4,950, 작은 병 3종 각 ¥2,200."},{"tip":"<b>45분으로 끊으세요.</b> 오늘은 연휴 마지막 날이라 신사이바시스지 인파가 상당합니다. 상점가에서는 어른 한 명이 한 아이씩 맡고, 다 보면 바로 난바 방향으로 내려오세요."}]}},{"time":"18:05","card":{"title":"리쿠로 오지상 치즈케이크","jp":"りくろーおじさんの店 なんば本店","blocks":[{"p":"난바 본점, 다카시마야 바로 옆입니다. 갓 구운 걸 꺼낼 때 종을 울리고 케이크가 출렁거리는데 아이들이 그 장면을 좋아해요. 통째로 하나 사서 호텔에서 잘라 먹으면 됩니다."}]}},{"time":"18:25","card":{"title":"다카시마야 지하 — 저녁 포장 + 당고 + 빵","badges":[{"b":"must","t":"먹킷 2·3/9"}],"jp":"高島屋大阪店 デパ地下","blocks":[{"p":"도시락·튀김·초밥·반찬이 한자리에 있습니다. <b>20시 폐점이라 19시부터 할인 스티커</b>가 붙어요. 18시 반이면 슬슬 붙기 시작하는 시간이라 타이밍이 괜찮습니다."},{"ul":["<b>당고</b> — 같은 지하의 <b>키야스 소혼포</b>(喜八洲総本舗). 오사카 명물 미타라시 당고를 주문하면 그 자리에서 구워줍니다. <b>굽기 정도를 고를 수 있는데</b> 살짝 태운 쪽이 훨씬 고소해요. 앉을 데는 없으니 포장해서 방에서 드세요","<b>빵</b> — 같은 층 베이커리에서 내일 아침 몫을 사둡니다. 미마루 방에 전기포트가 있어서 빵·우유·과일이면 아침이 해결돼요","<b>551 호라이</b>도 이 지하에 있습니다. 부타망 몇 개 사서 방에서 데우면 아이들이 잘 먹어요"]}]}},{"time":"19:15","card":{"title":"호텔에서 저녁 · 보드게임","blocks":[{"p":"식탁에 펼쳐놓고 방에서 먹습니다. 공휴일 저녁 식당에서 아이 둘 데리고 버티는 것보다 훨씬 편해요. 로비에서 보드게임을 빌려주니 하나 가져와서 마무리하면 첫날이 딱 좋게 끝납니다."},{"tip":"<b>부족한 게 있으면</b> — 길 건너 로손, 또는 돈키호테 도톤보리점(24시간)에 어른 한 명만 다녀오세요. 다만 면세 쇼핑은 9/26에 몰아서 하는 걸로 잡아뒀습니다."}]}}],"alt":[{"lead":"여유가 남으면","title":"그래도 첫날 뭔가 더 하고 싶다면","blocks":[{"p":"아이들 컨디션이 예상보다 좋으면 이 정도만 얹으세요. 전부 호텔 도보 10분 안입니다."},{"ul":["<b>난바파크스 옥상정원</b> — 계단식으로 이어진 무료 정원. 잔디가 있어 아이들 뛰기 좋고 공휴일에도 도톤보리만큼 붐비지 않습니다","<b>호젠지 요코초</b> — 도톤보리 바로 옆인데 좁은 돌길이라 분위기가 완전히 다릅니다. 이끼 덮인 부동명왕상에 물을 끼얹는 게 아이들한테 재밌어요. 10분이면 충분","도톤보리 글리코 간판은 <b>9/26 낮</b>에 넣어뒀습니다. 같은 자리도 토요일 낮이 공휴일 밤보다 훨씬 낫습니다","<b>점심을 백화점 말고 다른 데서 먹고 싶다면</b> — 짐만 호텔에 던지고 <b>쿠로몬 시장</b>(도보 3분)에서 해결하는 방법도 있습니다. 밥 먹는 김에 내일 아침거리까지 같이 사면 오후 일정이 하나 줄어요. 다만 서서 먹는 가게가 많아 제대로 앉아 먹기는 어렵습니다"]}]}]},{"id":"p2","cvar":"--d2","tab":{"n":"9/24","w":"목 · 가이유칸"},"title":"가이유칸 & 텐포잔 — 하루 종일 한 동네","intro":"예약해두신 가이유칸을 중심으로 텐포잔 한 블록에서 전부 해결합니다. 이동이 거의 없어 아이들 체력에 가장 유리한 날.","flag":"텐포잔 마켓플레이스 한 건물 안에 점심 · 관람차 · 레고랜드가 다 있습니다. 건물 밖으로 나갈 일이 없어 걷는 거리가 가장 짧은 날이에요.","stops":[{"time":"07:40","card":{"title":"아침 — 방에서 (전날 사둔 것)","blocks":[{"p":"미마루 주방에 전자레인지·냉장고·전기포트가 있으니 어제 다카시마야에서 사둔 걸로 해결합니다. 아이들을 아침부터 밖으로 끌고 나가지 않는 것만으로 하루 체력이 달라져요."},{"tip":"<b>오늘 밤 살 것</b> — 내일(9/25)은 나라 가는 날이라 아침이 더 이릅니다. 오늘 저녁에 빵·우유·바나나를 넉넉히 사두세요."}]}},{"time":"08:30","move":{"segs":[{"pill":"사카이스지선","c":"#8A5326","t":"니혼바시 → 사카이스지혼마치","dur":"4분","note":"호텔에서 니혼바시역 도보 5분"},{"pill":"츄오선","t":"사카이스지혼마치 → 오사카코","dur":"14분","note":"+ 도보 5분"}],"sum":"<b>08:30 출발 → 09:15경 오사카코역 도착.</b> 입장까지 45분 여유가 생깁니다"}},{"time":"09:15","card":{"title":"텐포잔 바닷가에서 시간 보내기","blocks":[{"p":"일찍 나선 만큼 45분이 뜹니다. 이 시간을 줄에 서서 버리지 마세요. 가이유칸 앞은 바로 <b>오사카항 바닷가</b>라 산책로와 벤치가 있습니다. 배가 오가고 관람차가 머리 위에 있어서 아이들은 그것만 봐도 좋아해요."},{"tip":"<b>화장실은 여기서 미리.</b> 가이유칸은 들어가면 나선형 일방통행이라 되돌아 나오기가 번거롭습니다."},{"tip":"<b>09:45쯤 입구 줄로.</b> 예약분은 별도 줄이라 오래 안 걸립니다. 텐포잔 마켓플레이스는 11시 개점이라 그 전엔 실내로 들어갈 데가 마땅치 않아요."}]}},{"time":"10:00","card":{"title":"가이유칸","badges":[{"b":"rsv","t":"10:00 예약완료","sm":true}],"jp":"海遊館","blocks":[{"p":"8층까지 올라간 뒤 나선형으로 내려오며 관람하는 구조라 계단이 없고 계속 완만하게 내려옵니다. 소요 2~3시간."},{"ul":["고래상어가 있는 태평양 대수조는 <b>층마다 다른 높이</b>에서 보입니다. 아이들은 아래층 유리 앞이 제일 반응 좋아요","바다사자·펭귄 구역에서 시간 많이 씁니다. 앞에서 여유 있게","마지막 구역 '터치 풀'에서 상어·가오리를 직접 만질 수 있어요. 70개월 아이 하이라이트"]},{"tip":"<b>입장 요금</b> — 3세 이하 무료, 4~6세는 유아 요금입니다. 36개월 아이는 무료 대상이니 예약 인원 확인해보세요."}]}},{"time":"12:30","card":{"title":"점심 — 나니와 쿠이신보 요코초","badges":[{"b":"must","t":"먹킷 4/9 타코야키"}],"jp":"なにわ食いしんぼ横丁","blocks":[{"p":"텐포잔 마켓플레이스 2층. 옛날 오사카 거리를 재현한 푸드코트라 아이들이 구경만 해도 좋아합니다. 타코야키·오므라이스·카레·우동이 다 있어서 각자 먹고 싶은 걸 고를 수 있어요."},{"tip":"<b>타코야키 주문 팁</b> — 아이용은 소스 적게, 가츠오부시 빼달라고 하면 됩니다. 속이 굉장히 뜨거우니 반으로 갈라서 식혀주세요."}]}},{"time":"13:50","card":{"title":"텐포잔 대관람차","jp":"天保山大観覧車","blocks":[{"p":"가이유칸 바로 옆. 직경 100m, 높이 112.5m로 세계 최대급이고 <b>한 바퀴 15분</b>입니다. 가이유칸에서 두 시간 넘게 걸은 뒤라 <b>앉아서 쉬는 15분</b>이라는 게 오늘 가장 큰 장점이에요. 곤돌라 안에 안내 방송이 나오고, 날 좋으면 아카시 해협 대교와 간사이공항까지 보입니다."},{"ul":["<b>¥800 · 3세 이상</b>부터 요금 · 10:00–22:00","60대 중 8대가 <b>바닥까지 투명한 시스루 곤돌라</b>인데 대기가 길고 아이가 무서워할 수 있습니다. <b>일반 곤돌라로 달라고 하면</b> 바로 탑니다","평일 낮이라 대기는 거의 없을 거예요"]},{"tip":"<b>레고랜드를 뺀 게 맞는 선택입니다.</b> 실내에서 두세 시간 더 도는 코스라 가이유칸 직후엔 과해요. 게다가 내일이 나라라 이번 여행에서 제일 많이 걷는 날입니다. 오늘 체력을 남겨두는 편이 낫습니다."},{"tip":"<b>그래도 아쉬우면</b> — 레고랜드는 같은 건물 3층이고 평일 온라인 예매가 약 ¥2,200입니다. 아이들이 관람차 타고도 쌩쌩하면 그때 현장에서 결정해도 돼요. 다만 <b>당일 예약이 안 될 수 있고</b> 입장 마감이 16시입니다."}]}},{"time":"14:45","move":{"segs":[{"pill":"츄오선 → 사카이스지선","t":"오사카코 → 니혼바시","dur":"20분","note":"+ 호텔까지 도보 5분"}]}},{"time":"15:30","card":{"title":"호텔 복귀 · 낮잠 & 샤워","blocks":[{"p":"이 시간대를 비워두는 게 4일 내내 무너지지 않는 핵심입니다. 36개월 아이는 여기서 한숨 자야 저녁이 편해요."}]}},{"time":"17:30","card":{"title":"저녁 — 스시로 센니치마에점","badges":[{"b":"must","t":"사전 접수 권장"}],"jp":"スシロー 千日前店","blocks":[{"p":"<b>호텔에서 도보 5분</b>, 돈키호테 건물 4층입니다(엘리베이터로 바로 4층). 태블릿으로 주문하면 접시가 레일로 달려오는 게 아이들한테는 식당이 아니라 놀이예요. 우동·감자튀김·푸딩도 있어서 초밥 못 먹는 36개월도 괜찮습니다. 11:00–23:00."},{"tip":"<b>스시로는 ‘예약’이 아니라 순번 접수입니다.</b> 전화 예약은 아예 안 받아요. 대신 <b>공식 앱 · LINE · 공식 웹사이트</b>에서 두 가지를 할 수 있습니다. ① <b>날짜·시간 지정 예약</b> — 며칠 전에 미리 잡아두는 방식 ② <b>‘지금 갈게’ 접수</b> — 30분 안에 도착할 수 있을 때 순번만 미리 받는 방식. 30분이 지나면 자동 취소되니 주의하세요."},{"tip":"<b>여기는 접수를 꼭 하세요.</b> 도톤보리 옆 관광 밀집 구역이라 피크에는 현장 발권 시 <b>60~120분</b> 대기가 나옵니다. 아이 둘 데리고 그 시간을 서서 버티는 건 무리예요."},{"tip":"<b>그래서 저녁을 17:30으로 당겼습니다.</b> 일본 저녁 피크는 18:30~20:00입니다. 오늘은 15:30에 호텔로 돌아와 쉬는 일정이라 한 시간 일찍 나가는 게 어렵지 않아요. 미리 접수까지 해두면 거의 안 기다립니다."},{"tip":"<b>접수해도 즉시 착석은 아닙니다.</b> 매장 회전에 따라 10~20분은 볼 수 있으니 그 정도는 감안하세요."},{"tip":"<b>접수가 번거로우면</b> — 스시로도 포장이 되고, 다카시마야 지하 식품관(20:00 마감)에서 사와 방에서 먹어도 됩니다. 종일 걸은 날이라 방에서 먹는 쪽도 충분히 좋아요."}]}},{"time":"19:15","card":{"title":"내일 아침거리 사기","blocks":[{"p":"내일은 나라라 08:40에 나섭니다. 오늘 밤에 반드시 사두세요. <b>라이프 시모데라점</b>(도보 9분, 24:00까지)이 종류가 많고, 급하면 24시간 돈키호테나 편의점으로도 됩니다."},{"tip":"<b>나라에서 먹일 것도 같이</b> — 물, 바나나, 젤리. 나라공원은 자판기가 드문드문 있고 사슴이 봉지를 노리니 가방 안쪽에 넣어두세요."}]}}]},{"id":"p3","cvar":"--d3","tab":{"n":"9/25","w":"금 · 나라"},"title":"나라 — 사슴, 대불, 조용한 연못","intro":"평일 금요일. 오사카난바에서 환승 없이 40분이라 아이 둘 데리고 가기 가장 편한 근교입니다. 오전에 도착해 붐비기 전에 움직이는 게 핵심이에요.","flag":"9월은 수사슴 발정기입니다. 매년 10월에 뿔 자르기 행사를 하는 게 바로 이 시기 수컷이 예민해지기 때문이에요. 아래 안전 수칙을 출발 전에 한 번 읽어주세요.","stops":[{"time":"07:50","card":{"title":"아침 — 방에서 (어젯밤에 사둔 것)","blocks":[{"p":"오늘은 나라 가는 날이라 출발이 이릅니다. 방에서 먹고 바로 나서면 08:40 열차에 여유 있게 맞아요."}]}},{"time":"08:25","move":{"segs":[{"pill":"도보","t":"호텔 → 오사카난바역(킨테츠)","dur":"약 8분","note":"난카이 난바역과 다른 역입니다"}]}},{"time":"08:40","card":{"title":"오사카난바역 출발","jp":"大阪難波駅","blocks":[{"p":"호텔에서 도보 7분. 킨테츠 나라선 <b>쾌속급행</b>을 타면 환승 없이 킨테츠나라역까지 갑니다. 자유석이라 예약은 필요 없어요."},{"tip":"<b>긴테츠니혼바시역이 더 가깝지만</b>(도보 6분) 거기서 타면 이미 자리가 찹니다. 오사카난바가 시발역이니 한 정거장 더 걸어가서 앉아 가세요. 아이 둘이면 40분을 서서 가느냐 앉아 가느냐가 큽니다."},{"money":"어른 ¥680 · 아이 둘 다 무료"},{"tip":"<b>왜 아침 일찍인가</b> — 나라는 오전 11시부터 관광버스가 몰립니다. 같은 자리도 9시대에는 사람이 눈에 띄게 적고, 사슴도 아직 배가 고프지 않아 덜 달려들어요."}]}},{"time":"","move":{"segs":[{"pill":"킨테츠 나라선 쾌속급행","t":"오사카난바 → 킨테츠나라","dur":"40분 · 환승 없음"}]}},{"time":"09:30","card":{"title":"도다이지 참배길 — 첫 사슴","jp":"東大寺 南大門","blocks":[{"p":"킨테츠나라역 2번 출구에서 도보 10분. 남대문 앞 잔디에 사슴이 흩어져 있습니다. 첫 만남은 센베 없이 그냥 보여주기만 하세요. 36개월 아이는 사슴과 눈높이가 비슷해서 처음엔 놀랄 수 있으니 안고 보여주다가 반응 보고 내려주는 게 좋아요."}]}},{"time":"10:15","card":{"title":"도다이지 대불전","jp":"東大寺 大仏殿","blocks":[{"p":"15미터 넘는 청동 대불. 실물 크기가 사진과 완전히 달라서 아이들도 입을 벌립니다."},{"ul":["<b>기둥 구멍 통과</b> — 대불 뒤 기둥에 대불 콧구멍 크기의 구멍이 뚫려 있습니다. 통과하면 복이 온다는 이야기가 있어요. 70개월 아이는 혼자 통과 가능하고, 36개월은 어른이 밀어 넣어주면 됩니다. 오늘 사진 중 제일 잘 나올 장면","오전이라 구멍 앞 줄이 짧습니다. 오후엔 30분씩 서기도 해요"]},{"money":"어른 ¥800 · 미취학 아동 무료"}]}},{"time":"11:40","card":{"title":"점심 — 나라에서 고르기","blocks":[{"p":"도다이지를 보고 나온 시간대입니다. 셋 다 걸어갈 수 있는 거리예요."},{"ul":["<b>소바도코로 키타하라</b> — 나라 소바 최고 평가. 도다이지 도보 5분. 하루 40~50인분만 만들어서 <b>11:00 개점에 맞춰 가야</b> 합니다","<b>미즈야차야</b> — 초가지붕 찻집의 우동과 오뎅. <b>야외 툇마루라 아이 데리고 가장 편합니다.</b> 회전도 빨라요","<b>소바처 남고</b> — 우키미도 근처 8석짜리 집. 자리가 나면 오늘의 행운입니다","<b>가마메시 시즈카</b> 공원점 — 솥밥. 맛은 좋지만 <b>대기가 1시간 넘는 날이 많습니다</b>"]},{"tip":"<b>아이 둘 기준으로는 미즈야차야가 가장 안전합니다.</b> 소바를 꼭 먹고 싶으면 도다이지를 조금 일찍 끊고 11시에 키타하라로 직행하세요."}]}},{"time":"13:00","card":{"title":"우키미도 · 사기이케","badges":[{"b":"kid","t":"오늘의 하이라이트"}],"jp":"浮見堂 鷺池","blocks":[{"p":"요청하신 ‘덜 붐비고 순한 사슴’ 자리입니다. 나라공원 남서쪽 끝이라 도다이지–가스가타이샤 주 동선에서 완전히 빠져 있어요. 연못 위에 육각 정자가 떠 있고 주변은 넓은 잔디밭입니다."},{"ul":["<b>센베 노점이 없어서</b> 여기 사슴은 사람을 먹이로 학습하지 않았습니다. 달려들지 않고 풀 뜯거나 누워 있어요","아이가 사슴 옆에 앉아서 가만히 볼 수 있는 거의 유일한 구역","평지에 포장길이고 큰 나무 그늘과 벤치가 있어, 오전 내내 걷고 다리 쉬기에 딱 좋습니다"]},{"tip":"<b>센베를 꼭 주고 싶다면</b> — 도다이지 쪽에서 한 봉지만 사서 <b>가방 깊숙이 넣고</b> 여기로 이동하세요. 손에 들고 걸으면 오는 길 내내 사슴이 따라옵니다."}]}},{"time":"14:20","card":{"title":"나카타니도 떡치기","jp":"中谷堂","blocks":[{"p":"히가시무키 상점가. 두 사람이 무서운 속도로 떡메를 내리치는 걸 길에 서서 그냥 볼 수 있습니다. 갓 만든 쑥떡이 한 개 ¥150이고, 아이들 반응이 오늘 중 손꼽히는 순간이에요."},{"money":"쑥떡 ¥150 / 개"}]}},{"time":"15:10","card":{"title":"마호로바 대불 푸딩","jp":"まほろば大仏プリン","blocks":[{"p":"킨테츠나라역 안 매장. 사슴과 대불 그림이 그려진 유리병에 담겨 나와서 병을 기념품으로 가져올 수 있습니다. 열차 기다리며 하나씩 먹기 좋아요."},{"tip":"오후에 디즈니 하나만 붙어 있어서 나라를 15:30까지 씁니다. 사슴을 더 보고 싶으면 우키미도에서 시간을 더 쓰고 나카타니도를 빼세요."}]}},{"time":"15:30","move":{"segs":[{"pill":"킨테츠 나라선","t":"킨테츠나라 15:30 → 오사카난바 16:10","dur":"40분"}]}},{"time":"16:20","card":{"title":"호텔에서 한 시간 쉬기","badges":[{"b":"must","t":"건너뛰지 마세요"}],"blocks":[{"p":"나라에서 하루치를 이미 걸었습니다. 오후에 디즈니를 붙이려면 <b>이 한 시간이 조건</b>이에요. 씻기고 눕히고 간식 먹이고 다시 나갑니다."}]}},{"time":"17:45","card":{"title":"디즈니스토어 신사이바시 파르코점","badges":[{"b":"kid","t":"2026.8.26 오픈"}],"jp":"ディズニーストア 心斎橋パルコ店","blocks":[{"p":"호텔에서 약 1.5km, 도보 19분 또는 미도스지선 신사이바시역 직결입니다. <b>신사이바시 파르코 5층.</b> 국내 45번째이자 <b>서일본 최대 규모</b> 점포로 신사이바시에 4년 만에 돌아왔습니다. 매일 10:00–20:00."},{"tip":"<b>매장 자체가 볼거리</b> — ‘마법의 여행’을 주제로 한 일본 최초 디자인입니다. 입구에서 기관사 복장의 <b>스티치 조형물</b>이 맞아주고, 증기기관차 ‘Train of Wonder’가 매장을 가로지릅니다. 객차마다 티거, 앨리스와 체셔 고양이, 존과 커비가 타고 있어요. 안쪽에는 기관차 연료인 <b>픽시더스트를 만드는 칩과 데일</b>이 숨어 있습니다. 아이들한테 찾아보라고 하면 알아서 한 바퀴 돕니다."},{"tip":"<b>여기서만 파는 것</b> — 오픈 기념 <b>점포 한정 23종</b>. 오코노미야키·타코야키 모티브의 ‘우루포차짱’ 인형처럼 오사카색이 들어간 물건이 많고, 오사카부 한정 아이템도 따로 있습니다. 한정품은 개수 제한이 걸려 있어요."},{"tip":"<b>입장</b> — 오픈 직후 8/26~8/30에만 앱 예약이 필요했고 지금은 그냥 들어갑니다. 상품이 1,500점이라 작정하면 한 시간이 그냥 가니 45분으로 끊으세요. <b>20시 마감</b>입니다."}]}},{"time":"18:45","card":{"title":"저녁 — 디즈니 다녀오는 길에","blocks":[{"p":"파르코에서 도톤보리를 지나 호텔로 내려오는 동선입니다. 전부 그 길 위에 있어요."},{"ul":["<b>킨류 라멘</b> — <b>다다미 좌식석</b>이 있어 36개월 아이는 오히려 편합니다. 김치·부추 무한, 24시간. 관광지 한복판이라 평은 갈려요","<b>무겐 라멘</b> — 난바 라멘 중 평점이 가장 높습니다. 2층까지 있어 4인이 앉기 수월해요","<b>도톤보리 이마이</b> — 우동. 21시까지고 층이 여러 개라 자리가 넉넉합니다. 종일 걸은 날 국물이 순해서 잘 맞아요","<b>후쿠타로</b> — 오코노미야키. 본점은 호텔 도보 4분, 대기가 있으면 다카시마야 8층 지점으로"]},{"tip":"<b>지쳤으면</b> 다카시마야 지하에서 포장해 방에서 먹어도 됩니다. 나라에서 하루치를 걸은 날이라 그것도 충분히 좋은 선택이에요."}]}},{"time":"20:00","card":{"title":"호텔 복귀","blocks":[{"p":"오늘이 이번 여행에서 가장 긴 하루입니다. 씻기고 일찍 재우세요. 내일 아침거리는 어제 사둔 게 남아 있으면 그걸로, 없으면 로손에서."},{"tip":"<b>지쳤다면 잘라낼 순서</b> — ① 나카타니도·푸딩을 생략하고 나라에서 한 시간 일찍 나오기 ② 디즈니를 9/26 낮으로 미루기(그날은 오전이 비어 있어서 얼마든지 들어갑니다) ③ 저녁을 551 대신 다카시마야 지하 포장으로 바꾸기."}]}}],"alt":[{"lead":"꼭 읽어주세요","leadc":"#B01C1C","border":"#E0B9B4","bg":"#FFFBFA","title":"사슴 안전 수칙","blocks":[{"ul":["<b>센베는 어른이 들고 아이에게 한 장씩</b> 건네주세요. 봉지째 아이 손에 쥐여주면 여러 마리가 동시에 달려듭니다","센베를 등 뒤로 숨기면 사슴이 옷과 가방을 머리로 들이받습니다. <b>다 줬으면 손바닥을 활짝 펴 보여주세요.</b> 알아듣고 물러납니다","뿔이 크고 목이 굵은 수컷은 9월에 특히 예민합니다. 사진만 멀리서 찍고 아이는 그쪽으로 보내지 마세요","지도·티켓·비닐봉지는 가방 안에. 종이류를 먹으려고 달려듭니다","고개를 숙여 인사하면 사슴도 따라 숙이는데, 손에 아무것도 없을 때 하면 아이들이 정말 좋아합니다","옷은 세탁 편한 걸로. 사슴 침과 흙이 반드시 묻습니다"]}]},{"lead":"사슴 구역 선택지","title":"덜 붐비는 순서","blocks":[{"p":"나라 사슴은 나라공원 일대에만 살아서 완전히 다른 장소는 없습니다. 대신 <b>같은 공원 안에서도 구역에 따라 인파와 사슴 성격이 완전히 다릅니다.</b> 기준은 하나, 센베 노점이 있느냐예요."},{"ul":["<b>1순위 · 우키미도 · 사기이케</b> — 위 일정에 넣은 곳. 노점이 없어 사슴이 순하고 사람이 적습니다","<b>2순위 · 미즈야차야 주변 숲길</b> — 가스가타이샤 뒤편 삼나무 숲. 사슴이 그늘에서 쉬고 있고 사진이 제일 예쁩니다","<b>3순위 · 도다이지 뒤편</b> — 대불전에서 정문으로 되돌아 나오지 말고 뒤쪽(쇼소인 방향)으로 5분만 걸으면 관광객이 거의 사라집니다. 동선 손해가 없는 게 장점","<b>피할 곳</b> — 나라국립박물관 앞 센베 노점 주변. 사슴이 사람을 먹이로 학습해서 가장 공격적입니다"]}]},{"lead":"B안 — 비가 오면","title":"키즈플라자 오사카 (실내)","blocks":[{"p":"나라는 온종일 야외라 비 예보가 있으면 바꾸는 게 낫습니다. 사카이스지선 오기마치역 바로 앞, 일본 최초의 어린이 박물관이에요."},{"ul":["오스트리아 작가가 설계한 컬러풀한 미로 건축 ‘어린이의 거리’가 핵심. 70개월 아이가 몇 시간이고 놉니다","유아 전용 존이 따로 있어 36개월 아이도 안전해요","09:30–17:00 (입장 마감 16:15) · 수유실·기저귀 교환대 있음","점심은 도보 5분 텐진바시스지 상점가에서"]},{"money":"어른 ¥1,400 · 3세 이상 ¥500"}]}]},{"id":"p4","cvar":"--d4","tab":{"n":"9/26","w":"토 · 출국"},"title":"마지막 날 — 시장 아침, 쇼핑, 공항","intro":"19:35 출발이라 오후 3시 반까지는 온전히 쓸 수 있습니다. 쇼핑은 어제까지 다 끝냈으니 오늘은 아이들 놀리고 마지막 정리만 합니다. 짐은 호텔에 맡기고 몸만 나오세요.","flag":"귀국 라피트는 특급권 4장만 예약된 상태라 <b>난바역에서 승차권을 따로 사야 합니다.</b> 16:10 항목을 확인해주세요.","stops":[{"time":"08:30","card":{"title":"아침 먹고 체크아웃 · 짐 맡기기","blocks":[{"p":"남은 음식으로 방에서 아침을 해결하고 나옵니다. 캐리어는 프런트에 맡기세요."},{"tip":"<b>첫날 물어본 수하물 배송</b>이 된다면 여기서 부치는 게 최선입니다. 오후 내내 짐 없이 다니고 호텔로 되돌아올 필요도 없어져요. 다만 <b>공항 도착 시간과 출발편을 꼭 확인</b>하고 부치세요."}]}},{"time":"09:00","card":{"title":"아침 — 마루후쿠 커피 센니치마에 본점","badges":[{"b":"must","t":"먹킷 7/9"}],"jp":"丸福珈琲店 千日前本店","blocks":[{"p":"호텔에서 도보 7분, 1934년에 문 연 오사카 커피의 원조 격입니다. 좁은 골목 모퉁이에 있고 안은 70~80년대 영국풍 인테리어라 분위기가 완전히 달라요. <b>08:00–23:00</b>이라 아침에 여는 몇 안 되는 제대로 된 카페입니다. 영어 메뉴가 있어요."},{"ul":["<b>계란 샌드위치</b>가 이 집 간판입니다. 편의점 계란 샌드와는 다른 물건이에요","<b>핫케이크</b> — 바닥이 바삭하게 구워져 나옵니다. 커피 휘핑크림을 얹어줘요. 아이 둘이 나눠 먹기 좋습니다","커피는 상당히 진하고 씁쓸한 편이라 단 것과 같이 먹어야 균형이 맞습니다"]},{"tip":"<b>아침 대기는 10분 안팎</b>입니다. 8시 조금 넘어 가면 거의 안 기다려요. 나오는 데 20분쯤 걸리니 여유 있게 잡으세요."},{"tip":"<b>쿠로몬 시장</b>은 호텔 도보 3분이니 나오는 길에 구경만 하고 지나가도 됩니다. 오늘은 살 게 없으니 사진만 찍으세요."}]}},{"time":"10:30","card":{"title":"코나몬 뮤지엄 — 타코야키 만들기","badges":[{"b":"kid","t":"아이 체험"}],"jp":"道頓堀コナモンミュージアム","blocks":[{"p":"도톤보리, 호텔에서 도보 10분. 직접 타코야키를 뒤집어 굽는 체험을 합니다. 30분 정도 걸리고 <b>70개월 아이가 특히 좋아하는 종류</b>예요. 36개월 아이는 어른이 손을 잡고 같이 돌려주면 됩니다."},{"tip":"체험은 인원이 차면 대기가 생깁니다. 토요일이라 도착하면 먼저 접수부터 하세요. 체험이 부담스러우면 1층에서 음식 모형만 구경하고 나와도 됩니다."},{"tip":"<b>대안</b> — 체험이 내키지 않으면 <b>난바파크스 옥상정원</b>(호텔 도보 8분). 계단식 무료 정원이라 아이들 마지막으로 실컷 뛰게 하기 좋고, 짐 찾는 호텔에서 가깝습니다."}]}},{"time":"12:30","card":{"title":"점심 — 마지막 제대로 된 한 끼","blocks":[{"p":"도톤보리에서 호텔로 돌아오는 길입니다."},{"ul":["<b>지유켄 난바 본점</b> — 1910년 창업, 오사카에서 가장 오래된 양식당. 명물 카레는 카레와 밥을 미리 비벼 내고 생계란 노른자를 얹어줍니다. 노른자를 섞으면 매운맛이 부드러워져요. <b>아이는 오므라이스나 하이라이스로.</b> 11:00–19:35","<b>도톤보리 이마이</b> — 우동을 아직 안 먹었다면 여기. 토요일 영업합니다","<b>후쿠타로 다카시마야 8층</b> — 오코노미야키. 짐 찾으러 가는 길에 붙습니다"]},{"tip":"<b>인디안 카레는 아이와 가지 마세요.</b> 36개월에게는 확실히 맵고 자리도 좁습니다. 어른들끼리 짬이 날 때만."},{"tip":"<b>551 부타망</b>은 선물용으로 간사이공항점에서 사세요. 상온 보관이 짧습니다."}]}},{"time":"13:40","card":{"title":"도톤보리 — 글리코 간판","jp":"道頓堀 グリコサイン","blocks":[{"p":"첫날 일부러 뺐던 걸 여기로 옮겼습니다. <b>토요일 낮이 공휴일 밤보다 훨씬 낫습니다.</b> 코나몬 뮤지엄 바로 앞이라 오전에 미리 봐도 되고, 점심 먹고 다시 나와도 됩니다. 글리코 간판 사진 한 장, 에비스바시 위 한 바퀴면 20분이에요."},{"tip":"<b>10분만 더 쓴다면</b> — 바로 옆 <b>호젠지 요코초</b>. 좁은 돌길이라 분위기가 완전히 달라지고, 이끼 덮인 부동명왕상에 물을 끼얹는 게 아이들한테 재밌습니다."}]}},{"time":"14:20","card":{"title":"돈키호테 도톤보리 — 면세 마무리","badges":[{"b":"must","t":"여권 지참"}],"jp":"ドン・キホーテ 道頓堀店","blocks":[{"p":"오늘 면세는 여기 한 곳에서 끝냅니다. 남은 기념품과 약·과자를 한 번에 정리하세요. <b>면세 카운터가 따로 있고 토요일 오후엔 줄이 깁니다.</b> 계산 전에 5,000엔(세금 제외)이 넘는지 확인하고, 일반물품과 소모품을 나눠 담아두면 처리가 빨라요."},{"tip":"<b>시간을 아끼려면</b> — 어른 한 명이 아이들과 밖에서 기다리고, 한 명만 면세 카운터에 서세요. 면세 절차와 요령은 <b>‘팁’ 탭의 면세 쇼핑 항목</b>에 정리해뒀습니다."},{"tip":"<b>551 부타망은 여기서 사지 마세요.</b> 상온 보관이 짧아 간사이공항점에서 보냉백과 함께 사는 게 맞습니다."}]}},{"time":"15:30","card":{"title":"호텔에서 짐 찾기","blocks":[{"p":"화장실 다녀오고, 아이들 옷 갈아입히고, 물 사서 출발."}]}},{"time":"16:10","card":{"title":"난카이 난바역 — 승차권 구매","badges":[{"b":"must","t":"필수"}],"hi":true,"jp":"南海なんば駅 きっぷうりば","blocks":[{"p":"난카이 특급은 <b>승차권 + 특급권 두 장이 한 세트</b>입니다. 예약하신 건 특급권 4장뿐이라, 이것만으로는 개찰구를 통과할 수 없어요."},{"p":"<b>좌석 4개를 점유하니 승차권도 4장</b>이 필요합니다. 미취학 아동은 원래 무료지만, 좌석을 따로 쓰면 소아 운임이 붙어요."},{"ul":["어른 승차권 ¥970 × 2 = <b>¥1,940</b>","소아 승차권 ¥490 × 2 = <b>¥980</b>","오늘 살 금액 <b>합계 ¥2,920</b> (특급권은 예약 완료)"]},{"tip":"<b>가장 빠른 방법</b> — 어른은 ICOCA·애플페이 스이카로 개찰을 통과하고, 아이 몫 소아 승차권 2장만 창구에서 사면 됩니다. 창구에 특급권 4장을 보여주면 알아서 처리해줘요. IC카드가 없으면 1층 매표소에서 4장 다 사세요."},{"tip":"<b>특급권이 어떻게 발권됐는지</b>도 창구에서 같이 확인하세요. 어른 4장으로 끊겼다면 아이 몫이 과납된 것이고, 소아 특급권 2장이 포함돼 있으면 위 계산 그대로입니다."},{"tip":"<b>열차 안에서 사면 ¥300이 추가</b>됩니다. 반드시 타기 전에 해결하세요."}]}},{"time":"16:30","move":{"segs":[{"pill":"난카이 라피트","t":"난바 → 간사이공항","dur":"38분","note":"예약하신 열차 시각에 맞춰 조정"}]}},{"time":"17:10","card":{"title":"간사이공항 도착 · 체크인","blocks":[{"p":"대한항공은 제1터미널입니다. 아이 둘이면 체크인과 보안검색이 느려서 <b>출발 2시간 30분 전 도착</b>이 마음 편해요. 수속 끝내고 면세구역에서 저녁 겸 간식 먹이면 시간이 딱 맞습니다."},{"tip":"<b>공항에서 살 것</b> — 551 부타망(보냉백 같이 주문), 로이스, 코베 후게츠도 고프레. 시내에서 미리 사서 들고 다니지 마세요."},{"tip":"<b>마지막 끼니는 공항에서</b> — 19:35 비행기라 저녁을 여기서 해결하는 게 자연스럽습니다. <b>키네야 무기마루</b>(제1터미널 2F, 07:00–22:00)는 육수를 원하는 만큼 받아 쓰는 셀프 방식이라 아이 몫을 연하게 조절할 수 있어요. 라멘을 시내에서 못 먹었으면 <b>멘쇼 라멘</b>, 네 식구 취향이 갈리면 <b>Tasty Street 푸드코트</b>가 답입니다. 면은 잘라주고 국물은 식혀서 주세요."}]}},{"time":"19:35","card":{"title":"KE2120 출발","blocks":[{"p":"김포 21:25 도착. 아이들은 이륙하면 바로 잘 확률이 높아요. 이착륙 때 귀 아파하면 물이나 젤리를 삼키게 해주세요."}]}}]}]}</script>
+<script type="application/json" id="food-data">{"groups":[{"area":"난바","title":"호텔에서 걸어서 10분 안","cards":[{"name":"카마타케 우동","cat":"우동","jpname":"釜たけうどん · 難波千日前4-20","meta":[{"t":"도보 3분"},{"t":"런치 대기 5~30분"},{"t":"한국어 메뉴 있음"}],"desc":"호텔에서 가장 가까운 제대로 된 우동집. 면이 굵고 쫄깃하며 튀김을 그때그때 튀겨줍니다. 어묵튀김과 반숙 계란튀김을 얹은 조합이 이 집 간판이에요. 사진 메뉴가 있어서 주문이 쉽습니다.","kid":[{"level":"good","html":"<b>아이 동반 ○</b> — 양이 많으니 아이는 어른 것에서 덜어주는 편이 낫습니다. 대기 중에 미리 주문을 받아서 앉으면 금방 나와요."}],"gm":"釜たけうどん 難波千日前"},{"name":"next shikaku","cat":"라멘","jpname":"next 四カク · 難波千日前9-12","meta":[{"t":"도보 3분"},{"t":"10:30–22:30"},{"t":"연중무휴"}],"desc":"굴 육수를 쓰는 진한 라멘. 국물이 크리미하면서 바다향이 강하게 올라오는데, 흔한 돈코츠와 완전히 다른 계열입니다. 밖의 자판기에서 식권을 사고 왼쪽 줄에 서면 돼요.","kid":[{"level":"bad","html":"<b>아이 동반 △</b> — <b>14석뿐이고 실내가 어둡습니다.</b> 4인이 함께 앉기 어려울 수 있어요. 어른들끼리 갈 기회가 있을 때가 낫습니다."}],"gm":"next shikaku 難波千日前"},{"name":"사키모토 베이커리","cat":"빵","jpname":"SAKImoto bakery 大阪初号本店 · 難波中2-3-18","meta":[{"t":"도보 3분"},{"t":"빵집 9:30–19:00"},{"t":"카페 8:30–18:00"}],"desc":"고급 식빵으로 유명해진 집인데, 건물 세 칸이 각각 <b>빵집·커피·카페</b>로 나뉘어 있습니다. 빵만 살 거면 1층, 앉아서 먹을 거면 2층 카페예요. 꿀버터 토스트와 소금빵 평이 특히 좋습니다.","kid":[{"level":"good","html":"<b>아이 동반 ○</b> — 다음 날 아침용 식빵을 사두기 딱 좋은 위치입니다. 카페는 이름 적고 대기하는 방식이에요."}],"gm":"SAKImoto bakery 難波中"},{"name":"후쿠타로 본점","cat":"오코노미야키","jpname":"福太郎本店 · 千日前2-3-17","meta":[{"t":"도보 4분"},{"t":"평일 17:00–22:45"},{"t":"토·일은 12:00부터","rest":true}],"desc":"겉은 바삭한데 속이 흐물흐물할 정도로 부드러운 게 이 집 특징입니다. 간판은 오코노미야키가 아니라 <b>네기야키</b>(파 잔뜩)인데, 소스 대신 특제 간장으로 먹어요. 소힘줄을 넣은 스지네기야키가 대표 메뉴입니다.","kid":[{"level":"good","html":"<b>아이 동반 ○</b> — 이름 적고 밖에서 대기하는 방식이라 회전은 빠른 편입니다. 눈앞 철판에서 굽는 걸 보는 것 자체가 아이들한테는 구경거리예요."},{"level":"","html":"<b>대기가 싫으면</b> — 난바 다카시마야 8층에 같은 집 지점이 있습니다. 11:00–21:00 매일이고 자리가 넓어 아이 데리고는 오히려 편해요."}],"gm":"福太郎本店 千日前"},{"name":"타코야키 도라쿠 와나카","cat":"타코야키","jpname":"たこ焼道楽わなか 千日前本店 · 難波千日前11-19","meta":[{"t":"도보 5분"},{"t":"10:30–21:00"},{"t":"주말 9:30부터"}],"desc":"오사카 타코야키 중 가장 안전한 선택. 겉이 살짝 바삭하고 속은 크림처럼 흐르며, 문어가 큼직하게 들어갑니다. 줄은 길어도 빨리 줄어요.","kid":[{"level":"good","html":"<b>아이 동반 ○</b> — <b>매장 뒤쪽에 2층짜리 좌석 공간이 있고 물이 무료</b>라 서서 먹지 않아도 됩니다. 속이 굉장히 뜨거우니 반으로 갈라 식혀주세요."}],"gm":"たこ焼道楽わなか 千日前本店"},{"name":"규카츠 모토무라 난바 별관","cat":"규카츠","jpname":"牛カツ もと村 難波別館 · 難波3-6-17 なんばチップスビル B1F","meta":[{"t":"도보 8분"},{"t":"11:00–22:00"},{"t":"연중무휴"}],"desc":"규카츠 하면 여기입니다. 겉만 튀기고 <b>속은 레어로 나와서, 자리마다 놓인 작은 돌판에 직접 구워</b> 원하는 익힘 정도로 먹습니다. 고기가 놀랄 만큼 부드럽고, 산쇼 소금·와사비·간장 소스를 바꿔가며 먹는 재미가 있어요. 밥·된장국·양배추가 딸려 나오고 리필됩니다.","kid":[{"level":"good","html":"<b>아이 동반 ○ — 대기 방식이 좋습니다.</b> 줄 서는 동안 미리 주문을 받아서 <b>앉자마자 음식이 나옵니다.</b> 아이 둘 데리고 앉아서 기다리는 시간이 짧아요."},{"level":"bad","html":"<b>돌판이 아주 뜨겁습니다.</b> 36개월 아이 손이 닿지 않게 안쪽에 두고, <b>고기는 어른이 충분히 익혀서</b> 나눠주세요. 기본이 레어라 그냥 주면 안 됩니다. 70개월 아이는 직접 굽는 걸 재밌어할 나이예요."}],"gm":"牛カツもと村 難波別館"},{"name":"교토 카츠규 난바워크점","cat":"규카츠","jpname":"京都勝牛 なんばウォーク1番街 · 難波2-3","meta":[{"t":"도보 9분"},{"t":"10:30–22:00"},{"t":"연중무휴"}],"desc":"모토무라와 쌍벽인 체인. 이쪽은 <b>카레와 산쇼 소금</b>까지 곁들여 나와서 맛을 여러 번 바꿔 먹을 수 있습니다. 등심·안심·와규 중에 고르는데 저렴한 부위도 충분히 좋아요.","kid":[{"level":"good","html":"<b>아이 동반 ◎ — 이 셋 중 가장 편합니다.</b> <b>지하상가 안</b>이라 비바람과 상관없고 통로가 넓으며, 대기용 의자가 있습니다. <b>10:30에 열어서</b> 붐비기 전에 이른 점심으로 가기 좋아요. 세트에 딸려 나오는 <b>작은 카레와 온천계란</b>이 있어서 고기를 안 먹는 아이도 밥을 먹습니다."}],"gm":"京都勝牛 なんばウォーク"},{"name":"돈카츠 KYK","cat":"돈가스","jpname":"デリカ KYK 大阪高島屋 · 難波5-1-5 B1","meta":[{"t":"도보 6분"},{"t":"10:00–20:00"},{"t":"연중무휴"}],"desc":"오사카에서 시작한 돈카츠 집. 다카시마야 지하 1층이라 난카이 난바역에서 밖으로 나가지 않고 갈 수 있습니다. <b>밥·양배추·된장국·차가 리필 무료</b>예요. 포장 도시락도 팝니다.","kid":[{"level":"good","html":"<b>아이 동반 ◎</b> — 히레카츠(안심)가 부드러워 아이가 먹기 편합니다. 백화점이라 통로가 넓어 캐리어를 끌고 들어가도 돼요. <b>첫날 도착 직후에 가장 현실적인 선택.</b>"}],"gm":"デリカKYK 大阪高島屋"},{"name":"키야스 소혼포","cat":"당고·디저트","jpname":"喜八洲総本舗 · 高島屋大阪店 B1F","meta":[{"t":"도보 6분"},{"t":"10:00–20:00"},{"t":"연중무휴"}],"desc":"오사카 명물 <b>미타라시 당고</b>. 주문하면 그 자리에서 구워주고 <b>굽기 정도를 고를 수 있는데</b>, 살짝 태운 쪽이 훨씬 고소합니다. 간장 소스가 과하게 달지 않아 계속 들어가요.","kid":[{"level":"","html":"<b>앉을 데가 없습니다.</b> 포장해서 호텔에서 드세요. 길에서 걸어다니며 먹는 건 실례로 여겨집니다."}],"gm":"喜八洲総本舗 高島屋大阪店"},{"name":"지유켄 난바 본점","cat":"카레","jpname":"自由軒 難波本店 · 難波3-1-34","meta":[{"t":"도보 7분"},{"t":"11:00–19:35"},{"t":"월요일 휴무","rest":true}],"desc":"1910년에 문 연 오사카에서 가장 오래된 양식당. 간판인 <b>명물 카레</b>는 카레와 밥을 미리 비벼 내고 가운데에 생계란 노른자를 얹어줍니다. 노른자를 풀어 섞으면 매운맛이 확 부드러워져요. 1,000엔이 안 됩니다.","kid":[{"level":"","html":"<b>아이 동반 ○</b> — 명물 카레는 살짝 매콤하고 생계란이 들어갑니다. 36개월 아이에게는 같은 집 <b>오므라이스나 하이라이스</b>를 시켜주세요. 붐빌 때 모르는 사람과 합석하지만 회전이 빨라 오래 안 기다립니다."}],"gm":"自由軒 難波本店"},{"name":"마루후쿠 커피 센니치마에 본점","cat":"커피","jpname":"丸福珈琲店 千日前本店 · 千日前1-9-1","meta":[{"t":"도보 7분"},{"t":"08:00–23:00"},{"t":"연중무휴"}],"desc":"1934년 창업. 좁은 골목 모퉁이의 70~80년대 영국풍 인테리어라 신사이바시 인파에서 완전히 벗어난 느낌입니다. <b>계란 샌드위치</b>가 간판이고, <b>핫케이크</b>는 바닥이 바삭하게 구워져 커피 휘핑크림과 함께 나와요. 커피는 상당히 진하고 씁쓸합니다. 영어 메뉴 있음.","kid":[{"level":"good","html":"<b>아이 동반 ◎</b> — <b>아침 8시에 여는 몇 안 되는 제대로 된 카페</b>라 아이들이 일찍 깨는 날에 최고입니다. 대기는 10분 안팎, 음식은 20분쯤 걸려요."}],"gm":"丸福珈琲店 千日前本店"},{"name":"CASCADE 난바 마루이","cat":"빵","jpname":"CASCADE なんばマルイ店 · 難波3-8-9 B1","meta":[{"t":"도보 7분"},{"t":"08:00–21:00"},{"t":"연중무휴"}],"desc":"아침 8시부터 밤 9시까지 여는 대형 베이커리. 종류가 압도적으로 많아 <b>아침거리를 한 번에 해결하기 좋습니다.</b> 멜론빵과 카레빵, 식빵 평이 좋아요. 8시 개점 직후에도 줄이 있습니다.","kid":[{"level":"good","html":"<b>아이 동반 ◎</b> — 쟁반에 집게로 담는 방식이라 아이가 직접 고르는 재미가 있습니다."}],"gm":"CASCADE なんばマルイ"},{"name":"파네파네","cat":"빵","jpname":"pane pane · 日本橋2-5-1","meta":[{"t":"도보 4분"},{"t":"10:00–19:00"},{"t":"수요일 휴무 · 현금만","rest":true}],"desc":"멜론빵 하나로 승부하는 작은 집. 겉은 바삭하고 속은 부드러워서 \"여행 중 먹은 멜론빵 중 최고\"라는 평이 반복됩니다. 주인 할머니가 편백나무 향이 밴 종이봉투에 담아줘요.","kid":[{"level":"","html":"<b>9/23은 수요일이라 휴무입니다.</b> 9/24~26에 지나가는 길에 들르세요. 호텔에서 정말 가깝습니다."}],"gm":"pane pane 日本橋 大阪"},{"name":"라멘 멘히카","cat":"라멘","jpname":"らーめん 麺匪火 · 難波中1-18-8","meta":[{"t":"도보 7분"},{"t":"11:30–14:30 / 18:00–20:30"},{"t":"수·목 휴무 · 현금만","rest":true}],"desc":"굴과 조개로 낸 맑은 소금 육수. 국물이 투명한데 단맛과 감칠맛이 진하게 올라오고 연어알을 얹어줍니다. 난바 라멘 중 평가가 가장 높은 축이에요. 돼지고기가 싫다고 하면 닭으로 바꿔줍니다.","kid":[{"level":"bad","html":"<b>아이 동반 △</b> — 좌석이 적고 입장 인원을 조절해서 대기가 깁니다. <b>9/23(수)과 9/24(목)은 휴무</b>라 이번 일정에선 9/25 점심 아니면 기회가 없어요."}],"gm":"麺匪火 難波中"}]},{"area":"도톤보리","title":"도톤보리 · 신사이바시 (도보 8~20분)","cards":[{"name":"도톤보리 이마이 본점","cat":"우동","jpname":"道頓堀 今井 本店 · 道頓堀1-7-22","meta":[{"t":"도보 9분"},{"t":"11:30–21:00"},{"t":"수요일 휴무","rest":true}],"desc":"<b>우동을 하나만 고른다면 여기입니다.</b> 도톤보리 한복판인데 안으로 들어가면 소란이 뚝 끊깁니다. 간판인 <b>키츠네우동(¥930)</b>은 국물이 맑고 가벼운데 다시 향이 깊고, 위에 얹힌 유부가 두툼하고 달아서 국물을 잔뜩 머금어요. 면은 굵고 부드럽습니다. 오야코동도 평이 좋아요.","kid":[{"level":"good","html":"<b>아이 동반 ◎</b> — 층이 여러 개라 자리가 넉넉하고, 붐벼도 음식이 10분 안에 나옵니다. 직원이 양이 많다 싶으면 작은 사이즈로 바꿔주기도 해요. 국물이 순해서 아이들이 잘 먹습니다."},{"level":"bad","html":"<b>9/23은 수요일이라 휴무입니다.</b> 9/24·9/25·9/26에 넣으세요."}],"gm":"道頓堀今井 本店"},{"name":"무겐 라멘 센니치마에","cat":"라멘","jpname":"無限ラーメン 千日前 · 難波1-2-2","meta":[{"t":"도보 8분"},{"t":"10:00–다음날 01:00"},{"t":"연중무휴"}],"desc":"난바 일대 라멘 중 평점이 가장 높은 집. 국물이 진하고 크리미하며 <b>등심 차슈</b>가 부드럽습니다. 키오스크로 주문하고 2층에도 자리가 있어요. 매운 라멘도 따로 있습니다.","kid":[{"level":"good","html":"<b>아이 동반 ○</b> — 2층까지 있어 4인이 앉기 수월하고 직원이 주문을 도와줍니다. 늦게까지 열어서 저녁 시간을 놓쳐도 돼요."}],"gm":"無限ラーメン 千日前"},{"name":"킨류 라멘 도톤보리","cat":"라멘","jpname":"金龍ラーメン 道頓堀 · 道頓堀1-7-26","meta":[{"t":"도보 9분"},{"t":"24시간"},{"t":"연중무휴"}],"desc":"지붕 위 거대한 용이 간판인 그 집. 식권 자판기로 주문하고 <b>김치와 부추가 무한 제공</b>됩니다. 한 그릇 1,000엔이 안 돼요.","kid":[{"level":"good","html":"<b>아이 동반 ○ (좌식)</b> — <b>다다미 좌식석</b>이 있어 36개월 아이는 오히려 편합니다. 다만 관광지 한복판이라 평가가 갈려요. 진한 돈코츠를 기대하면 실망할 수 있습니다. <b>싸고 빠르고 앉을 수 있다</b>가 장점입니다."}],"gm":"金龍ラーメン 道頓堀"},{"name":"혼케 오오타코","cat":"타코야키","jpname":"本家 大たこ 道頓堀本店 · 道頓堀1-4-16","meta":[{"t":"도보 9분"},{"t":"10:30–23:00"},{"t":"연중무휴"}],"desc":"글리코 간판 바로 근처. <b>문어 덩어리가 크고 신선한 게</b> 이 집의 특징입니다. 6개 600엔이라 와나카보다 조금 쌉니다. 안쪽에 앉아 먹을 공간이 있고 오코노미야키도 팝니다.","kid":[{"level":"good","html":"<b>아이 동반 ○</b> — 밤 11시까지 열어서 도톤보리 산책 뒤에 들르기 좋습니다."}],"gm":"本家大たこ 道頓堀"},{"name":"교토 카츠규 도톤보리점","cat":"규카츠","jpname":"京都勝牛 道頓堀中座くいだおれビル 2階 · 道頓堀1-7-21","meta":[{"t":"도보 10분"},{"t":"11:00–22:00"},{"t":"연중무휴"}],"desc":"쿠이다오레 빌딩 2층. <b>도톤보리 한복판인데 위층이라 조용한 게</b> 이 지점의 장점입니다. 창밖으로 도톤보리가 내려다보여요. 가격 대비 고기 양이 좋다는 평이 많습니다.","kid":[{"level":"good","html":"<b>아이 동반 ○</b> — 도톤보리 구경하다가 바로 올라가면 됩니다. 2층이라 길거리 인파에서 벗어날 수 있어요."}],"gm":"京都勝牛 道頓堀"},{"name":"인디안 카레 난바점","cat":"카레","jpname":"インデアンカレー 難波店 · 難波1-5-20","meta":[{"t":"도보 9분"},{"t":"11:00–15:30 / 17:00–20:00"},{"t":"수요일 휴무","rest":true}],"desc":"1940년대부터 이어온 오사카 명물. 처음엔 달다가 몇 초 뒤에 매운맛이 훅 올라오는 독특한 구조입니다. 메뉴가 사실상 두 개뿐이고 회전이 아주 빨라요.","kid":[{"level":"bad","html":"<b>아이 동반 ✕</b> — <b>36개월 아이에게는 확실히 맵습니다.</b> 좌석도 좁고 더워요. 어른들끼리 짬이 날 때 가세요. 아이와 카레를 먹을 거면 지유켄이 맞습니다."}],"gm":"インデアンカレー 難波店"},{"name":"우사미테이 마츠바야","cat":"우동","jpname":"うさみ亭マツバヤ · 南船場3-8-1","meta":[{"t":"도보 22분"},{"t":"11:00–18:00"},{"t":"일요일 휴무 · 현금만","rest":true}],"desc":"1893년 창업, <b>키츠네우동을 처음 만든 집</b>입니다. 130년 된 가게라 내부가 쇼와 시대 그대로예요. 대표 메뉴는 우동에 밥을 함께 끓인 <b>오지야우동</b>. 값도 쌉니다.","kid":[{"level":"","html":"<b>아이 동반 △</b> — 노부부가 운영하는 작은 가게라 붐빌 때 4인은 부담스러울 수 있습니다. 호텔에서 좀 멀어요(신사이바시 북쪽). 우동의 역사를 보러 가는 곳이지, 편한 식사 자리는 아닙니다."}],"gm":"うさみ亭マツバヤ 南船場"}]},{"area":"나라","title":"나라 — 9/25 금요일, 전부 정상 영업","cards":[{"name":"소바도코로 키타하라","cat":"소바","jpname":"蕎麦処 北原 · 奈良市水門町50","meta":[{"t":"도다이지에서 도보 5분"},{"t":"11:00–14:30"},{"t":"화·수 휴무","rest":true}],"desc":"나라 소바 중 평이 가장 좋은 집. <b>매일 아침 돌절구로 직접 갈아</b> 면을 뽑고, 하루 40~50인분만 만듭니다. 튀김은 기름지지 않고 바삭하며, 마지막에 소바 삶은 물을 남은 장국에 부어 마시는 것까지가 코스예요. 감 절임과 청어 조림 같은 나라 향토 반찬도 팝니다.","kid":[{"level":"bad","html":"<b>아이 동반 △ — 대기가 길 수 있습니다.</b> 하루 분량이 정해져 있어 <b>개점 시각(11:00)에 맞춰 가는 게 사실상 필수</b>예요. 그 이후엔 한 시간 대기가 나옵니다. 도다이지를 먼저 보고 11시에 딱 들어가는 동선이면 승산이 있습니다."}],"gm":"蕎麦処北原 奈良"},{"name":"소바처 남고","cat":"소바","jpname":"そば処 南郷 · 奈良市高畑町966-3","meta":[{"t":"나라공원 남쪽"},{"t":"11:30–15:00"},{"t":"수·목 휴무 · 현금만","rest":true}],"desc":"나라공원 바로 옆에 숨어 있는 8석짜리 집. 노부부가 둘이서 운영하고, 튀김소바 평이 아주 좋습니다. 손님에게 먹는 법과 소스 쓰는 법을 직접 알려줘요. <b>우키미도와 가까워서</b> 사슴 보는 동선에 자연스럽게 붙습니다.","kid":[{"level":"bad","html":"<b>아이 동반 △</b> — <b>8석뿐입니다.</b> 4인이 한 번에 앉으려면 운이 따라야 해요. 대신 분위기는 남의 집에 초대받은 것 같다는 평이 많습니다."}],"gm":"そば処南郷 奈良 高畑町"},{"name":"소바도코로 하야시","cat":"소바","jpname":"蕎麦処 はやし · 奈良市南袋町1","meta":[{"t":"나라마치"},{"t":"11:30–14:30"},{"t":"수요일 휴무","rest":true}],"desc":"나라마치 골목의 작고 소박한 집. 면을 직접 뽑고 튀김이 바삭합니다. 소바에 튀김을 곁들여 1,200엔 안팎이라 값이 착해요. 영어는 안 통하지만 주인이 친절합니다.","kid":[{"level":"","html":"<b>아이 동반 △</b> — 역시 작은 가게입니다. 위 두 곳이 안 되면 여기로."}],"gm":"蕎麦処はやし 奈良"},{"name":"미즈야차야","cat":"우동","jpname":"水谷茶屋 · 奈良市春日野町30","meta":[{"t":"가스가타이샤 뒤"},{"t":"11:00–15:30"},{"t":"화·수 휴무","rest":true}],"desc":"개울 옆 초가지붕 찻집. 우동과 소바, 오뎅, 말차 아이스크림을 팝니다. <b>냉수와 뜨거운 녹차가 무료</b>고, 사슴 센베도 여기서 팔아요. 나라에서 평점이 가장 높은 식사 자리 중 하나입니다.","kid":[{"level":"good","html":"<b>아이 동반 ◎ — 나라에서 아이 데리고 가기 가장 편한 곳입니다.</b> 자리가 야외 툇마루라 소란스러워도 괜찮고, 회전이 빨라 대기가 있어도 금방 앉아요. 주변에 사슴이 어슬렁거려서 밥 먹으며 구경이 됩니다."}],"gm":"水谷茶屋 奈良"},{"name":"가마메시 시즈카 공원점","cat":"솥밥","jpname":"釜めし志津香 公園店 · 奈良市登大路町59-11","meta":[{"t":"나라공원 안"},{"t":"11:00–15:00 (토·일 16:00)"},{"t":"화요일 휴무","rest":true}],"desc":"나라 대표 솥밥집. 주문 후 솥에 지어 나오고, 다 먹을 때쯤 바닥의 누룽지까지 긁어 먹는 게 코스입니다. 간이 순해서 아이들이 잘 먹어요.","kid":[{"level":"bad","html":"<b>대기가 정말 깁니다.</b> 밥 짓는 데 20~30분이 걸려 회전이 느려서, 1시간 이상 기다렸다는 후기가 많아요. <b>줄 서면서 미리 주문을 받습니다.</b> 개점 전에 가는 게 아니면 아이 둘과는 권하지 않습니다."},{"level":"","html":"<b>대안</b> — 같은 집 <b>본점(오미야초)</b>은 긴테츠나라역 서쪽이라 관광객이 훨씬 적고 정원이 보이는 자리입니다. 조용히 먹고 싶으면 이쪽."}],"gm":"釜めし志津香 公園店"},{"name":"나카타니도","cat":"당고·디저트","jpname":"中谷堂 · 奈良市橋本町29","meta":[{"t":"히가시무키 상점가"},{"t":"10:00–18:00"},{"t":"화요일 휴무","rest":true}],"desc":"두 사람이 무서운 속도로 떡메를 치는 걸 길에서 그냥 볼 수 있습니다. 갓 만든 쑥떡이 <b>한 개 200엔</b>이고 팥소가 과하게 달지 않아요. 하루만 지나도 맛이 떨어져서 그 자리에서 먹는 게 맞습니다.","kid":[{"level":"good","html":"<b>아이 동반 ◎</b> — 떡치기 공연 자체가 아이들 반응이 제일 좋은 구경거리입니다. 다만 <b>오후 4시쯤이면 그날 치기가 끝나므로</b> 공연을 보려면 점심 전후로 가세요."}],"gm":"中谷堂 奈良"}]},{"area":"공항","title":"간사이공항 — 마지막 끼니","cards":[{"name":"키네야 무기마루","cat":"우동","jpname":"杵屋麦丸 @KIX · 제1터미널 2F","meta":[{"t":"07:00–22:00"},{"t":"연중무휴"},{"t":"할랄 인증"}],"desc":"공항에서 제일 무난한 우동집. 면이 굵고 쫄깃하며 국물이 맑고 순합니다. <b>육수를 기계에서 원하는 만큼 받아 쓰는</b> 셀프 방식이라 아이 몫은 연하게 조절할 수 있어요. 값도 쌉니다.","kid":[{"level":"good","html":"<b>아이 동반 ◎</b> — 19:35 비행기라면 여기서 저녁을 해결하는 게 자연스럽습니다. <b>기내에서 배고파 깨는 일이 없어요.</b> 면은 잘라주고 국물은 식혀서 주세요."}],"gm":"杵屋麦丸 関西国際空港"},{"name":"멘쇼 라멘","cat":"라멘","jpname":"MENSHO RAMEN · 간사이공항","meta":[{"t":"06:30–24:15"},{"t":"연중무휴"}],"desc":"공항 라멘치고 평이 좋은 편입니다. <b>트러플 향을 얹은 닭 백탕</b>이 간판인데 국물이 진하고 면이 쫄깃해요. 공항 가격이라 시내보다 비쌉니다. 줄이 있어도 10분이면 앉습니다.","kid":[{"level":"","html":"<b>아이 동반 △</b> — 푸드코트가 아니라 일반 식당이라 자리가 넉넉하진 않습니다. 트러플 국물이 아이에겐 무거울 수 있어요. <b>라멘을 시내에서 못 먹었다면 여기가 마지막 기회입니다.</b>"}],"gm":"MENSHO RAMEN 関西国際空港"},{"name":"Tasty Street 푸드코트","cat":"푸드코트","jpname":"제1터미널 2F","meta":[{"t":"터미널 운영 시간"},{"t":"물 무료"}],"desc":"초밥, 카레, 텐동, 타코야키, 카무쿠라 라멘이 한자리에 있습니다. <b>네 식구 취향이 다 다를 때 답</b>입니다. 좌석이 작은 편이라 붐비면 자리 잡기가 어려워요.","kid":[{"level":"good","html":"<b>아이 동반 ◎</b> — 각자 먹고 싶은 걸 고를 수 있고 물이 무료입니다. 위 두 곳에 줄이 길면 여기로."}],"gm":"Tasty Street 関西国際空港"}]}],"footer":"영업 시간과 휴무일은 2026년 9월 기준 조사 내용입니다.<br>임시 휴업이 있을 수 있으니 가기 전 구글맵에서 한 번 확인하세요."}</script>
+<script>
+/* ── 일정 · 맛집 카드 렌더링 (데이터는 위 <script type="application/json"> 에 인라인) ──
+   원본: data/itinerary.json, data/food.json → node scripts/build.mjs 로 인라인 */
+(function(){
+  var IT, FD;
+  try{
+    IT = JSON.parse(document.getElementById('itin-data').textContent);
+    FD = JSON.parse(document.getElementById('food-data').textContent);
+  }catch(e){
+    var d=document.getElementById('days');
+    if(d) d.innerHTML='<section class="panel on"><div class="dayhead"><h2>일정을 불러오지 못했습니다</h2><p>데이터 파일이 손상됐을 수 있습니다.</p></div></section>';
+    return;
+  }
+
+  var BADGE={kid:'b-kid',must:'b-must',rsv:'b-rsv'};
+  function blocks(arr){
+    return (arr||[]).map(function(b){
+      if(b.p!=null) return '<p>'+b.p+'</p>';
+      if(b.ul!=null) return '<ul>'+b.ul.map(function(li){return '<li>'+li+'</li>';}).join('')+'</ul>';
+      if(b.tip!=null) return '<div class="tip">'+b.tip+'</div>';
+      if(b.money!=null) return '<span class="money">'+b.money+'</span>';
+      return '';
+    }).join('');
+  }
+  function badges(arr){
+    return (arr||[]).map(function(x){
+      return '<span class="badge '+(BADGE[x.b]||'')+'"'+(x.sm?' style="font-size:10px"':'')+'>'+x.t+'</span>';
+    }).join('');
+  }
+  function card(c){
+    var h='<div class="card"'+(c.hi?' style="border:2px solid #E5171F"':'')+'>';
+    h+='<h3>'+badges(c.badges)+c.title+'</h3>';
+    if(c.jp) h+='<button class="jp" data-jp="'+c.jp.replace(/"/g,'&quot;')+'">'+c.jp+'</button>';
+    h+=blocks(c.blocks)+'</div>';
+    return h;
+  }
+  function move(mv){
+    var out=mv.segs.map(function(s,i){
+      var sty=[]; if(i>0) sty.push('padding-top:0'); if(s.c) sty.push('color:'+s.c);
+      return '<div class="trip"'+(sty.length?' style="'+sty.join(';')+'"':'')+'>'+
+        '<span class="pill"'+(s.c?' style="background:'+s.c+'"':'')+'>'+s.pill+'</span> '+
+        s.t+' <span class="dur">'+s.dur+'</span>'+(s.note?' · '+s.note:'')+'</div>';
+    }).join('');
+    if(mv.sum) out+='<div class="trip" style="padding-top:0;color:var(--day)"><b>'+mv.sum+'</b></div>';
+    return out;
+  }
+  function altbox(a){
+    var sty=[]; if(a.border) sty.push('border-color:'+a.border); if(a.bg) sty.push('background:'+a.bg);
+    return '<div class="altbox"'+(sty.length?' style="'+sty.join(';')+'"':'')+'>'+
+      '<div class="lead"'+(a.leadc?' style="color:'+a.leadc+'"':'')+'>'+a.lead+'</div>'+
+      '<h3>'+a.title+'</h3>'+blocks(a.blocks)+'</div>';
+  }
+
+  var m=IT.meta;
+  document.getElementById('masthead').innerHTML=
+    '<h1>'+m.title+'</h1>'+
+    '<p class="sub">'+m.sub.join('<br>')+'</p>'+
+    '<div class="meter">'+
+      '<div><div class="k">출발까지</div><div class="v" id="dday">–</div></div>'+
+      '<div><div class="k">일본 현지 시각</div><div class="v" id="jst">–</div></div>'+
+    '</div>'+
+    '<div class="fly">'+
+      m.flights.map(function(f){return '<div class="row"><span class="cd">'+f.code+'</span><span class="rt">'+f.route+'</span><span class="tm">'+f.time+'</span></div>';}).join('')+
+      '<div class="memo">'+m.flightMemo+'</div>'+
+    '</div>';
+
+  document.getElementById('tabs').innerHTML=
+    IT.days.map(function(d,i){
+      return '<button class="tab" data-c="'+(i+1)+'" role="tab" aria-selected="'+(i===0)+'" data-p="'+d.id+'"><span class="n">'+d.tab.n+'</span><span class="w">'+d.tab.w+'</span></button>';
+    }).join('')+
+    '<button class="tab" data-c="x" role="tab" aria-selected="false" data-p="pf"><span class="n">식당</span><span class="w">디저트</span></button>'+
+    '<button class="tab" data-c="x" role="tab" aria-selected="false" data-p="ps"><span class="n">쇼핑</span><span class="w">기념품</span></button>'+
+    '<button class="tab" data-c="x" role="tab" aria-selected="false" data-p="pt"><span class="n">준비</span><span class="w">팁·체크</span></button>';
+
+  document.getElementById('days').innerHTML=IT.days.map(function(d,i){
+    var h='<section class="panel'+(i===0?' on':'')+'" id="'+d.id+'" style="--day:var('+d.cvar+')">';
+    h+='<div class="dayhead"><h2>'+d.title+'</h2><p>'+d.intro+'</p>'+(d.flag?'<div class="flag">'+d.flag+'</div>':'')+'</div>';
+    h+='<div class="line">'+d.stops.map(function(s){
+      var when='<div class="when">'+(s.time||'')+'</div><div class="rail"><span class="dot"></span></div>';
+      if(s.move) return '<div class="stop move">'+when+'<div class="body">'+move(s.move)+'</div></div>';
+      return '<div class="stop">'+when+'<div class="body">'+card(s.card)+'</div></div>';
+    }).join('')+'</div>';
+    h+=(d.alt||[]).map(altbox).join('');
+    return h+'</section>';
+  }).join('');
+
+  FD.groups.forEach(function(g){
+    var el=document.querySelector('#page-food .group[data-area="'+g.area+'"]');
+    if(!el) return;
+    el.innerHTML='<h2>'+g.title+'</h2>'+g.cards.map(function(c){
+      return '<div class="card" data-cat="'+c.cat+'" data-a="'+g.area+'">'+
+        '<div class="ctop"><h3>'+c.name+'</h3><span class="cat">'+c.cat+'</span></div>'+
+        '<p class="jpname">'+c.jpname+'</p>'+
+        '<div class="meta">'+c.meta.map(function(mm){return '<span'+(mm.rest?' class="rest"':'')+'>'+mm.t+'</span>';}).join('')+'</div>'+
+        '<p class="desc">'+c.desc+'</p>'+
+        (c.kid||[]).map(function(k){return '<div class="kid'+(k.level?' '+k.level:'')+'">'+k.html+'</div>';}).join('')+
+        '<a class="gm" href="https://maps.google.com/?q='+encodeURIComponent(c.gm)+'" target="_blank" rel="noopener">구글맵에서 열기 →</a>'+
+      '</div>';
+    }).join('');
+  });
+  var ff=document.getElementById('foodfoot');
+  if(ff) ff.innerHTML=FD.footer;
+})();
+</script>
 <script>
 (function(){
   var cat='all', area='all';
