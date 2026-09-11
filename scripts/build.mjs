@@ -25,5 +25,6 @@ function inline(html, id, jsonPath) {
 let html = readFileSync(htmlPath, 'utf8');
 html = inline(html, 'itin-data', 'data/itinerary.json');
 html = inline(html, 'food-data', 'data/food.json');
+html = inline(html, 'transit-data', 'data/transit.json');
 writeFileSync(htmlPath, html);
-console.log('inlined data/itinerary.json + data/food.json → index.html');
+console.log('inlined data/itinerary.json + data/food.json + data/transit.json → index.html');

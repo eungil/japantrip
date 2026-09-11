@@ -96,3 +96,22 @@ footer: "하단 안내문 <br> 가능"
 | `desc` | 설명 문단. `<b>` 가능 |
 | `kid` | `[{ "level": "good", "html": "<b>아이 동반 ◎</b> …" }]`. level: `good`(초록) `bad`(붉음) `""`(회색). 여러 개 가능 |
 | `gm` | 구글맵 검색어 (일본어 권장). 링크는 자동 생성 |
+
+## transit.json
+
+일정 탭 맨 끝 "교통" 패널(`#ptr`)에서 렌더링됩니다. 지금은 `{}` (빈 객체) 플레이스홀더 — 채우면 자동으로 뜹니다.
+
+```
+{
+  "title": "오사카 교통",
+  "intro": "부제 (선택)",
+  "payment": { "heading": "교통카드 결제", "blocks": [ ...위 blocks 항목과 동일한 p/ul/tip/money... ] },
+  "lines": { "heading": "지하철 노선", "items": [
+    { "name": "미도스지선", "jp": "御堂筋線", "color": "#E5171F", "desc": "설명 문단", "stops": ["난바","신사이바시","우메다"] }
+  ]}
+}
+```
+
+- `payment.blocks`는 itinerary.json의 `blocks`와 완전히 같은 문법 (`p`/`ul`/`tip`/`money`)
+- `lines.items[].color`는 실제 노선 색(hex) 권장 — 카드 왼쪽 테두리와 배지에 그대로 씀
+- `title`이 없으면(빈 객체) "내용을 준비 중입니다" 플레이스홀더가 뜸
