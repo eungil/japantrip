@@ -99,19 +99,19 @@ footer: "하단 안내문 <br> 가능"
 
 ## transit.json
 
-일정 탭 맨 끝 "교통" 패널(`#ptr`)에서 렌더링됩니다. 지금은 `{}` (빈 객체) 플레이스홀더 — 채우면 자동으로 뜹니다.
+일정 탭 맨 끝 "교통" 패널(`#ptr`)에서 렌더링됩니다. `pf`/`pt`(식당/팁) 패널과 같은 `.item` 카드 나열 구조.
 
 ```
 {
-  "title": "오사카 교통",
-  "intro": "부제 (선택)",
-  "payment": { "heading": "교통카드 결제", "blocks": [ ...위 blocks 항목과 동일한 p/ul/tip/money... ] },
-  "lines": { "heading": "지하철 노선", "items": [
-    { "name": "미도스지선", "jp": "御堂筋線", "color": "#E5171F", "desc": "설명 문단", "stops": ["난바","신사이바시","우메다"] }
-  ]}
+  "id": "tip-교통결제",
+  "title": "교통 · 결제 — 어디서 뭘 찍고 뭘 사야 하나",
+  "intro": "인트로 문단 (선택)",
+  "cards": [
+    { "name": "카드 제목", "hi": true, "blocks": [ ...itinerary.json의 blocks와 동일한 p/ul/tip/money... ] }
+  ]
 }
 ```
 
-- `payment.blocks`는 itinerary.json의 `blocks`와 완전히 같은 문법 (`p`/`ul`/`tip`/`money`)
-- `lines.items[].color`는 실제 노선 색(hex) 권장 — 카드 왼쪽 테두리와 배지에 그대로 씀
-- `title`이 없으면(빈 객체) "내용을 준비 중입니다" 플레이스홀더가 뜸
+- `cards[].blocks`는 itinerary.json의 `blocks`와 완전히 같은 문법 (`p`/`ul`/`tip`/`money`)
+- `cards[].hi:true`면 카드에 빨간 테두리 (꼭 봐야 하는 카드)
+- `title`이 없으면(빈 객체 `{}`) "내용을 준비 중입니다" 플레이스홀더가 뜸
