@@ -107,8 +107,9 @@
 - 데이터: `data/shoppinglist.json` (`categories` + `items[]`). 필드는 `data/SCHEMA.md` 참고
 - 렌더러는 `itin-data`/`food-data`/`transit-data`와 같은 IIFE 안, `ptr` 처리 바로 다음
 - 필터 칩(`#slcatrow`)은 `categories`에서 동적 생성, food의 `.chip` 패턴을 `#pls` 스코프로 복제
-- **현재 `items`는 빈 배열.** 드라이브의 `shopping-new.json`도 스키마만 있고 실제 품목은 아직
-  없음 — 품목이 채워지면 `data/shoppinglist.json`에 옮겨 넣고 `node scripts/build.mjs` 실행
+- **품목 9개 반영 완료 (2026-09-19).** 드라이브 `shopping-new.json`(2026-09-17 수정본)에서
+  이식 — 551 부타망, Sanrio 한정 굿즈 3종, 디즈니스토어 한정, 나라 사슴 인형, 카키노하즈시,
+  대불 푸딩 등. `jpyPrice`가 "확인 필요"인 항목은 개인 상점 상품이라 현장에서 재확인 필요
 
 ### 지도 (2026-09-10: 개념도 제거, 실제 지도 단일)
 **실제 지도 (`.lmap`)** — Leaflet + OpenStreetMap 타일. 인터넷 필요.
