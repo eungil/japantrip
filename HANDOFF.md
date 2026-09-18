@@ -66,9 +66,11 @@
   #page-itinerary.page.on
     .wrap
       #masthead        ← 렌더링됨: D-day, 일본 현지시각, 항공편
-      #tabs            ← 렌더링됨: 날짜 탭(데이터) + 식당/쇼핑/준비(고정)
+      #tabs            ← 렌더링됨: 날짜 탭(데이터) + 식당/쇼핑/목록/준비/교통(고정)
       #days            ← 렌더링됨: section.panel#p1..p4 (data/itinerary.json)
       section.panel#pf,#ps,#pt ← 식당후보/쇼핑/팁·체크 (정적 HTML, 그대로)
+      section.panel#pls ← 쇼핑리스트(품목 체크). 셸은 정적, 카드는 data/shoppinglist.json 렌더링
+      section.panel#ptr ← 교통·결제. 셸은 정적, 카드는 data/transit.json 렌더링
   #page-food.page
     .fw
       .daywarn         ← 지도 사용법 + 요일별 휴무 경고 (정적)
@@ -91,6 +93,14 @@
 - 되돌리려면: 이 커밋 이전 `index.html` 로 복원 (전부 git에 있음)
 - `#pf/#ps/#pt`(식당후보·쇼핑·팁·체크리스트)는 변동이 적어 **정적 HTML로 남겨둠**. 체크리스트
   배열은 마지막 `<script>` 안에 하드코딩
+
+### 쇼핑리스트 탭 추가 (2026-09-17)
+기존 `#ps`(쇼핑, 매장 가이드)와는 별개로 **품목 단위 체크리스트** 탭 `#pls`("목록")를 추가했다.
+- 데이터: `data/shoppinglist.json` (`categories` + `items[]`). 필드는 `data/SCHEMA.md` 참고
+- 렌더러는 `itin-data`/`food-data`/`transit-data`와 같은 IIFE 안, `ptr` 처리 바로 다음
+- 필터 칩(`#slcatrow`)은 `categories`에서 동적 생성, food의 `.chip` 패턴을 `#pls` 스코프로 복제
+- **현재 `items`는 빈 배열.** 드라이브의 `shopping-new.json`도 스키마만 있고 실제 품목은 아직
+  없음 — 품목이 채워지면 `data/shoppinglist.json`에 옮겨 넣고 `node scripts/build.mjs` 실행
 
 ### 지도 (2026-09-10: 개념도 제거, 실제 지도 단일)
 **실제 지도 (`.lmap`)** — Leaflet + OpenStreetMap 타일. 인터넷 필요.

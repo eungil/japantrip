@@ -97,6 +97,32 @@ footer: "하단 안내문 <br> 가능"
 | `kid` | `[{ "level": "good", "html": "<b>아이 동반 ◎</b> …" }]`. level: `good`(초록) `bad`(붉음) `""`(회색). 여러 개 가능 |
 | `gm` | 구글맵 검색어 (일본어 권장). 링크는 자동 생성 |
 
+## shoppinglist.json
+
+일정 탭 맨 끝 "목록"(쇼핑리스트) 패널(`#pls`)에서 렌더링됩니다. 기존 `#ps`(쇼핑, 매장 가이드)와는
+별개로, **품목 단위 체크리스트**입니다 — 살 것 · 어디서 · 면세 여부 · 가격 비교.
+
+```
+{
+  "categories": ["기념품", "캐릭터굿즈", "식품", "화장품·약", "의류·잡화"],
+  "items": [
+    { "name": "...", "cat": "...", "shopName": "...", "shopLoc": "...",
+      "taxFree": true, "krAvailable": false, "jpyPrice": "...", "krwPrice": null,
+      "note": "..." }
+  ]
+}
+```
+
+- `categories`: 필터 칩 순서. 새 카테고리를 쓰려면 여기 추가
+- `items[].cat`: `categories` 중 하나와 일치해야 필터가 걸림
+- `items[].shopName` / `shopLoc`: 판매처 이름 · 위치(건물·층·동네)
+- `items[].taxFree`: 그 판매처가 면세 처리를 해주는지 (`true`/`false`/`null`=미확인)
+- `items[].krAvailable`: 한국 판매 여부 (`true`/`false`, 부분이면 문자열로 설명 가능)
+- `items[].jpyPrice`: 일본 현지가(세금 포함 표시가 기준)
+- `items[].krwPrice`: 한국 판매가 (없으면 `null`)
+- `items[].note`: 구매 시 참고사항 (면세 최소 구매액 충족 여부, 품절 잦은지 등)
+- `items`가 비어 있으면 패널에 "아직 등록된 품목이 없습니다" 안내만 뜸
+
 ## transit.json
 
 일정 탭 맨 끝 "교통" 패널(`#ptr`)에서 렌더링됩니다. `pf`/`pt`(식당/팁) 패널과 같은 `.item` 카드 나열 구조.
