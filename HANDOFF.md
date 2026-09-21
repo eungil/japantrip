@@ -5,6 +5,8 @@
 
 - 배포 주소: `https://eungil.github.io/japantrip/`
 - 저장소 루트에 `index.html` 하나만 올라가 있는 구조
+- **실제 작업 절차(드라이브 확인→반영→배포)는 `PIPELINE.md` 참고.** 이 문서는 "무엇이
+  왜 바뀌었는지"의 기록이고, `PIPELINE.md`는 "어떻게 하는지"의 절차서다
 
 ---
 
