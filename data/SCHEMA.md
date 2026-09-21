@@ -105,6 +105,10 @@ footer: "하단 안내문 <br> 가능"
 ```
 {
   "categories": ["기념품", "캐릭터굿즈", "식품", "화장품·약", "의류·잡화"],
+  "coupons": [
+    { "name": "...", "issuer": "...", "howToGet": "...", "whereToGet": "...",
+      "contents": "...", "validUntil": "2026-09-30", "note": "..." }
+  ],
   "items": [
     { "name": "...", "cat": "...", "shopName": "...", "shopLoc": "...",
       "taxFree": true, "krAvailable": false, "jpyPrice": "...", "krwPrice": null,
@@ -114,6 +118,9 @@ footer: "하단 안내문 <br> 가능"
 ```
 
 - `categories`: 필터 칩 순서. 새 카테고리를 쓰려면 여기 추가
+- `coupons`: 특정 품목이 아니라 여행 전체에 걸쳐 쓸 수 있는 할인/쿠폰 정보. 필터 대상이 아니라
+  카테고리 칩 위에 항상 노출됨(`#slcoupons`). `contents`(할인 내용) `howToGet`(받는 법)
+  `whereToGet`(받는 곳) `validUntil`(유효기한) `note`(참고사항) — 전부 선택 필드, 있는 것만 렌더링
 - `items[].cat`: `categories` 중 하나와 일치해야 필터가 걸림
 - `items[].shopName` / `shopLoc`: 판매처 이름 · 위치(건물·층·동네)
 - `items[].taxFree`: 그 판매처가 면세 처리를 해주는지 (`true`/`false`/`null`=미확인)
