@@ -10,9 +10,13 @@
 
 ---
 
-## 0. 작업 디렉토리는 하나뿐이다 — 확인부터
+## 0. 작업 디렉토리 — 클론은 금지, worktree는 허용
 
-**정식 작업 디렉토리는 `/Users/gilbert/japantrip` 하나뿐이다.**
+**정식 작업 디렉토리는 `/Users/gilbert/japantrip`(브랜치 `main`)이다.**
+별도 클론을 만들어 작업하지 마라. 다만 **여러 세션이 동시에 붙을 때는 git worktree로 분리한다**
+(아래 0-b).
+
+### 0-a. 왜 클론이 금지인가
 
 2026-09-22에 `/Users/gilbert/Downloads/japantrip`라는 별도 클론이 발견됐다. 거기엔
 `CLAUDE.md`(개념도·KML 파일 등 이미 삭제된 옛날 기능을 전제로 한 완전히 낡은 버전)와
@@ -37,6 +41,42 @@ git log -1 --oneline        # 내 로컬 HEAD가 origin과 같은지
 (`git show <hash>`) 무엇이 바뀌었는지 파악한 다음** 작업을 시작해라. 모르고 덮어쓰면
 방금 겪은 것과 같은 혼란이 반복된다. 다른 클론(`Downloads` 등)을 발견하면 거기서
 작업하지 말고, 있는 문서만 참고삼아 읽고 `/Users/gilbert/japantrip`으로 가져와라.
+
+### 0-b. 세션이 둘 이상이면 worktree로 분리한다
+
+**2026-09-22에 두 클로드 세션이 `/Users/gilbert/japantrip` 한 곳에서 동시에 작업하다 두 번 사고가 났다.**
+한쪽이 편집 중인 미커밋 변경이 다른 쪽의 `git add` 때 통째로 끌려가, 커밋 메시지와 실제 내용이
+어긋났다(`29135ed`는 "엘렉트릭카 왕복 반영"인데 난바 맛집 카드 5장이 같이 들어갔고,
+`0e4ce17`은 "스마 시월드 유모차 대여 조건 보완"인데 9/26 일정 전면 교체가 같이 들어갔다).
+**`git add`에 파일명을 하나하나 지정해도 막히지 않는다** — 같은 파일을 둘이 만지고 있으면
+상대의 변경도 그 파일 안에 들어 있기 때문이다.
+
+그래서 **두 번째 세션은 worktree를 쓴다.** 이미 만들어져 있다:
+
+| 경로 | 브랜치 | 용도 |
+|---|---|---|
+| `/Users/gilbert/japantrip` | `main` | 주 세션 |
+| `/Users/gilbert/japantrip-wt` | `wt/claude-b` | 두 번째 세션 |
+
+worktree 쪽 작업 절차는 이렇다:
+
+```bash
+cd /Users/gilbert/japantrip-wt
+git fetch origin main -q && git rebase origin/main   # 작업 시작 전
+# ... 편집 · node scripts/build.mjs · 검증 ...
+git add <파일명들> && git commit -m "..."
+git fetch origin main -q && git rebase origin/main   # 푸시 직전 다시
+git push origin HEAD:main
+```
+
+`rebase`에서 충돌이 나면 **그게 정상이다.** 예전엔 조용히 섞이던 것을 git이 잡아준 것이니,
+충돌 파일을 열어 양쪽 의도를 확인하고 손으로 합쳐라. 자동으로 한쪽을 버리지 마라.
+
+worktree가 없어졌으면 `git worktree add /Users/gilbert/japantrip-wt -b wt/claude-b origin/main`로
+다시 만든다. `build.mjs`는 node 내장 모듈만 쓰므로 worktree에서도 `node_modules` 없이 돈다.
+
+**주 세션(`main`)에서 일할 때도** 작업 시작 전과 커밋 직전에 `git status --short`로
+남의 미커밋 변경이 섞여 있지 않은지 본다. 있으면 그 세션이 작업 중이니 건드리지 마라.
 
 ---
 
