@@ -570,8 +570,19 @@ Central Square Life 난바점(슈퍼마켓) · Super Maruhachi 난바(슈퍼마�
 교체하지 말고, 저장소에 이미 검증된 수치(요금·운항일·좌표·예약 상태)가 있으면 그쪽을 남기고
 드라이브에서는 **새로 생긴 항목만** 골라 와라.
 
-**미결 — `푸드코트` 필터 칩 누락(기존 결함).** `공항` 그룹의 `Tasty Street 푸드코트` 카드가 쓰는
-`푸드코트` 종류에 `#catrow` 칩이 없다. 이번 변경과 무관한 기존 누락이라 건드리지 않았다.
+**`푸드코트` 필터 칩 누락(기존 결함) — 해결.** `공항` 그룹의 `Tasty Street 푸드코트` 카드가 쓰는
+`푸드코트` 종류에 `#catrow` 칩이 없어 필터로 고를 수 없었다. 칩 한 줄을 추가했다.
+이제 카드가 쓰는 `cat` 값과 칩 목록이 양방향으로 완전히 일치한다(고아 cat 0, 고아 칩 0).
+새 카드를 추가할 때마다 아래로 확인하면 된다:
+
+```bash
+node -e 'const fs=require("fs"),f=JSON.parse(fs.readFileSync("data/food.json","utf8")),
+h=fs.readFileSync("index.html","utf8"),
+row=h.slice(h.indexOf(`id="catrow"`),h.indexOf(`id="arearow"`)),
+used=[...new Set(f.groups.flatMap(g=>g.cards.map(c=>c.cat)))],
+chips=[...row.matchAll(/data-c="([^"]+)"/g)].map(m=>m[1]).filter(v=>v!=="all");
+console.log(used.filter(c=>!chips.includes(c)),chips.filter(c=>!used.includes(c)))'
+```
 
 ### 9/25 오테몬 도보 관람 취소 · 간식집 위치 오류 정정 (2026-09-22)
 
